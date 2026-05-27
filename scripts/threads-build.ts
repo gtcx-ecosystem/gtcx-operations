@@ -76,6 +76,13 @@ function getOrCreateThread(contactId: string): Thread {
   const contact = crm.contacts.find((c) => c.id === contactId);
   const company = contact?.company_id ? crm.companies.find((c) => c.id === contact.company_id) : undefined;
   
+  // Determine purpose from contact type
+  let purpose: Thread['purpose'] = 'general';
+  if (contact?.type === 'investor') purpose = 'fundraising';
+  if (contact?.type === 'producer') purpose = 'general'; // Producer engagement
+  if (contact?.type === 'vendor') purpose = 'general';
+  if (contact?.type === 'legal') purpose = 'legal';
+  
   const thread: Thread = {
     id: generateThreadId(),
     contact_id: contactId,
@@ -84,7 +91,7 @@ function getOrCreateThread(contactId: string): Thread {
     contact_whatsapp: contact?.whatsapp,
     company_id: contact?.company_id,
     company_name: company?.name,
-    purpose: 'general',
+    purpose,
     messages: [],
     follow_ups: [],
     last_activity: new Date().toISOString(),

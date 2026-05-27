@@ -20,6 +20,46 @@ interface OrchestrationRule {
   action: (thread: Thread) => ThreadFollowUp | null;
 }
 
+// Audience-aware routing helpers
+function getPrimaryChannel(contactType: string): string {
+  switch (contactType) {
+    case 'investor': return 'email';
+    case 'producer': return 'whatsapp';
+    case 'partner': return 'whatsapp';
+    case 'vendor': return 'email';
+    case 'legal': return 'email';
+    default: return 'email';
+  }
+}
+
+function getFollowUpSequence(contactType: string): Array<{ day: number; channel: string }> {
+  switch (contactType) {
+    case 'investor':
+      return [
+        { day: 3, channel: 'email' },
+        { day: 7, channel: 'platform' },
+        { day: 14, channel: 'email' },
+      ];
+    case 'producer':
+      return [
+        { day: 1, channel: 'whatsapp' },
+        { day: 3, channel: 'whatsapp' },
+        { day: 7, channel: 'whatsapp' },
+        { day: 14, channel: 'sms' },
+      ];
+    case 'partner':
+      return [
+        { day: 3, channel: 'whatsapp' },
+        { day: 7, channel: 'email' },
+      ];
+    default:
+      return [
+        { day: 3, channel: 'email' },
+        { day: 7, channel: 'email' },
+      ];
+  }
+}
+
 const rules: OrchestrationRule[] = [
   {
     name: 'whatsapp-no-reply-24h',
@@ -203,11 +243,13 @@ if (!existsSync(registryPath)) {
 const registry = readJson(registryPath) as { threads: Thread[] };
 const newFollowUps: Array<{ thread: Thread; followUp: ThreadFollowUp }> = [];
 
-console.log(`\n🎛️ WhatsApp-First Orchestrator`);
+console.log(`\n🎛️ Audience-Aware Orchestrator`);
 console.log(`   Threads: ${registry.threads.length}`);
 console.log(`   Rules: ${rules.length}`);
-console.log(`   Primary channel: WhatsApp`);
-console.log(`   Fallback: Email (legal only)\n`);
+console.log(`   Investors: Platform + Email`);
+console.log(`   Producers: WhatsApp`);
+console.log(`   Partners: WhatsApp`);
+console.log(`   Vendors: Email\n`);
 
 for (const thread of registry.threads) {
   for (const rule of rules) {
