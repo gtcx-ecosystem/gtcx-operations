@@ -1,0 +1,20 @@
+{
+  "id": "WA-J8LYWI",
+  "template_id": "investor-update",
+  "to": "+1234567890",
+  "from": "+1234567890",
+  "type": "template",
+  "body": "Hi Jane, here's our May update:\n\n🚀 Traction: 3 partners\n\n📊 Key metrics: 15K users\n\n🎯 Next: Series A\n\nReply with any questions.",
+  "sent_at": "2026-05-27T06:47:34.586Z",
+  "status": "sent",
+  "metadata": {
+    "template": "investor-update",
+    "variables": {
+      "first_name": "Jane",
+      "month": "May",
+      "traction_summary": "3 partners",
+      "metrics_summary": "15K users",
+      "next_month_goals": "Series A"
+    }
+  }
+}

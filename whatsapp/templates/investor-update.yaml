@@ -1,0 +1,26 @@
+id: investor-update
+name: investor_update_english
+category: fundraising
+language: en
+status: approved
+components:
+  - type: header
+    format: text
+    text: "GTCX Protocol Update"
+  - type: body
+    text: "Hi {{first_name}}, here's our {{month}} update:\n\n🚀 Traction: {{traction_summary}}\n\n📊 Key metrics: {{metrics_summary}}\n\n🎯 Next: {{next_month_goals}}\n\nReply with any questions."
+    example:
+      body_text:
+        - "Jane"
+        - "May"
+        - "3 new partners signed, 2 pilots launched"
+        - "15K users, $120K revenue, 89% retention"
+        - "Series A close, Ghana expansion"
+  - type: footer
+    text: "GTCX Protocol | https://gtcx.io"
+variables:
+  - first_name
+  - month
+  - traction_summary
+  - metrics_summary
+  - next_month_goals

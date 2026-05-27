@@ -1,0 +1,23 @@
+id: follow-up
+name: follow_up_english
+category: bd
+language: en
+status: approved
+components:
+  - type: body
+    text: "Hi {{first_name}}, following up on our {{interaction_type}} about {{subject}}.\n\n{{follow_up_action}}\n\nLet me know if {{date}} works for a quick call."
+    example:
+      body_text:
+        - "Jane"
+        - "meeting"
+        - "GTCX Protocol investment"
+        - "Would love to share our updated deck"
+        - "Tuesday 2pm"
+  - type: footer
+    text: "Reply to schedule"
+variables:
+  - first_name
+  - interaction_type
+  - subject
+  - follow_up_action
+  - date

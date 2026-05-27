@@ -9,6 +9,8 @@
       "last_name": "Doe",
       "title": "Partner",
       "company_id": "CO-A1B2C3",
+      "phone": "+1234567890",
+      "whatsapp": "+1234567890",
       "source": "conference",
       "status": "active",
       "tags": ["investor", "series-a", "priority"],

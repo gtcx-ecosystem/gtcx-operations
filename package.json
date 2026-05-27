@@ -15,6 +15,8 @@
     "pipeline:status": "tsx scripts/pipeline-status.ts",
     "email:send": "tsx scripts/email-send.ts",
     "email:config": "cat email/config/provider.yaml",
+    "whatsapp:send": "tsx scripts/whatsapp-send.ts",
+    "whatsapp:config": "cat whatsapp/config/provider.yaml",
     "calendar:schedule": "tsx scripts/calendar-schedule.ts",
     "crm:report": "tsx scripts/crm-report.ts",
     "crm:sync-google": "tsx scripts/crm-sync-google.ts",

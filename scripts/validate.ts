@@ -10,6 +10,7 @@ import { IpRegistrySchema } from '../src/schemas/ip-asset.js';
 import { PipelineSchema } from '../src/schemas/fundraising.js';
 import { ContractFrontmatterSchema, PolicyFrontmatterSchema } from '../src/schemas/contract.js';
 import { EmailProviderConfigSchema, EmailTemplateSchema, EmailLogSchema, EmailCampaignSchema } from '../src/schemas/email.js';
+import { WhatsAppProviderSchema, WhatsAppTemplateSchema, WhatsAppMessageSchema } from '../src/schemas/whatsapp.js';
 import { CrmRegistrySchema, CrmContactSchema, CrmCompanySchema, CrmInteractionSchema } from '../src/schemas/crm.js';
 
 const results: ValidationResult[] = [];
@@ -101,6 +102,39 @@ for (const file of emailLogFiles) {
   try {
     const data = readJson(file);
     results.push(validateWithZod(file, data, EmailLogSchema));
+  } catch (e) {
+    results.push({ path: file, valid: false, errors: [`Parse error: ${e}`], warnings: [] });
+  }
+}
+
+// Validate WhatsApp config
+const whatsappConfigFiles = getFilesByExtension(join(REPO_ROOT, 'whatsapp', 'config'), '.yaml');
+for (const file of whatsappConfigFiles) {
+  try {
+    const data = readYaml(file);
+    results.push(validateWithZod(file, data, WhatsAppProviderSchema));
+  } catch (e) {
+    results.push({ path: file, valid: false, errors: [`Parse error: ${e}`], warnings: [] });
+  }
+}
+
+// Validate WhatsApp templates
+const whatsappTemplateFiles = getFilesByExtension(join(REPO_ROOT, 'whatsapp', 'templates'), '.yaml');
+for (const file of whatsappTemplateFiles) {
+  try {
+    const data = readYaml(file);
+    results.push(validateWithZod(file, data, WhatsAppTemplateSchema));
+  } catch (e) {
+    results.push({ path: file, valid: false, errors: [`Parse error: ${e}`], warnings: [] });
+  }
+}
+
+// Validate WhatsApp logs
+const whatsappLogFiles = getFilesByExtension(join(REPO_ROOT, 'whatsapp', 'sent'), '.json');
+for (const file of whatsappLogFiles) {
+  try {
+    const data = readJson(file);
+    results.push(validateWithZod(file, data, WhatsAppMessageSchema));
   } catch (e) {
     results.push({ path: file, valid: false, errors: [`Parse error: ${e}`], warnings: [] });
   }
