@@ -1,7 +1,7 @@
 {
   "name": "@gtcx/operations",
   "version": "0.1.0",
-  "description": "GTCX Corporate Operations — legal, HR, finance, IP, fundraising, ops, email, CRM",
+  "description": "GTCX Corporate Operations — legal, HR, finance, IP, fundraising, ops, email, CRM, Google Workspace",
   "type": "module",
   "scripts": {
     "build": "tsc",
@@ -10,11 +10,14 @@
     "check:budgets": "tsx scripts/check-budgets.ts",
     "generate:contract": "tsx scripts/generate-contract.ts",
     "sync:budgets": "tsx scripts/sync-budgets.ts",
+    "sheets:sync-budgets": "tsx scripts/sheets-sync-budgets.ts",
     "ip:check": "tsx scripts/ip-check.ts",
     "pipeline:status": "tsx scripts/pipeline-status.ts",
     "email:send": "tsx scripts/email-send.ts",
     "email:config": "cat email/config/provider.yaml",
+    "calendar:schedule": "tsx scripts/calendar-schedule.ts",
     "crm:report": "tsx scripts/crm-report.ts",
+    "crm:sync-google": "tsx scripts/crm-sync-google.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit"
@@ -27,6 +30,8 @@
     "@types/js-yaml": "^4.0.9"
   },
   "dependencies": {
+    "googleapis": "^172.0.0",
+    "@google-cloud/local-auth": "^3.0.1",
     "js-yaml": "^4.1.0",
     "handlebars": "^4.7.8",
     "zod": "^3.23.0"

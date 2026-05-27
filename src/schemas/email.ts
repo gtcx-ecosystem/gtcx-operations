@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export const EmailProviderConfigSchema = z.object({
-  provider: z.enum(['resend', 'sendgrid', 'ses', 'webhook', 'mock']),
+  provider: z.enum(['gmail', 'resend', 'sendgrid', 'ses', 'webhook', 'mock']),
   api_key_env: z.string().default('EMAIL_API_KEY'),
   from_address: z.string().email(),
   from_name: z.string().default('GTCX Operations'),

@@ -1,16 +1,52 @@
 # Email provider configuration
-# Set EMAIL_API_KEY env var for your chosen provider
+# GTCX Operations uses Google Workspace APIs as the primary integration
 
-provider: mock
-api_key_env: EMAIL_API_KEY
+# Primary: Gmail API (recommended for G Suite/Google Workspace)
+provider: gmail
 from_address: ops@gtcx.io
 from_name: GTCX Operations
 reply_to: founders@gtcx.io
 rate_limit_per_second: 10
 
-# Provider-specific settings
-# For Resend: set provider to 'resend', webhook_url is optional
-# For SendGrid: set provider to 'sendgrid'
-# For AWS SES: set provider to 'ses'
-# For webhook (custom endpoint): set provider to 'webhook', provide webhook_url
-# For mock (no actual sending): set provider to 'mock'
+# Gmail API settings
+gmail:
+  credentials_path: .secrets/gmail-credentials.json
+  token_path: .secrets/gmail-token.json
+  user_id: me
+  scopes:
+    - https://www.googleapis.com/auth/gmail.send
+    - https://www.googleapis.com/auth/gmail.readonly
+    - https://www.googleapis.com/auth/gmail.labels
+    - https://www.googleapis.com/auth/gmail.modify
+
+# Google Workspace integration
+google_workspace:
+  enabled: true
+  credentials_path: .secrets/workspace-credentials.json
+  token_path: .secrets/workspace-token.json
+  services:
+    calendar:
+      enabled: true
+      calendar_id: primary
+      scopes:
+        - https://www.googleapis.com/auth/calendar
+        - https://www.googleapis.com/auth/calendar.events
+    contacts:
+      enabled: true
+      scopes:
+        - https://www.googleapis.com/auth/contacts
+        - https://www.googleapis.com/auth/contacts.readonly
+    drive:
+      enabled: true
+      scopes:
+        - https://www.googleapis.com/auth/drive
+        - https://www.googleapis.com/auth/drive.file
+    sheets:
+      enabled: true
+      scopes:
+        - https://www.googleapis.com/auth/spreadsheets
+        - https://www.googleapis.com/auth/spreadsheets.readonly
+
+# Fallback: mock for testing
+mock:
+  enabled: false
