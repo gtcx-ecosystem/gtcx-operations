@@ -1,6 +1,10 @@
 # Cross-Repo Dependencies
 
-> Edit this file to track what gtcx-operations needs from other repos and what other repos need from it.
+> Auto-discovered from package.json, imports, and docs.
+
+## Ecosystem Dependencies
+
+No cross-repo dependencies detected in package.json or docs.
 
 ## Hard Dependencies (Blocking)
 | Needs | From Repo | Status | ETA | Blocking Epic |
@@ -16,3 +20,4 @@
 | Repo | What They Need | Status |
 |------|---------------|--------|
 | | | |
+

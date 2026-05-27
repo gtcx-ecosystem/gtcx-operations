@@ -1,6 +1,6 @@
 # Memory Index
 
-**Schema version:** 1.0
+**Schema version:** 1.1
 **Last updated:** 2026-05-27
 **Repo:** gtcx-operations
 
@@ -13,6 +13,9 @@
 
 ## Status
 
-Memory initialized. Populate each file as sessions complete.
+✅ Baseline initialized with repo-specific content.
+- 1 patterns discovered
+- 0 active TODOs/FIXMEs flagged
+- See individual files for details.
 
-See [baseline-os/docs/agents/memory-schema.md](../../../../baseline-os/docs/agents/memory-schema.md) for schema specification.
+See [baseline-os/docs/operations/organization/memory-schema.md](../../../../baseline-os/docs/operations/organization/memory-schema.md) for schema specification.

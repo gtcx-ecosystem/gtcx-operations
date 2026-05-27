@@ -1,13 +1,16 @@
 # Confirmed Patterns
 
+## Architecture & Stack
+**Discovered:** 2026-05-27
+- TypeScript strict mode enabled
+- CI/CD via GitHub Actions
+- Tech stack: Node.js / TypeScript
+
+## Conventions
+**Discovered:** 2026-05-27
+- Add confirmed conventions here as they are validated
+
 ## Documentation
-**Added:** 2026-05-27
-- Add patterns here as they are validated
-
-## Code Style
-**Added:** 2026-05-27
-- Add patterns here as they are validated
-
-## Architecture
-**Added:** 2026-05-27
-- Add patterns here as they are validated
+**Discovered:** 2026-05-27
+- Uses docs/ for documentation
+- Has root README.md
