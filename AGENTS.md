@@ -62,3 +62,4 @@ Human commits should use your personal identity.
 - `pnpm validate` — Schema validation for all YAML/JSON contracts
 - `pnpm lint:policies` — Check policy frontmatter completeness
 - `pnpm check:budgets` — Variance analysis and alerts
+\n## Credential Access\n\nBefore accessing any API key, token, or secret:\n\n1. Read **Protocol 19: Agent Credential Access** — `gtcx-docs/docs/governance/protocols/19-agent-credential-access/protocol.md`\n2. Request a lease from the vault. Never handle raw credential values.\n3. Never commit secrets. Never ask users for credentials in chat.\n
