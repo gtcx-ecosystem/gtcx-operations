@@ -24,6 +24,7 @@
     "orchestrate": "tsx scripts/orchestrate-cross-channel.ts",
     "clickup:sync": "tsx scripts/clickup-sync.ts",
     "check-credentials": "tsx scripts/check-credentials.ts",
+    "test:integrations": "tsx scripts/test-integrations.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit"
