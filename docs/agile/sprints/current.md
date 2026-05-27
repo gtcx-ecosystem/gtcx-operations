@@ -32,6 +32,10 @@ velocity: 0
 
 # Sprint 46: Operations Setup
 
+> **Team:** [Team Definition](../team.md)  
+> **Backlog:** [Backlog](../backlog.md)  
+> **Roadmap:** [Roadmap](../roadmap.md)
+
 ## Objective
 
 Establish gtcx-operations as the corporate functions source of truth. Create templates and schemas for legal, finance, HR, IP, fundraising, and operations.
