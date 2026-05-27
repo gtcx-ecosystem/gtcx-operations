@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-05-17T00:00:00Z",
+  "companies": [
+    {
+      "id": "CO-A1B2C3",
+      "name": "Example Ventures",
+      "domain": "exampleventures.com",
+      "industry": "Venture Capital",
+      "size": "11-50",
+      "type": "investor",
+      "status": "active",
+      "tags": ["africa-focused", "fintech", "series-a"],
+      "created_at": "2026-05-01T00:00:00Z",
+      "notes": "Strong interest in African fintech. Met at Lagos Tech Week."
+    }
+  ]
+}

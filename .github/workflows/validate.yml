@@ -32,6 +32,9 @@ jobs:
       - name: Type check
         run: pnpm typecheck
 
+      - name: Run tests
+        run: pnpm test
+
       - name: Validate all contracts and data
         run: pnpm validate
 
@@ -43,6 +46,9 @@ jobs:
 
       - name: Check IP deadlines
         run: pnpm ip:check
+
+      - name: Generate CRM report
+        run: pnpm crm:report
 
       - name: Sync budget summaries
         run: pnpm sync:budgets

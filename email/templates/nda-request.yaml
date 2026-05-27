@@ -1,0 +1,31 @@
+id: nda-request
+name: "NDA Request"
+category: legal
+subject: "Mutual NDA — {{company_name}} / GTCX Protocol"
+body_text: |
+  Hi {{first_name}},
+
+  Thank you for your interest in exploring a potential partnership with GTCX Protocol.
+
+  Before we share confidential information, we ask all parties to sign a mutual non-disclosure agreement. Please find the attached NDA for your review.
+
+  Key details:
+  - Term: {{term_months}} months
+  - Jurisdiction: {{jurisdiction}}
+  - Effective date: {{effective_date}}
+
+  Please review and let us know if you have any questions. Once executed, we can proceed with sharing our technical documentation and roadmap.
+
+  Best regards,
+  {{sender_name}}
+  GTCX Protocol
+
+  ---
+  Attachments: NDA_{{company_name}}_{{effective_date}}.pdf
+variables:
+  - first_name
+  - company_name
+  - term_months
+  - jurisdiction
+  - effective_date
+  - sender_name

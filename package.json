@@ -1,7 +1,7 @@
 {
   "name": "@gtcx/operations",
   "version": "0.1.0",
-  "description": "GTCX Corporate Operations — legal, HR, finance, IP, fundraising, ops",
+  "description": "GTCX Corporate Operations — legal, HR, finance, IP, fundraising, ops, email, CRM",
   "type": "module",
   "scripts": {
     "build": "tsc",
@@ -12,21 +12,23 @@
     "sync:budgets": "tsx scripts/sync-budgets.ts",
     "ip:check": "tsx scripts/ip-check.ts",
     "pipeline:status": "tsx scripts/pipeline-status.ts",
+    "email:send": "tsx scripts/email-send.ts",
+    "email:config": "cat email/config/provider.yaml",
+    "crm:report": "tsx scripts/crm-report.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/handlebars": "^4.1.0",
-    "@types/js-yaml": "^4.0.9",
-    "@types/node": "^22.0.0",
-    "tsx": "^4.19.0",
     "typescript": "^5.4.0",
-    "vitest": "^2.1.9"
+    "tsx": "^4.19.0",
+    "vitest": "^2.1.9",
+    "@types/node": "^22.0.0",
+    "@types/js-yaml": "^4.0.9"
   },
   "dependencies": {
-    "handlebars": "^4.7.8",
     "js-yaml": "^4.1.0",
+    "handlebars": "^4.7.8",
     "zod": "^3.23.0"
   }
 }

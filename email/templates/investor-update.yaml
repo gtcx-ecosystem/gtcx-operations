@@ -1,0 +1,32 @@
+id: investor-update
+name: "Monthly Investor Update"
+category: fundraising
+subject: "GTCX Protocol — {{month}} {{year}} Update"
+body_text: |
+  Hi {{first_name}},
+
+  Here's our {{month}} update:
+
+  🚀 Traction
+  {{traction_summary}}
+
+  📊 Metrics
+  {{metrics_summary}}
+
+  🎯 Next Month
+  {{next_month_goals}}
+
+  Best,
+  The GTCX Team
+
+  ---
+  GTCX Protocol | https://gtcx.io
+  Unsubscribe: {{unsubscribe_link}}
+variables:
+  - first_name
+  - month
+  - year
+  - traction_summary
+  - metrics_summary
+  - next_month_goals
+  - unsubscribe_link

@@ -1,0 +1,26 @@
+{
+  "id": "EML-2USK91",
+  "template_id": "investor-update",
+  "to": [
+    "test@example.com"
+  ],
+  "cc": [],
+  "bcc": [],
+  "from": "ops@gtcx.io",
+  "subject": "GTCX Protocol — {{month}} {{year}} Update",
+  "body_preview": "Hi {{first_name}},\n\nHere's our {{month}} update:\n\n🚀 Traction\n{{traction_summary}}\n\n📊 Metrics\n{{metrics_summary}}\n\n🎯 Next Month\n{{next_month_goals}}\n\nBest,\nThe GTCX Team\n\n---\nGTCX Protocol | https:/",
+  "sent_at": "2026-05-27T05:12:12.096Z",
+  "status": "sent",
+  "metadata": {
+    "template": "investor-update",
+    "variables": [
+      "first_name",
+      "month",
+      "year",
+      "traction_summary",
+      "metrics_summary",
+      "next_month_goals",
+      "unsubscribe_link"
+    ]
+  }
+}

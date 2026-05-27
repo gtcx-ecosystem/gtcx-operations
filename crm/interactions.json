@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-05-17T00:00:00Z",
+  "interactions": [
+    {
+      "id": "INT-A1B2C3",
+      "contact_id": "CNT-A1B2C3",
+      "company_id": "CO-A1B2C3",
+      "type": "meeting",
+      "direction": "outbound",
+      "subject": "Initial pitch at Lagos Tech Week",
+      "summary": "30-min booth demo. Jane showed strong interest in our land registry protocol for Nigeria.",
+      "date": "2026-05-01T14:00:00Z",
+      "duration_minutes": 30,
+      "outcome": "positive",
+      "follow_up_date": "2026-05-20T00:00:00Z",
+      "follow_up_action": "Send pitch deck and schedule follow-up call",
+      "related_deal_id": "CAMP-A1B2C3",
+      "created_by": "gtcx-agent"
+    },
+    {
+      "id": "INT-A1B2C4",
+      "contact_id": "CNT-A1B2C3",
+      "company_id": "CO-A1B2C3",
+      "type": "email",
+      "direction": "outbound",
+      "subject": "Follow-up: GTCX Protocol pitch deck",
+      "summary": "Sent pitch deck and Calendly link for follow-up call.",
+      "date": "2026-05-05T10:00:00Z",
+      "outcome": "follow-up",
+      "follow_up_date": "2026-05-12T00:00:00Z",
+      "follow_up_action": "Check if deck was reviewed",
+      "created_by": "gtcx-agent"
+    }
+  ]
+}

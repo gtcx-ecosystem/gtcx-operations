@@ -1,0 +1,16 @@
+# Email provider configuration
+# Set EMAIL_API_KEY env var for your chosen provider
+
+provider: mock
+api_key_env: EMAIL_API_KEY
+from_address: ops@gtcx.io
+from_name: GTCX Operations
+reply_to: founders@gtcx.io
+rate_limit_per_second: 10
+
+# Provider-specific settings
+# For Resend: set provider to 'resend', webhook_url is optional
+# For SendGrid: set provider to 'sendgrid'
+# For AWS SES: set provider to 'ses'
+# For webhook (custom endpoint): set provider to 'webhook', provide webhook_url
+# For mock (no actual sending): set provider to 'mock'
