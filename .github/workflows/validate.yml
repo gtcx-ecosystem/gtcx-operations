@@ -16,15 +16,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: npm install
-      - run: npm run validate
-      - run: npm run lint:policies
-      - run: npm run check:budgets
 
-      - name: Commit automated fixes
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Type check
+        run: pnpm typecheck
+
+      - name: Validate all contracts and data
+        run: pnpm validate
+
+      - name: Lint policies
+        run: pnpm lint:policies
+
+      - name: Check budgets
+        run: pnpm check:budgets
+
+      - name: Check IP deadlines
+        run: pnpm ip:check
+
+      - name: Sync budget summaries
+        run: pnpm sync:budgets
+
+      - name: Commit automated updates
         if: github.event_name == 'schedule'
         run: |
           git config user.name "gtcx-agent"
@@ -33,7 +56,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore(ops): automated validation fixes $(date +%F)"
+            git commit -m "chore(ops): automated validation and sync $(date +%F)"
             git push
           fi
         env:

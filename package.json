@@ -4,17 +4,29 @@
   "description": "GTCX Corporate Operations — legal, HR, finance, IP, fundraising, ops",
   "type": "module",
   "scripts": {
-    "validate": "node scripts/validate.js",
-    "sync:budgets": "node scripts/sync-budgets.js",
-    "generate:contract": "node scripts/generate-contract.js",
-    "lint:policies": "node scripts/lint-policies.js",
-    "check:budgets": "node scripts/check-budgets.js"
+    "build": "tsc",
+    "validate": "tsx scripts/validate.ts",
+    "lint:policies": "tsx scripts/lint-policies.ts",
+    "check:budgets": "tsx scripts/check-budgets.ts",
+    "generate:contract": "tsx scripts/generate-contract.ts",
+    "sync:budgets": "tsx scripts/sync-budgets.ts",
+    "ip:check": "tsx scripts/ip-check.ts",
+    "pipeline:status": "tsx scripts/pipeline-status.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "typescript": "^5.4.0"
+    "@types/handlebars": "^4.1.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.1.9"
   },
   "dependencies": {
+    "handlebars": "^4.7.8",
     "js-yaml": "^4.1.0",
-    "handlebars": "^4.7.8"
+    "zod": "^3.23.0"
   }
 }

@@ -2,6 +2,7 @@
 id: RUNBOOK-001
 title: "Incident Response"
 version: "1.0"
+effective_date: "2026-05-17"
 owner: "ops@gtcx.io"
 trigger: "Production outage, security breach, or data loss"
 severity_levels:

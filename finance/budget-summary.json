@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-05-27T04:56:55.178Z",
+  "budgets": [
+    {
+      "file": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx-operations/finance/budgets/fy2026-q2.yaml",
+      "quarter": "Q2-2026",
+      "currency": "USD",
+      "total_budget": 760000,
+      "total_spent": 500000,
+      "total_remaining": 260000,
+      "utilization_percent": 65.78947368421053,
+      "categories": [
+        {
+          "name": "Engineering",
+          "budget": 450000,
+          "spent": 320000,
+          "remaining": 130000,
+          "status": "on-track"
+        },
+        {
+          "name": "Product & Design",
+          "budget": 120000,
+          "spent": 85000,
+          "remaining": 35000,
+          "status": "on-track"
+        },
+        {
+          "name": "Legal & IP",
+          "budget": 80000,
+          "spent": 45000,
+          "remaining": 35000,
+          "status": "on-track"
+        },
+        {
+          "name": "Operations",
+          "budget": 60000,
+          "spent": 30000,
+          "remaining": 30000,
+          "status": "on-track"
+        },
+        {
+          "name": "Fundraising",
+          "budget": 50000,
+          "spent": 20000,
+          "remaining": 30000,
+          "status": "on-track"
+        }
+      ]
+    }
+  ]
+}
