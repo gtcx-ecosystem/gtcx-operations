@@ -1,14 +1,22 @@
 # Email provider configuration
-# GTCX Operations uses Google Workspace APIs as the primary integration
+# EMAIL IS FALLBACK ONLY — WhatsApp and Platform are primary channels
+# This config exists for legal requirements and investor preferences only
 
-# Primary: Gmail API (recommended for G Suite/Google Workspace)
-provider: gmail
+provider: mock
 from_address: ops@gtcx.io
 from_name: GTCX Operations
 reply_to: founders@gtcx.io
 rate_limit_per_second: 10
 
-# Gmail API settings
+# Usage rules:
+# 1. Legal notices requiring written communication
+# 2. Investor explicitly prefers email (set in CRM preferred_channel)
+# 3. External auditors requesting email records
+# 4. Board resolutions if bylaws mandate email
+
+# For all other communications, use WhatsApp or Platform
+
+# Gmail API settings (if needed for legal emails)
 gmail:
   credentials_path: .secrets/gmail-credentials.json
   token_path: .secrets/gmail-token.json
@@ -16,10 +24,8 @@ gmail:
   scopes:
     - https://www.googleapis.com/auth/gmail.send
     - https://www.googleapis.com/auth/gmail.readonly
-    - https://www.googleapis.com/auth/gmail.labels
-    - https://www.googleapis.com/auth/gmail.modify
 
-# Google Workspace integration
+# Google Workspace integration (for legal document storage only)
 google_workspace:
   enabled: true
   credentials_path: .secrets/workspace-credentials.json
@@ -28,25 +34,11 @@ google_workspace:
     calendar:
       enabled: true
       calendar_id: primary
-      scopes:
-        - https://www.googleapis.com/auth/calendar
-        - https://www.googleapis.com/auth/calendar.events
-    contacts:
-      enabled: true
-      scopes:
-        - https://www.googleapis.com/auth/contacts
-        - https://www.googleapis.com/auth/contacts.readonly
     drive:
       enabled: true
-      scopes:
-        - https://www.googleapis.com/auth/drive
-        - https://www.googleapis.com/auth/drive.file
     sheets:
       enabled: true
-      scopes:
-        - https://www.googleapis.com/auth/spreadsheets
-        - https://www.googleapis.com/auth/spreadsheets.readonly
 
 # Fallback: mock for testing
 mock:
-  enabled: false
+  enabled: true

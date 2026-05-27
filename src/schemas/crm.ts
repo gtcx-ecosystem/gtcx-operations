@@ -12,6 +12,7 @@ export const CrmContactSchema = z.object({
   whatsapp: z.string().regex(/^\+\d{10,15}$/).optional(),
   telegram: z.string().optional(),
   source: z.enum(['referral', 'conference', 'outbound', 'inbound', 'partner', 'whatsapp', 'other']).default('other'),
+  preferred_channel: z.enum(['whatsapp', 'email', 'platform', 'call']).default('whatsapp'),
   status: z.enum(['active', 'inactive', 'do-not-contact', 'unsubscribed']).default('active'),
   created_at: z.string().datetime(),
   last_contact_at: z.string().datetime().optional(),

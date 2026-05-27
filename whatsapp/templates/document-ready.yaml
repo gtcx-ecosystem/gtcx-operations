@@ -1,0 +1,19 @@
+id: document-ready
+name: document_ready_english
+category: legal
+language: en
+status: draft
+components:
+  - type: body
+    text: "Hi {{first_name}}, {{document_name}} is ready for your review.\n\nOpen here: {{platform_link}}\n\nYou can review, comment, and sign directly on the platform. Questions? Just reply here."
+    example:
+      body_text:
+        - "Jane"
+        - "Series A Term Sheet"
+        - "https://gtcx.io/docs/series-a-term-sheet"
+  - type: footer
+    text: "GTCX Protocol"
+variables:
+  - first_name
+  - document_name
+  - platform_link

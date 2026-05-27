@@ -1,0 +1,19 @@
+id: meeting-request
+name: meeting_request_english
+category: bd
+language: en
+status: draft
+components:
+  - type: body
+    text: "Hi {{first_name}}, can we find 15 minutes this week to discuss {{topic}}?\n\nBook here: {{calendar_link}}\n\nOr just reply with what works for you."
+    example:
+      body_text:
+        - "Jane"
+        - "Q2 update and next steps"
+        - "https://calendly.com/gtcx/jane"
+  - type: footer
+    text: "Looking forward to it"
+variables:
+  - first_name
+  - topic
+  - calendar_link

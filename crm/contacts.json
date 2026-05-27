@@ -12,6 +12,7 @@
       "phone": "+1234567890",
       "whatsapp": "+1234567890",
       "source": "conference",
+      "preferred_channel": "whatsapp",
       "status": "active",
       "tags": ["investor", "series-a", "priority"],
       "created_at": "2026-05-01T00:00:00Z",
