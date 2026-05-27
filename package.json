@@ -1,0 +1,20 @@
+{
+  "name": "@gtcx/operations",
+  "version": "0.1.0",
+  "description": "GTCX Corporate Operations — legal, HR, finance, IP, fundraising, ops",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "sync:budgets": "node scripts/sync-budgets.js",
+    "generate:contract": "node scripts/generate-contract.js",
+    "lint:policies": "node scripts/lint-policies.js",
+    "check:budgets": "node scripts/check-budgets.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "handlebars": "^4.7.8"
+  }
+}

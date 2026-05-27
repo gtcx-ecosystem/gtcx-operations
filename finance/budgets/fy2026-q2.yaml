@@ -1,0 +1,101 @@
+quarter: Q2-2026
+period:
+  start: "2026-04-01"
+  end: "2026-06-30"
+currency: USD
+owner: "finance@gtcx.io"
+version: "1.0"
+
+# Top-level categories
+categories:
+  engineering:
+    name: "Engineering"
+    budget: 450000
+    spent: 320000
+    forecast: 440000
+    line_items:
+      - item: "Salaries"
+        budget: 350000
+        spent: 280000
+      - item: "Infrastructure"
+        budget: 60000
+        spent: 25000
+      - item: "Tools & Licenses"
+        budget: 40000
+        spent: 15000
+
+  product:
+    name: "Product & Design"
+    budget: 120000
+    spent: 85000
+    forecast: 115000
+    line_items:
+      - item: "Salaries"
+        budget: 90000
+        spent: 75000
+      - item: "Design Tools"
+        budget: 15000
+        spent: 5000
+      - item: "Research"
+        budget: 15000
+        spent: 5000
+
+  legal:
+    name: "Legal & IP"
+    budget: 80000
+    spent: 45000
+    forecast: 75000
+    line_items:
+      - item: "Legal Fees"
+        budget: 50000
+        spent: 35000
+      - item: "Patent Filings"
+        budget: 20000
+        spent: 5000
+      - item: "Trademark Renewals"
+        budget: 10000
+        spent: 5000
+
+  operations:
+    name: "Operations"
+    budget: 60000
+    spent: 30000
+    forecast: 55000
+    line_items:
+      - item: "Office & Remote"
+        budget: 25000
+        spent: 15000
+      - item: "Travel"
+        budget: 20000
+        spent: 10000
+      - item: "Vendor Services"
+        budget: 15000
+        spent: 5000
+
+  fundraising:
+    name: "Fundraising"
+    budget: 50000
+    spent: 20000
+    forecast: 45000
+    line_items:
+      - item: "Deck & Materials"
+        budget: 10000
+        spent: 5000
+      - item: "Travel & Events"
+        budget: 25000
+        spent: 10000
+      - item: "Advisory"
+        budget: 15000
+        spent: 5000
+
+# Variance alerts
+alerts:
+  threshold_percent: 10
+  notify: ["finance@gtcx.io", "ops@gtcx.io"]
+
+# Totals
+total:
+  budget: 760000
+  spent: 500000
+  forecast: 730000
+  remaining: 260000

@@ -1,0 +1,46 @@
+pipeline:
+  name: "Series A"
+  target_raise: 5000000
+  currency: USD
+  target_close: "2026-09-30"
+  owner: "founders@gtcx.io"
+
+stages:
+  - name: "Prospecting"
+    description: "Initial research and list building"
+    investors: []
+
+  - name: "Outreach"
+    description: "First contact, deck shared"
+    investors:
+      - name: "Example Ventures"
+        contact: "partner@example.com"
+        introduced_by: "Mutual Connection"
+        date_added: "2026-05-01"
+        status: "active"
+        next_action: "Follow up after demo"
+        next_action_date: "2026-05-20"
+        notes: "Strong interest in African fintech"
+
+  - name: "Due Diligence"
+    description: "Data room access, deep dive"
+    investors: []
+
+  - name: "Term Sheet"
+    description: "Negotiating terms"
+    investors: []
+
+  - name: "Closing"
+    description: "Docs signed, funds wired"
+    investors: []
+
+  - name: "Passed"
+    description: "Declined or ghosted"
+    investors: []
+
+metrics:
+  total_contacts: 1
+  active_conversations: 1
+  term_sheets_received: 0
+  amount_committed: 0
+  days_since_start: 16

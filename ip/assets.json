@@ -1,0 +1,50 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-05-17",
+  "assets": [
+    {
+      "id": "IP-001",
+      "type": "patent",
+      "title": "Geotagged Trade Commitment Protocol",
+      "status": "filed",
+      "jurisdiction": "USPTO",
+      "filing_date": "2025-03-15",
+      "grant_date": null,
+      "expiry_date": "2045-03-15",
+      "owner": "GTCX Protocol Inc.",
+      "inventors": ["Amani Anai"],
+      "priority": "critical",
+      "next_action": "Respond to office action",
+      "next_action_date": "2026-06-30"
+    },
+    {
+      "id": "IP-002",
+      "type": "trademark",
+      "title": "GTCX Protocol",
+      "status": "registered",
+      "jurisdiction": "USPTO",
+      "filing_date": "2024-01-10",
+      "grant_date": "2024-08-20",
+      "expiry_date": "2034-08-20",
+      "owner": "GTCX Protocol Inc.",
+      "classes": ["035", "042"],
+      "priority": "high",
+      "next_action": "Renewal filing",
+      "next_action_date": "2033-08-20"
+    },
+    {
+      "id": "IP-003",
+      "type": "trade_secret",
+      "title": "VaultMark Cryptographic Scheme",
+      "status": "active",
+      "jurisdiction": "International",
+      "filing_date": null,
+      "grant_date": null,
+      "expiry_date": null,
+      "owner": "GTCX Protocol Inc.",
+      "priority": "critical",
+      "next_action": "Annual access audit",
+      "next_action_date": "2026-12-31"
+    }
+  ]
+}
