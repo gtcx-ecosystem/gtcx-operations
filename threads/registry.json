@@ -1,0 +1,104 @@
+{
+  "version": "1.1",
+  "generated_at": "2026-05-27T06:56:52.676Z",
+  "threads": [
+    {
+      "id": "THR-R4GBU0",
+      "contact_id": "CNT-A1B2C3",
+      "contact_name": "Jane Doe",
+      "contact_email": "partner@example.com",
+      "contact_whatsapp": "+1234567890",
+      "company_id": "CO-A1B2C3",
+      "company_name": "Example Ventures",
+      "purpose": "general",
+      "messages": [
+        {
+          "id": "INT-A1B2C3",
+          "channel": "meeting",
+          "direction": "outbound",
+          "timestamp": "2026-05-01T14:00:00Z",
+          "subject": "Initial pitch at Lagos Tech Week",
+          "body": "30-min booth demo. Jane showed strong interest in our land registry protocol for Nigeria.",
+          "from": "gtcx-agent",
+          "to": [
+            "Jane Doe"
+          ],
+          "status": "completed",
+          "metadata": {
+            "duration_minutes": 30,
+            "follow_up_date": "2026-05-20T00:00:00Z"
+          }
+        },
+        {
+          "id": "INT-A1B2C4",
+          "channel": "email",
+          "direction": "outbound",
+          "timestamp": "2026-05-05T10:00:00Z",
+          "subject": "Follow-up: GTCX Protocol pitch deck",
+          "body": "Sent pitch deck and Calendly link for follow-up call.",
+          "from": "gtcx-agent",
+          "to": [
+            "Jane Doe"
+          ],
+          "status": "delivered",
+          "metadata": {
+            "follow_up_date": "2026-05-12T00:00:00Z"
+          }
+        },
+        {
+          "id": "WA-J8LYWI",
+          "channel": "whatsapp",
+          "direction": "outbound",
+          "timestamp": "2026-05-27T06:47:34.586Z",
+          "body": "Hi Jane, here's our May update:\n\n🚀 Traction: 3 partners\n\n📊 Key metrics: 15K users\n\n🎯 Next: Series A\n\nReply with any questions.",
+          "from": "+1234567890",
+          "to": [
+            "+1234567890"
+          ],
+          "status": "sent",
+          "metadata": {
+            "template": "investor-update"
+          }
+        }
+      ],
+      "follow_ups": [
+        {
+          "id": "FU-INT-A1B2C3",
+          "type": "email",
+          "scheduled_at": "2026-05-20T00:00:00Z",
+          "action": "Send pitch deck and schedule follow-up call",
+          "status": "pending",
+          "triggered_by": "INT-A1B2C3",
+          "auto_trigger": false
+        },
+        {
+          "id": "FU-INT-A1B2C4",
+          "type": "email",
+          "scheduled_at": "2026-05-12T00:00:00Z",
+          "action": "Check if deck was reviewed",
+          "status": "pending",
+          "triggered_by": "INT-A1B2C4",
+          "auto_trigger": false
+        },
+        {
+          "id": "FU-INT-A1B2C4",
+          "type": "call",
+          "scheduled_at": "2026-05-28T06:57:02.732Z",
+          "action": "Call Jane Doe: Email \"Follow-up: GTCX Protocol pitch deck\" not replied to after 3 days",
+          "status": "pending",
+          "triggered_by": "INT-A1B2C4",
+          "auto_trigger": true
+        }
+      ],
+      "last_activity": "2026-05-27T06:47:34.586Z",
+      "status": "active",
+      "tags": [
+        "investor",
+        "series-a",
+        "priority"
+      ],
+      "last_outbound": "2026-05-27T06:47:34.586Z",
+      "next_scheduled": "2026-05-20T00:00:00Z"
+    }
+  ]
+}
