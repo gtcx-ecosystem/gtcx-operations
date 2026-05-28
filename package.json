@@ -31,8 +31,6 @@
     "ecosystem:health:v2": "tsx scripts/ecosystem-health-v2.ts",
     "check-credentials": "tsx scripts/check-credentials.ts",
     "test:integrations": "tsx scripts/test-integrations.ts",
-    "verify:slsa": "tsx scripts/verify-slsa.ts",
-    "generate:soc2": "tsx scripts/generate-soc2-evidence.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit"
