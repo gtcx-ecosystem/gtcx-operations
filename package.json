@@ -23,6 +23,7 @@
     "threads:build": "tsx scripts/threads-build.ts",
     "orchestrate": "tsx scripts/orchestrate-cross-channel.ts",
     "clickup:sync": "tsx scripts/clickup-sync.ts",
+    "ecosystem:health": "tsx scripts/ecosystem-health.ts",
     "check-credentials": "tsx scripts/check-credentials.ts",
     "test:integrations": "tsx scripts/test-integrations.ts",
     "test": "vitest run",
