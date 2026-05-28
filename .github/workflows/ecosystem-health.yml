@@ -1,0 +1,48 @@
+name: Ecosystem Health Dashboard
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gtcx-operations
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Checkout ecosystem repos
+        run: |
+          mkdir -p ~/Sites/gtcx-ecosystem
+          for repo in baseline-os gtcx-core gtcx-protocols gtcx-infrastructure gtcx-agentic gtcx-mobile gtcx-intelligence terminal-os ledger-ui compliance-os exploration-os griot-ai sensei-ai terra-os veritas-ai nyota-ai gtcx-docs gtcx-agile gtcx-markets gtcx-platforms gtcx-hardware; do
+            if [ ! -d "$HOME/Sites/gtcx-ecosystem/$repo" ]; then
+              git clone --depth 1 https://github.com/gtcx-ecosystem/$repo.git $HOME/Sites/gtcx-ecosystem/$repo 2>/dev/null || true
+            fi
+          done
+
+      - name: Run ecosystem health check
+        run: pnpm ecosystem:health
+        env:
+          ECOSYSTEM_ROOT: ${{ github.workspace }}/../gtcx-ecosystem
+
+      - name: Commit and push results
+        run: |
+          git config user.name "gtcx-agent"
+          git config user.email "agent@gtcx.io"
+          git add workstream/ecosystem-health.json workstream/ecosystem-health.md
+          git diff --cached --quiet || git commit -m "chore(health): daily ecosystem health report [ci skip]"
+          git push
