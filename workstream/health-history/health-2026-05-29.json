@@ -1,35 +1,35 @@
 {
-  "generatedAt": "2026-05-29T04:57:55.604Z",
+  "generatedAt": "2026-05-29T05:11:40.234Z",
   "repos": [
     {
       "name": "baseline-os",
-      "commitsSinceMay1": 377,
+      "commitsSinceMay1": 379,
       "dirtyFiles": 0,
-      "hasRoadmap": false,
+      "hasRoadmap": true,
       "hasConventionsMd": true,
       "unpushedCommits": 0
     },
     {
       "name": "gtcx-core",
-      "commitsSinceMay1": 326,
+      "commitsSinceMay1": 327,
       "dirtyFiles": 0,
-      "hasRoadmap": false,
+      "hasRoadmap": true,
       "hasConventionsMd": true,
       "unpushedCommits": 0
     },
     {
       "name": "gtcx-protocols",
-      "commitsSinceMay1": 291,
-      "dirtyFiles": 12,
-      "hasRoadmap": false,
+      "commitsSinceMay1": 293,
+      "dirtyFiles": 0,
+      "hasRoadmap": true,
       "hasConventionsMd": true,
       "unpushedCommits": 0
     },
     {
       "name": "gtcx-infrastructure",
-      "commitsSinceMay1": 387,
+      "commitsSinceMay1": 388,
       "dirtyFiles": 0,
-      "hasRoadmap": false,
+      "hasRoadmap": true,
       "hasConventionsMd": true,
       "unpushedCommits": 0
     },
@@ -43,8 +43,8 @@
     },
     {
       "name": "gtcx-mobile",
-      "commitsSinceMay1": 246,
-      "dirtyFiles": 1,
+      "commitsSinceMay1": 250,
+      "dirtyFiles": 0,
       "hasRoadmap": true,
       "hasConventionsMd": true,
       "unpushedCommits": 0
@@ -59,8 +59,8 @@
     },
     {
       "name": "terminal-os",
-      "commitsSinceMay1": 160,
-      "dirtyFiles": 10,
+      "commitsSinceMay1": 163,
+      "dirtyFiles": 37,
       "hasRoadmap": true,
       "hasConventionsMd": true,
       "unpushedCommits": 0
@@ -76,10 +76,10 @@
     {
       "name": "compliance-os",
       "commitsSinceMay1": 221,
-      "dirtyFiles": 0,
-      "hasRoadmap": false,
+      "dirtyFiles": 4,
+      "hasRoadmap": true,
       "hasConventionsMd": true,
-      "unpushedCommits": 2
+      "unpushedCommits": 0
     },
     {
       "name": "exploration-os",
@@ -91,15 +91,15 @@
     },
     {
       "name": "griot-ai",
-      "commitsSinceMay1": 224,
-      "dirtyFiles": 9,
+      "commitsSinceMay1": 227,
+      "dirtyFiles": 27,
       "hasRoadmap": true,
       "hasConventionsMd": true,
       "unpushedCommits": 0
     },
     {
       "name": "sensei-ai",
-      "commitsSinceMay1": 298,
+      "commitsSinceMay1": 299,
       "dirtyFiles": 0,
       "hasRoadmap": true,
       "hasConventionsMd": true,
@@ -107,15 +107,15 @@
     },
     {
       "name": "terra-os",
-      "commitsSinceMay1": 230,
-      "dirtyFiles": 0,
+      "commitsSinceMay1": 231,
+      "dirtyFiles": 23,
       "hasRoadmap": true,
       "hasConventionsMd": true,
       "unpushedCommits": 0
     },
     {
       "name": "veritas-ai",
-      "commitsSinceMay1": 69,
+      "commitsSinceMay1": 70,
       "dirtyFiles": 0,
       "hasRoadmap": true,
       "hasConventionsMd": true,
@@ -131,15 +131,15 @@
     },
     {
       "name": "gtcx-operations",
-      "commitsSinceMay1": 38,
-      "dirtyFiles": 0,
+      "commitsSinceMay1": 42,
+      "dirtyFiles": 6,
       "hasRoadmap": true,
       "hasConventionsMd": true,
       "unpushedCommits": 0
     },
     {
       "name": "gtcx-docs",
-      "commitsSinceMay1": 41,
+      "commitsSinceMay1": 42,
       "dirtyFiles": 0,
       "hasRoadmap": true,
       "hasConventionsMd": true,
@@ -147,7 +147,7 @@
     },
     {
       "name": "gtcx-agile",
-      "commitsSinceMay1": 27,
+      "commitsSinceMay1": 28,
       "dirtyFiles": 0,
       "hasRoadmap": true,
       "hasConventionsMd": true,
@@ -155,7 +155,7 @@
     },
     {
       "name": "gtcx-markets",
-      "commitsSinceMay1": 175,
+      "commitsSinceMay1": 176,
       "dirtyFiles": 8,
       "hasRoadmap": true,
       "hasConventionsMd": true,
@@ -164,7 +164,7 @@
     {
       "name": "gtcx-platforms",
       "commitsSinceMay1": 152,
-      "dirtyFiles": 255,
+      "dirtyFiles": 269,
       "hasRoadmap": true,
       "hasConventionsMd": true,
       "unpushedCommits": 0
@@ -181,46 +181,24 @@
   "alerts": [
     {
       "severity": "warning",
-      "repo": "baseline-os",
-      "message": "Missing canonical roadmap",
-      "metric": "hasRoadmap",
-      "value": 0
-    },
-    {
-      "severity": "warning",
-      "repo": "gtcx-core",
-      "message": "Missing canonical roadmap",
-      "metric": "hasRoadmap",
-      "value": 0
-    },
-    {
-      "severity": "warning",
-      "repo": "gtcx-protocols",
-      "message": "Missing canonical roadmap",
-      "metric": "hasRoadmap",
-      "value": 0
-    },
-    {
-      "severity": "warning",
-      "repo": "gtcx-infrastructure",
-      "message": "Missing canonical roadmap",
-      "metric": "hasRoadmap",
-      "value": 0
-    },
-    {
-      "severity": "warning",
-      "repo": "compliance-os",
-      "message": "Missing canonical roadmap",
-      "metric": "hasRoadmap",
-      "value": 0
-    },
-    {
-      "severity": "warning",
       "repo": "gtcx-platforms",
-      "message": "Large dirty file backlog (255)",
+      "message": "Large dirty file backlog (269)",
       "metric": "dirtyFiles",
-      "value": 255
+      "value": 269
     }
   ],
-  "trends": []
+  "trends": [
+    {
+      "repo": "terminal-os",
+      "metric": "dirtyFiles",
+      "direction": "up",
+      "delta": 2
+    },
+    {
+      "repo": "gtcx-operations",
+      "metric": "dirtyFiles",
+      "direction": "up",
+      "delta": 2
+    }
+  ]
 }
