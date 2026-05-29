@@ -1,0 +1,118 @@
+name: Ecosystem CI
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 06:00 UTC
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/ecosystem-ci.yml'
+  workflow_dispatch:
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with: { version: 9 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'pnpm' }
+      - run: pnpm install
+      - run: pnpm ecosystem:health:v2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: health-report
+          path: workstream/ecosystem-health-v2.md
+
+  consistency:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with: { version: 9 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'pnpm' }
+      - run: pnpm install
+      - run: pnpm ecosystem:validate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: consistency-report
+          path: workstream/ecosystem-consistency.md
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with: { version: 9 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'pnpm' }
+      - run: pnpm install
+      - run: pnpm audit:security
+      - uses: actions/upload-artifact@v4
+        with:
+          name: security-report
+          path: workstream/security-audit-*.md
+
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with: { version: 9 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'pnpm' }
+      - run: pnpm install
+      - run: pnpm gate:docs --max-stale=180
+      - uses: actions/upload-artifact@v4
+        with:
+          name: docs-report
+          path: workstream/docs-freshness-*.md
+
+  dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with: { version: 9 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'pnpm' }
+      - run: pnpm install
+      - run: pnpm score:dependencies
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dependency-report
+          path: workstream/dependency-freshness-*.md
+
+  todos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with: { version: 9 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'pnpm' }
+      - run: pnpm install
+      - run: pnpm track:todos
+      - uses: actions/upload-artifact@v4
+        with:
+          name: todo-report
+          path: workstream/todo-backlog-*.md
+
+  release-notes:
+    runs-on: ubuntu-latest
+    if: github.event.schedule
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with: { version: 9 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'pnpm' }
+      - run: pnpm install
+      - run: pnpm generate:release-notes --version=$(date +%Y.%m.%d) --since="7 days ago"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-notes
+          path: workstream/release-notes-*.md

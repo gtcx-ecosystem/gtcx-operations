@@ -42,11 +42,11 @@ function scanSkillFiles(): DiscoveredSkill[] {
           const relPath = fullPath.replace(ECOSYSTEM_ROOT, "");
           const content = readFileSync(fullPath, "utf-8");
 
-          const idMatch = content.match(/ID:\s*`?([^`\n]+)`?/);
+          const idMatch = content.match(/\*{0,2}ID:\*{0,2}\s*`?([^`\n]+)`?/);
           const nameMatch = content.match(/# Skill:\s*(.+)/);
-          const typeMatch = content.match(/Type:\s*`?([^`\n]+)`?/);
-          const layerMatch = content.match(/Layer:\s*`?([^`\n]+)`?/);
-          const verticalMatch = content.match(/Vertical:\s*`?([^`\n]+)`?/);
+          const typeMatch = content.match(/\*{0,2}Type:\*{0,2}\s*`?([^`\n]+)`?/);
+          const layerMatch = content.match(/\*{0,2}Layer:\*{0,2}\s*`?([^`\n]+)`?/);
+          const verticalMatch = content.match(/\*{0,2}Vertical:\*{0,2}\s*`?([^`\n]+)`?/);
 
           const id = idMatch?.[1].trim() || entry.name.replace("-skill.md", "");
           const name = nameMatch?.[1].trim() || id;
@@ -69,18 +69,29 @@ function scanSkillFiles(): DiscoveredSkill[] {
 }
 
 function loadRegistry(): Set<string> {
-  const registryPath = join(ECOSYSTEM_ROOT, "baseline-os", "packages", "baselineos", "src", "core", "skill-registry.ts");
   const ids = new Set<string>();
 
-  if (!existsSync(registryPath)) return ids;
+  // Scan skill-registry.ts for type definitions (not skill instances)
+  const registryPath = join(ECOSYSTEM_ROOT, "baseline-os", "packages", "baselineos", "src", "core", "skill-registry.ts");
+  if (existsSync(registryPath)) {
+    try {
+      const content = readFileSync(registryPath, "utf-8");
+      // skill-registry.ts only has type definitions, not skill instances
+      // actual skills are in gtcx-skills.ts
+    } catch { /* skip */ }
+  }
 
-  try {
-    const content = readFileSync(registryPath, "utf-8");
-    const matches = content.matchAll(/id:\s*['"](.+?)['"]/g);
-    for (const m of matches) {
-      ids.add(m[1]);
-    }
-  } catch { /* skip */ }
+  // Scan gtcx-skills.ts for skill('id', ...) calls
+  const gtcxPath = join(ECOSYSTEM_ROOT, "baseline-os", "packages", "baselineos", "src", "core", "gtcx-skills.ts");
+  if (existsSync(gtcxPath)) {
+    try {
+      const content = readFileSync(gtcxPath, "utf-8");
+      const matches = content.matchAll(/skill\(['"](.+?)['"]/g);
+      for (const m of matches) {
+        ids.add(m[1]);
+      }
+    } catch { /* skip */ }
+  }
 
   return ids;
 }
