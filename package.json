@@ -29,6 +29,9 @@
     "generate:soc2": "tsx scripts/generate-soc2-evidence.ts",
     "pentest:track": "tsx scripts/pentest-tracker.ts",
     "ecosystem:health:v2": "tsx scripts/ecosystem-health-v2.ts",
+    "ecosystem:validate": "tsx scripts/validate-ecosystem-consistency.ts",
+    "ecosystem:self-heal": "tsx scripts/ecosystem-self-heal.ts",
+    "generate:release-checklist": "tsx scripts/generate-release-checklist.ts",
     "check-credentials": "tsx scripts/check-credentials.ts",
     "test:integrations": "tsx scripts/test-integrations.ts",
     "test": "vitest run",
@@ -42,6 +45,7 @@
     "@types/node": "^22.0.0",
     "@types/js-yaml": "^4.0.9"
   },
+  "license": "AGPL-3.0",
   "dependencies": {
     "googleapis": "^172.0.0",
     "@google-cloud/local-auth": "^3.0.1",
