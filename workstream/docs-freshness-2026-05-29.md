@@ -2,77 +2,113 @@
 
 **Generated:** 2026-05-29
 **Repos:** 22
-**Markdown files:** 10494
+**Markdown files:** 7889
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| Total markdown files | 10494 |
-| Stale (>90d) | 67 |
-| Critically stale (>180d) | 0 |
-| Broken internal links | 0 |
-| TODOs | 826 |
-| FIXMEs | 243 |
+| Total markdown files | 7889 |
+| Stale (>90d) | 42 |
+| Critically stale (>180d) | 42 |
+| Broken internal links | 10065 |
+| TODOs | 537 |
+| FIXMEs | 125 |
 
-## Stale Files (90-180 days)
+## Critically Stale Files (>180 days)
 
-| Repo | File | Days Stale |
-|------|------|------------|
-| nyota-ai | .github/PULL_REQUEST_TEMPLATE.md | 115 |
-| gtcx-protocols | protocols/gci/conformance/readme.md | 114 |
-| gtcx-protocols | protocols/gci/governance/readme.md | 114 |
-| gtcx-infrastructure | infra/security/reports/README.md | 114 |
-| sensei-ai | .github/CODE_OF_CONDUCT.md | 114 |
-| sensei-ai | .github/CONTRIBUTING.md | 114 |
-| nyota-ai | .github/SECURITY.md | 114 |
-| compliance-os | data/sources/review_report.md | 112 |
-| sensei-ai | services/maba-service/README.md | 112 |
-| gtcx-docs | agile-pm/README.md | 112 |
-| compliance-os | infra/compliance/templates/README.md | 110 |
-| gtcx-protocols | protocols/gci/governance/decision-log.md | 101 |
-| sensei-ai | tools/release/homebrew-tap-readme.md | 101 |
-| gtcx-core | .changeset/README.md | 100 |
-| gtcx-core | packages/logging/README.md | 100 |
-| gtcx-core | packages/utils/README.md | 100 |
-| gtcx-core | rust/gtcx-consensus/README.md | 100 |
-| gtcx-core | rust/gtcx-edge/README.md | 100 |
-| gtcx-core | rust/gtcx-network/README.md | 100 |
-| gtcx-protocols | packages/auth/README.md | 99 |
-| gtcx-protocols | packages/location-types/README.md | 99 |
-| gtcx-protocols | packages/schemas/README.md | 99 |
-| gtcx-protocols | packages/typescript-config/README.md | 99 |
-| gtcx-protocols | packages/validators/README.md | 99 |
-| compliance-os | services/vxa-ml/models/README.md | 99 |
-| sensei-ai | .github/SECURITY.md | 99 |
-| sensei-ai | apps/agent-orchestrator/README.md | 99 |
-| sensei-ai | apps/cli/README.md | 99 |
-| sensei-ai | apps/docs/README.md | 99 |
-| gtcx-protocols | packages/audit/README.md | 98 |
+| Repo | File | Last Modified | Days Stale |
+|------|------|---------------|------------|
+| gtcx-protocols | docs/audit/_archive/README.md | unknown | 999 |
+| terminal-os | docs/audit/evidence-package/README.md | unknown | 999 |
+| terminal-os | docs/audit/master-audit-2026-05-29.md | unknown | 999 |
+| terminal-os | docs/operations/auth-role-matrix.md | unknown | 999 |
+| terminal-os | docs/sef/01-quality-rubric.md | unknown | 999 |
+| terminal-os | docs/sef/02-design-system.md | unknown | 999 |
+| terminal-os | docs/sef/03-component-library.md | unknown | 999 |
+| terminal-os | docs/sef/04-component-specs-missing.md | unknown | 999 |
+| terminal-os | docs/sef/05-error-state-patterns.md | unknown | 999 |
+| terminal-os | docs/sef/06-developer-playbook.md | unknown | 999 |
+| terminal-os | docs/sef/07-accessibility-roadmap.md | unknown | 999 |
+| terminal-os | docs/sef/08-production-readiness.md | unknown | 999 |
+| griot-ai | docs/audit/evidence-package/README.md | unknown | 999 |
+| griot-ai | docs/audit/master-audit-2026-05-29.md | unknown | 999 |
+| griot-ai | docs/ecosystem/skill-registry-entry.md | unknown | 999 |
+| griot-ai | docs/operations/api-rate-limiting.md | unknown | 999 |
+| griot-ai | docs/security/pen-test-rfp-2026-06.md | unknown | 999 |
+| terra-os | docs/agile/sprints/README.md | unknown | 999 |
+| terra-os | docs/agile/sprints/S54.md | unknown | 999 |
+| terra-os | docs/agile/sprints/S55.md | unknown | 999 |
+| terra-os | docs/agile/sprints/S56.md | unknown | 999 |
+| terra-os | docs/agile/sprints/S57.md | unknown | 999 |
+| terra-os | docs/agile/sprints/S58.md | unknown | 999 |
+| terra-os | docs/agile/sprints/S59.md | unknown | 999 |
+| terra-os | docs/agile/sprints/S60.md | unknown | 999 |
+| terra-os | docs/audit/sprint-execution/S57-external-kickoff-checklist.md | unknown | 999 |
+| terra-os | docs/security/npm-audit-exceptions-2026-05-29.md | unknown | 999 |
+| gtcx-markets | docs/architecture/eix/00-overview.md | unknown | 999 |
+| gtcx-markets | docs/architecture/eix/01-domain-model.md | unknown | 999 |
+| gtcx-markets | docs/architecture/eix/02-listing-layer.md | unknown | 999 |
+
+## Broken Internal Links
+
+| Repo | Source | Target | Line |
+|------|--------|--------|------|
+| baseline-os | docs/README.md | specs/_project/overview/overview-README.md | 29 |
+| baseline-os | docs/README.md | specs/_project/go-to-market/gtm/00-executive-brief.md | 29 |
+| baseline-os | docs/README.md | specs/_project/overview/overview-README.md | 30 |
+| baseline-os | docs/README.md | specs/_project/go-to-market/gtm/01-security-posture.md | 30 |
+| baseline-os | docs/README.md | specs/_project/go-to-market/gtm/02-compliance-matrix.md | 30 |
+| baseline-os | docs/README.md | specs/_project/overview/overview-README.md | 31 |
+| baseline-os | docs/README.md | gitbook/getting-started/getting-started.md | 31 |
+| baseline-os | docs/README.md | architecture/system-overview.md | 31 |
+| baseline-os | docs/README.md | architecture/system-overview.md | 32 |
+| baseline-os | docs/README.md | architecture/data-flow.md | 32 |
+| baseline-os | docs/README.md | specs/_project/overview/strategy/ga-technical-roadmap.md | 32 |
+| baseline-os | docs/README.md | architecture/ecosystem-integration.md | 33 |
+| baseline-os | docs/README.md | engineering/guides/integrations/mcp-listing.md | 33 |
+| baseline-os | docs/README.md | specs/_project/overview/overview-README.md | 134 |
+| baseline-os | docs/README.md | specs/_project/go-to-market/gtm/00-executive-brief.md | 135 |
+| baseline-os | docs/README.md | architecture/business-logic.md | 136 |
+| baseline-os | docs/README.md | architecture/principles/adoption-model.md | 137 |
+| baseline-os | docs/README.md | architecture/system-overview.md | 143 |
+| baseline-os | docs/README.md | architecture/ecosystem-integration.md | 144 |
+| baseline-os | docs/README.md | architecture/data-flow.md | 145 |
+| baseline-os | docs/README.md | specs/_project/overview/strategy/ga-technical-roadmap.md | 146 |
+| baseline-os | docs/README.md | specs/specification.md | 147 |
+| baseline-os | docs/README.md | specs/_project/go-to-market/gtm/01-security-posture.md | 153 |
+| baseline-os | docs/README.md | specs/_project/go-to-market/gtm/02-compliance-matrix.md | 154 |
+| baseline-os | docs/README.md | operations/compliance/soc2-readiness.md | 155 |
+| baseline-os | docs/README.md | operations/compliance/iso27001-readiness.md | 156 |
+| baseline-os | docs/README.md | cli/lang-guide.md | 162 |
+| baseline-os | docs/README.md | cli/cli-guide.md | 163 |
+| baseline-os | docs/README.md | cli/command-index.md | 164 |
+| baseline-os | docs/README.md | gitbook/getting-started/getting-started.md | 170 |
+| ... | ... | ... | ... |
 
 ## Per-Repo Documentation
 
 | Repo | Files | Stale | TODOs |
 |------|-------|-------|-------|
-| gtcx-docs | 2624 | 1 | 81 |
-| sensei-ai | 889 | 15 | 45 |
-| gtcx-protocols | 846 | 13 | 36 |
-| gtcx-mobile | 696 | 0 | 61 |
-| baseline-os | 651 | 0 | 212 |
-| compliance-os | 605 | 20 | 24 |
-| terminal-os | 505 | 0 | 36 |
-| gtcx-infrastructure | 497 | 1 | 13 |
-| gtcx-core | 428 | 9 | 23 |
-| terra-os | 351 | 5 | 37 |
-| gtcx-platforms | 310 | 0 | 44 |
-| nyota-ai | 304 | 2 | 14 |
-| gtcx-intelligence | 290 | 0 | 36 |
-| gtcx-agile | 243 | 0 | 30 |
-| ledger-ui | 225 | 1 | 16 |
-| gtcx-hardware | 211 | 0 | 10 |
-| exploration-os | 200 | 0 | 17 |
-| griot-ai | 180 | 0 | 16 |
-| gtcx-markets | 161 | 0 | 24 |
-| gtcx-agentic | 100 | 0 | 18 |
-| veritas-ai | 96 | 0 | 25 |
-| gtcx-operations | 82 | 0 | 8 |
+| gtcx-docs | 2507 | 0 | 54 |
+| gtcx-protocols | 710 | 1 | 32 |
+| terminal-os | 454 | 11 | 31 |
+| baseline-os | 440 | 0 | 202 |
+| gtcx-infrastructure | 421 | 0 | 9 |
+| gtcx-mobile | 361 | 0 | 37 |
+| gtcx-core | 338 | 0 | 19 |
+| sensei-ai | 288 | 0 | 16 |
+| nyota-ai | 276 | 0 | 10 |
+| compliance-os | 264 | 0 | 14 |
+| gtcx-platforms | 248 | 7 | 27 |
+| gtcx-intelligence | 245 | 0 | 17 |
+| terra-os | 221 | 10 | 15 |
+| gtcx-hardware | 176 | 0 | 6 |
+| exploration-os | 166 | 0 | 3 |
+| ledger-ui | 162 | 0 | 12 |
+| griot-ai | 160 | 5 | 5 |
+| gtcx-agile | 157 | 0 | 7 |
+| gtcx-markets | 127 | 8 | 8 |
+| gtcx-agentic | 68 | 0 | 1 |
+| veritas-ai | 66 | 0 | 12 |
+| gtcx-operations | 34 | 0 | 0 |
