@@ -43,6 +43,8 @@
     "monitor:bundles": "tsx scripts/bundle-size-monitor.ts",
     "gate:docs": "tsx scripts/docs-freshness-ci-gate.ts",
     "generate:release-notes": "tsx scripts/generate-release-notes.ts",
+    "graph:v3": "tsx scripts/ecosystem-graph-v3.ts",
+    "discover:skills": "tsx scripts/skill-registry-auto-discovery.ts",
     "track:docs": "tsx scripts/documentation-freshness-tracker.ts",
     "check-credentials": "tsx scripts/check-credentials.ts",
     "test:integrations": "tsx scripts/test-integrations.ts",
