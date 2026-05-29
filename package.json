@@ -33,6 +33,7 @@
     "ecosystem:self-heal": "tsx scripts/ecosystem-self-heal.ts",
     "generate:release-checklist": "tsx scripts/generate-release-checklist.ts",
     "generate:changelog": "tsx scripts/generate-ecosystem-changelog.ts",
+    "score:dependencies": "tsx scripts/dependency-freshness-scorer.ts",
     "check-credentials": "tsx scripts/check-credentials.ts",
     "test:integrations": "tsx scripts/test-integrations.ts",
     "test": "vitest run",
