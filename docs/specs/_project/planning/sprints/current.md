@@ -1,4 +1,18 @@
 ---
+title: "Sprint 46: Operations Setup"
+status: "current"
+date: "2026-05-27"
+owner: "gtcx-operations"
+role: "protocol-architect"
+agent_id: "agent://gtcx-operations/2026-05-27/session-backfill"
+trust_score: 60
+autonomy_level: "permissioned"
+tier: "standard"
+tags: ["documentation", "specs"]
+review_cycle: "on-change"
+---
+
+---
 sprint: 46
 period: "2026-05-12 to 2026-05-25"
 objective: "Set up gtcx-operations repo and initial templates"

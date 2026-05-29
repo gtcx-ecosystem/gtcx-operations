@@ -1,4 +1,18 @@
 ---
+title: "GTCX Operations — Agile Team"
+status: "current"
+date: "2026-05-27"
+owner: "gtcx-operations"
+role: "product-agent"
+agent_id: "agent://gtcx-operations/2026-05-27/session-backfill"
+trust_score: 60
+autonomy_level: "permissioned"
+tier: "standard"
+tags: ["documentation", "specs"]
+review_cycle: "on-change"
+---
+
+---
 title: 'GTCX Operations — Agile Team'
 status: 'current'
 date: '2026-05-27'

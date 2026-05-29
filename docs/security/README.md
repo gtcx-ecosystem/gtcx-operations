@@ -1,0 +1,17 @@
+---
+title: "Security"
+status: "current"
+date: "2026-05-28"
+owner: "gtcx-operations"
+role: "protocol-architect"
+agent_id: "agent://gtcx-operations/2026-05-28/structure-fix"
+trust_score: 60
+autonomy_level: "permissioned"
+tier: "standard"
+tags: ["documentation", "security"]
+review_cycle: "on-change"
+---
+
+# Security
+
+> Canonical folder per Protocol 1 v2.1. Content to be migrated or added.

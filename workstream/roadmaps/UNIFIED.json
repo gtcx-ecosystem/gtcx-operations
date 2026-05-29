@@ -1,0 +1,1532 @@
+{
+  "generatedAt": "2026-05-27T13:27:09.122Z",
+  "summary": {
+    "totalRepos": 25,
+    "reposWithRoadmaps": 8,
+    "totalEpics": 126,
+    "p1Epics": 31,
+    "doneEpics": 5,
+    "inProgressEpics": 13,
+    "plannedEpics": 108
+  },
+  "roadmaps": [
+    {
+      "repo": "baseline-os",
+      "hasRoadmap": true,
+      "northStar": "The orchestration hub of the GTCX ecosystem — every repo coordinates through BaselineOS, and every agent operates with trust, context, and accountability.",
+      "owner": "@amanianai",
+      "lastUpdated": "2026-05-27",
+      "epicCount": 20,
+      "p1Count": 8,
+      "epics": [
+        {
+          "name": "Populate sprint docs across 21 repos",
+          "priority": "P1",
+          "status": "🚧 In Progress",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Coordination Activation",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "Fix daily standup git detection",
+          "priority": "P1",
+          "status": "🚧 In Progress",
+          "effort": "S",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Coordination Activation",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "Resolve 4 P0 critical path blockers",
+          "priority": "P1",
+          "status": "🚧 In Progress",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-intelligence",
+          "quarter": "Coordination Activation",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "Fix desktop test regression",
+          "priority": "P1",
+          "status": "🚧 In Progress",
+          "effort": "S",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Coordination Activation",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "Fix API contract + MCP manifest paths",
+          "priority": "P1",
+          "status": "📋 Planned",
+          "effort": "S",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Coordination Activation",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "Fix folder hygiene (25→30/35)",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "S",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Coordination Activation",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "gtcx-agentic adopts baselineos runtime",
+          "priority": "P1",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-agentic",
+          "quarter": "Agentic Runtime",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "Standardize `.agent/config/` pattern",
+          "priority": "P1",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "all repos",
+          "quarter": "Agentic Runtime",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "Desktop app ecosystem widget",
+          "priority": "P1",
+          "status": "📋 Planned",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "desktop team",
+          "quarter": "Agentic Runtime",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "Add tests to gtcx-agile",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-agile",
+          "quarter": "Agentic Runtime",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "Property-based testing (2+ packages)",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Agentic Runtime",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "SBOM artifact generation",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "S",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Agentic Runtime",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "Cross-repo event bus (gtcx-core)",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-core",
+          "quarter": "Event Bus & Ecosystem Maturity",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "Real-time coordination dashboard",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "desktop team",
+          "quarter": "Event Bus & Ecosystem Maturity",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "Automated release pipeline",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Event Bus & Ecosystem Maturity",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "gtcx-agentic resists adopting baselineos",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "Gradual migration; prove value with POC",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Event Bus & Ecosystem Maturity",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "Protocol definitions",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "No",
+          "owner": "Q3",
+          "dependencies": "—",
+          "quarter": "Event Bus & Ecosystem Maturity",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "gtcx-operations",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "No",
+          "owner": "Q2",
+          "dependencies": "—",
+          "quarter": "Event Bus & Ecosystem Maturity",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "gtcx-markets",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "No",
+          "owner": "Q2",
+          "dependencies": "—",
+          "quarter": "Event Bus & Ecosystem Maturity",
+          "repo": "baseline-os"
+        },
+        {
+          "name": "P0 blockers resolved",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "0/4",
+          "owner": "0/4",
+          "dependencies": "—",
+          "quarter": "Event Bus & Ecosystem Maturity",
+          "repo": "baseline-os"
+        }
+      ]
+    },
+    {
+      "repo": "compliance-os",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "exploration-os",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "griot-ai",
+      "hasRoadmap": true,
+      "northStar": "The intelligence media engine of the GTCX ecosystem — synthesizing raw data into actionable intelligence for 54 African jurisdictions via the THESIS AI engine.",
+      "owner": "@amanianai",
+      "lastUpdated": "2026-05-27",
+      "epicCount": 11,
+      "p1Count": 2,
+      "epics": [
+        {
+          "name": "Stabilize 233+ RSS feed ingestion",
+          "priority": "P1",
+          "status": "🚧 In Progress",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Feed Stability & Veritas",
+          "repo": "griot-ai"
+        },
+        {
+          "name": "Veritas54 attestation production",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-core",
+          "quarter": "Feed Stability & Veritas",
+          "repo": "griot-ai"
+        },
+        {
+          "name": "THESIS engine performance tuning",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Feed Stability & Veritas",
+          "repo": "griot-ai"
+        },
+        {
+          "name": "YouTube transcript pipeline",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "S",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Feed Stability & Veritas",
+          "repo": "griot-ai"
+        },
+        {
+          "name": "Consume gtcx-markets deal data",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-markets",
+          "quarter": "Deal Intelligence & Events",
+          "repo": "griot-ai"
+        },
+        {
+          "name": "Event bus integration (publish/subscribe)",
+          "priority": "P1",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-core",
+          "quarter": "Deal Intelligence & Events",
+          "repo": "griot-ai"
+        },
+        {
+          "name": "Real-time CTII/CDII score feeds",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Deal Intelligence & Events",
+          "repo": "griot-ai"
+        },
+        {
+          "name": "DealRoom54 attestation linking",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "S",
+          "owner": "@amanianai",
+          "dependencies": "terminal-os",
+          "quarter": "Deal Intelligence & Events",
+          "repo": "griot-ai"
+        },
+        {
+          "name": "PANX price feed integration",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-protocols",
+          "quarter": "Market Intelligence",
+          "repo": "griot-ai"
+        },
+        {
+          "name": "Frontier54 auto-opportunity generation",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-markets",
+          "quarter": "Market Intelligence",
+          "repo": "griot-ai"
+        },
+        {
+          "name": "Executive54 personalized briefings",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Market Intelligence",
+          "repo": "griot-ai"
+        }
+      ]
+    },
+    {
+      "repo": "gtcx-agentic",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "gtcx-agile",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "gtcx-core",
+      "hasRoadmap": true,
+      "northStar": "The shared foundation of the GTCX ecosystem — types, crypto primitives, event schemas, and SDKs that every repo depends on.",
+      "owner": "@amanianai",
+      "lastUpdated": "2026-05-27",
+      "epicCount": 13,
+      "p1Count": 4,
+      "epics": [
+        {
+          "name": "Fix type drift (Prisma ↔ TS Deal type)",
+          "priority": "P1",
+          "status": "🚧 In Progress",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-markets",
+          "quarter": "Shared Types & Crypto",
+          "repo": "gtcx-core"
+        },
+        {
+          "name": "Standardize `@gtcx/crypto` package",
+          "priority": "P1",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Shared Types & Crypto",
+          "repo": "gtcx-core"
+        },
+        {
+          "name": "Publish `@gtcx/types` v1.0",
+          "priority": "P1",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Shared Types & Crypto",
+          "repo": "gtcx-core"
+        },
+        {
+          "name": "SLSA provenance spec for builds",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-intelligence",
+          "quarter": "Shared Types & Crypto",
+          "repo": "gtcx-core"
+        },
+        {
+          "name": "Cross-repo event bus (typed events)",
+          "priority": "P1",
+          "status": "📋 Planned",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "all repos",
+          "quarter": "Event Bus & SDK",
+          "repo": "gtcx-core"
+        },
+        {
+          "name": "`@gtcx/sdk` v1.0 with protocol clients",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-protocols",
+          "quarter": "Event Bus & SDK",
+          "repo": "gtcx-core"
+        },
+        {
+          "name": "Runtime integration with terminal-os",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "terminal-os",
+          "quarter": "Event Bus & SDK",
+          "repo": "gtcx-core"
+        },
+        {
+          "name": "Runtime integration with griot-ai",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "griot-ai",
+          "quarter": "Event Bus & SDK",
+          "repo": "gtcx-core"
+        },
+        {
+          "name": "OpenAPI spec validation",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Event Bus & SDK",
+          "repo": "gtcx-core"
+        },
+        {
+          "name": "PvP atomic settlement protocol",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-protocols",
+          "quarter": "Settlement & Maturity",
+          "repo": "gtcx-core"
+        },
+        {
+          "name": "SDK coverage: 100% of platform APIs",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-platforms",
+          "quarter": "Settlement & Maturity",
+          "repo": "gtcx-core"
+        },
+        {
+          "name": "Ecosystem integration score 8.0+",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "all repos",
+          "quarter": "Settlement & Maturity",
+          "repo": "gtcx-core"
+        },
+        {
+          "name": "Protocol specs",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "Q3",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Settlement & Maturity",
+          "repo": "gtcx-core"
+        }
+      ]
+    },
+    {
+      "repo": "gtcx-docs",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "gtcx-hardware",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "gtcx-infrastructure",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "gtcx-intelligence",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "gtcx-markets",
+      "hasRoadmap": true,
+      "northStar": "The AI-native dealer-broker for African exploration markets — where deals are originated, structured, and funded with institutional-grade governance and LP transparency.",
+      "owner": "@amanianai",
+      "lastUpdated": "2026-05-27",
+      "epicCount": 22,
+      "p1Count": 3,
+      "epics": [
+        {
+          "name": "Investor dashboard (threads, docs, votes, notifications, activity)",
+          "priority": "P1",
+          "status": "✅ Done",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "baseline-os",
+          "quarter": "Investor Dashboard & Deal Pipeline",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "Deal pipeline (advisory detail + investor deal room)",
+          "priority": "P1",
+          "status": "✅ Done",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "advisory-api",
+          "quarter": "Investor Dashboard & Deal Pipeline",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "Database migration (Prisma schema extensions)",
+          "priority": "P1",
+          "status": "🚧 In Progress",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Investor Dashboard & Deal Pipeline",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "Seed demo data for investor dashboard",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "S",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Investor Dashboard & Deal Pipeline",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "Deal edit page (`/deals/:id/edit`)",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Investor Dashboard & Deal Pipeline",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "Wire memo generation from deal detail",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "advisory-api",
+          "quarter": "AI Memo Generation & EIX Tier 1",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "Wire term sheet execution UI",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "advisory-api",
+          "quarter": "AI Memo Generation & EIX Tier 1",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "\"Express interest\" in portal deal detail",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "fund-api",
+          "quarter": "AI Memo Generation & EIX Tier 1",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "Investor interest tracking model",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "AI Memo Generation & EIX Tier 1",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "EIX Tier 1 matching engine (equipment finance)",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "brokerage-api",
+          "quarter": "AI Memo Generation & EIX Tier 1",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "Capital call payment UI in portal",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "fund-api",
+          "quarter": "AI Memo Generation & EIX Tier 1",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "Auto-origination from ExplorationOS",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "exploration-os",
+          "quarter": "Automation & AGX Extension",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "EIX Tier 2 (AGX order types)",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-platforms",
+          "quarter": "Automation & AGX Extension",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "Full settlement trace for LPs",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "custody-api",
+          "quarter": "Automation & AGX Extension",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "Portfolio construction tools",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "research-api",
+          "quarter": "Automation & AGX Extension",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "DATABASE_URL not available",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "Use local PostgreSQL for dev; document prod setup",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Automation & AGX Extension",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "ExplorationOS bankability API unstable",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "Mock bankability scores for testing",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Automation & AGX Extension",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "ExplorationOS bankability",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "Yes (auto-origination)",
+          "owner": "Q4",
+          "dependencies": "—",
+          "quarter": "Automation & AGX Extension",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "Compliance for KYC",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "No",
+          "owner": "Q3",
+          "dependencies": "—",
+          "quarter": "Automation & AGX Extension",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "gtcx-operations",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "No",
+          "owner": "Q3",
+          "dependencies": "—",
+          "quarter": "Automation & AGX Extension",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "baseline-os",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "No",
+          "owner": "Q2",
+          "dependencies": "—",
+          "quarter": "Automation & AGX Extension",
+          "repo": "gtcx-markets"
+        },
+        {
+          "name": "Portal page load time",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "< 1.5s",
+          "owner": "< 1s",
+          "dependencies": "—",
+          "quarter": "Automation & AGX Extension",
+          "repo": "gtcx-markets"
+        }
+      ]
+    },
+    {
+      "repo": "gtcx-mobile",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "gtcx-operations",
+      "hasRoadmap": true,
+      "northStar": "Corporate operations run as agentic software — every communication, contract, budget, and follow-up is versioned, routed, and observable across the GTCX ecosystem.",
+      "owner": "@amanianai",
+      "lastUpdated": "2026-05-27",
+      "epicCount": 21,
+      "p1Count": 7,
+      "epics": [
+        {
+          "name": "Complete architecture docs",
+          "priority": "P1",
+          "status": "✅ Done",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Documentation & ClickUp Activation",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Complete workflow runbooks",
+          "priority": "P1",
+          "status": "✅ Done",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Documentation & ClickUp Activation",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Complete API reference",
+          "priority": "P1",
+          "status": "✅ Done",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Documentation & ClickUp Activation",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Fix ClickUp list ID mapping",
+          "priority": "P1",
+          "status": "🚧 In Progress",
+          "effort": "S",
+          "owner": "@amanianai",
+          "dependencies": "baseline-os",
+          "quarter": "Documentation & ClickUp Activation",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Place Google Workspace credentials",
+          "priority": "P1",
+          "status": "🚧 In Progress",
+          "effort": "S",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Documentation & ClickUp Activation",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Test all integrations end-to-end",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Documentation & ClickUp Activation",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Event bus integration (publish)",
+          "priority": "P1",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-core",
+          "quarter": "Event-Driven Operations",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Push investor notifications to gtcx-markets portal",
+          "priority": "P1",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-markets",
+          "quarter": "Event-Driven Operations",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Automated WhatsApp campaign runner",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "Twilio",
+          "quarter": "Event-Driven Operations",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "CRM bidirectional sync with Google Contacts",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "S",
+          "owner": "@amanianai",
+          "dependencies": "Google",
+          "quarter": "Event-Driven Operations",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Budget variance alerts (Slack + email)",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "S",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Event-Driven Operations",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Auto-execute scheduled follow-ups",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "WhatsApp API",
+          "quarter": "Autonomous Operations",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Monthly compliance report generation",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Autonomous Operations",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Nyota-AI event sharing",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "nyota-ai",
+          "quarter": "Autonomous Operations",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "AI-powered contract review",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "griot-ai",
+          "quarter": "Autonomous Operations",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "WhatsApp API rate limits",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "Implement exponential backoff; batch messages",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Autonomous Operations",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Portal notification API",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "Yes",
+          "owner": "Q3",
+          "dependencies": "—",
+          "quarter": "Autonomous Operations",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Coordination reports",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "No",
+          "owner": "Q2",
+          "dependencies": "—",
+          "quarter": "Autonomous Operations",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "gtcx-markets",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "No",
+          "owner": "Q3",
+          "dependencies": "—",
+          "quarter": "Autonomous Operations",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "baseline-os",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "No",
+          "owner": "Q2",
+          "dependencies": "—",
+          "quarter": "Autonomous Operations",
+          "repo": "gtcx-operations"
+        },
+        {
+          "name": "Google APIs operational",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "5/5",
+          "owner": "5/5",
+          "dependencies": "—",
+          "quarter": "Autonomous Operations",
+          "repo": "gtcx-operations"
+        }
+      ]
+    },
+    {
+      "repo": "gtcx-platforms",
+      "hasRoadmap": true,
+      "northStar": "The six sovereign digital platforms of the GTCX ecosystem — CRX, SGX, AGX, Pathways, Veritas, and Operations — enabling compliant, traceable commodity trade across Africa.",
+      "owner": "@amanianai",
+      "lastUpdated": "2026-05-27",
+      "epicCount": 11,
+      "p1Count": 3,
+      "epics": [
+        {
+          "name": "Replace mock data with API calls",
+          "priority": "P1",
+          "status": "🚧 In Progress",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "AGX Scaffold & Tenant Routing",
+          "repo": "gtcx-platforms"
+        },
+        {
+          "name": "Tenant URL-level scoping",
+          "priority": "P1",
+          "status": "🚧 In Progress",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "AGX Scaffold & Tenant Routing",
+          "repo": "gtcx-platforms"
+        },
+        {
+          "name": "Real JWT auth (replace devToken)",
+          "priority": "P1",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "AGX Scaffold & Tenant Routing",
+          "repo": "gtcx-platforms"
+        },
+        {
+          "name": "AGX dashboard v0.2",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "AGX Scaffold & Tenant Routing",
+          "repo": "gtcx-platforms"
+        },
+        {
+          "name": "CRX permit validation API",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "compliance-os",
+          "quarter": "CRX + SGX & End-to-End",
+          "repo": "gtcx-platforms"
+        },
+        {
+          "name": "SGX settlement gateway",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-markets",
+          "quarter": "CRX + SGX & End-to-End",
+          "repo": "gtcx-platforms"
+        },
+        {
+          "name": "End-to-end CRX→SGX→AGX protocol tests",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-protocols",
+          "quarter": "CRX + SGX & End-to-End",
+          "repo": "gtcx-platforms"
+        },
+        {
+          "name": "AGX buyer verification (TradePass)",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-protocols",
+          "quarter": "CRX + SGX & End-to-End",
+          "repo": "gtcx-platforms"
+        },
+        {
+          "name": "AGX live transactions (pilot)",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-markets",
+          "quarter": "Production Readiness",
+          "repo": "gtcx-platforms"
+        },
+        {
+          "name": "Multi-tenant deployment",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-infrastructure",
+          "quarter": "Production Readiness",
+          "repo": "gtcx-platforms"
+        },
+        {
+          "name": "EIX Tier 2 order types",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-markets",
+          "quarter": "Production Readiness",
+          "repo": "gtcx-platforms"
+        }
+      ]
+    },
+    {
+      "repo": "gtcx-protocols",
+      "hasRoadmap": true,
+      "northStar": "The protocol layer of the GTCX ecosystem — TradePass, GeoTag, GCI, PvP, PANX, and VaultMark — providing identity, provenance, compliance, settlement, price consensus, and custody verification.",
+      "owner": "@amanianai",
+      "lastUpdated": "2026-05-27",
+      "epicCount": 17,
+      "p1Count": 1,
+      "epics": [
+        {
+          "name": "TradePass v1.0 spec (DID identity)",
+          "priority": "P1",
+          "status": "🚧 In Progress",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Specification Completeness",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "GeoTag v1.0 spec (provenance)",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Specification Completeness",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "GCI v1.0 spec (compliance scoring)",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "compliance-os",
+          "quarter": "Specification Completeness",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "VaultMark v1.0 spec (custody)",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Specification Completeness",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "PANX v0.9 spec (price oracle)",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Specification Completeness",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "PvP v0.9 spec (atomic settlement)",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-core",
+          "quarter": "Specification Completeness",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "TradePass reference implementation",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Reference Implementations",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "GCI scoring engine (PREMIUM/VERIFIED/PROVISIONAL)",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Reference Implementations",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "PANX pBFT consensus testnet",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "—",
+          "quarter": "Reference Implementations",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "Protocol SDK consumed by 3+ repos",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "all repos",
+          "quarter": "Reference Implementations",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "TradePass production deployment",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-platforms",
+          "quarter": "Production Protocols",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "GCI production scoring",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-platforms",
+          "quarter": "Production Protocols",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "PANX mainnet price feed",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-platforms",
+          "quarter": "Production Protocols",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "PvP first atomic settlement",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-core",
+          "quarter": "Production Protocols",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "Protocols with v1.0 specs",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "6",
+          "owner": "6",
+          "dependencies": "—",
+          "quarter": "Production Protocols",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "Protocol imports by repos",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "6",
+          "owner": "10",
+          "dependencies": "—",
+          "quarter": "Production Protocols",
+          "repo": "gtcx-protocols"
+        },
+        {
+          "name": "Production protocols",
+          "priority": "P3",
+          "status": "📋 Planned",
+          "effort": "0",
+          "owner": "2",
+          "dependencies": "—",
+          "quarter": "Production Protocols",
+          "repo": "gtcx-protocols"
+        }
+      ]
+    },
+    {
+      "repo": "ledger-ui",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "ledger-ui-archive",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "nyota-ai",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "scripts",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "sensei-ai",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "terminal-os",
+      "hasRoadmap": true,
+      "northStar": "The Bloomberg Terminal for African commodities — real-time intelligence, deal execution, and portfolio management across 54 jurisdictions.",
+      "owner": "@amanianai",
+      "lastUpdated": "2026-05-27",
+      "epicCount": 11,
+      "p1Count": 3,
+      "epics": [
+        {
+          "name": "AGX proxy routes (listings, trades)",
+          "priority": "P2",
+          "status": "🚧 In Progress",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-platforms",
+          "quarter": "AGX Proxy & DealRoom",
+          "repo": "terminal-os"
+        },
+        {
+          "name": "DealRoom54 integration with gtcx-markets",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-markets",
+          "quarter": "AGX Proxy & DealRoom",
+          "repo": "terminal-os"
+        },
+        {
+          "name": "TradeDesk54 real-time signal feed",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "griot-ai",
+          "quarter": "AGX Proxy & DealRoom",
+          "repo": "terminal-os"
+        },
+        {
+          "name": "Fix zero runtime integration with gtcx-core",
+          "priority": "P1",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-core",
+          "quarter": "AGX Proxy & DealRoom",
+          "repo": "terminal-os"
+        },
+        {
+          "name": "Adopt `@gtcx/sdk` for protocol calls",
+          "priority": "P1",
+          "status": "📋 Planned",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-core",
+          "quarter": "SDK & Events",
+          "repo": "terminal-os"
+        },
+        {
+          "name": "Event-driven UI updates (SSE/webhooks)",
+          "priority": "P1",
+          "status": "📋 Planned",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-core",
+          "quarter": "SDK & Events",
+          "repo": "terminal-os"
+        },
+        {
+          "name": "griotFetch() gateway production hardening",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "griot-ai",
+          "quarter": "SDK & Events",
+          "repo": "terminal-os"
+        },
+        {
+          "name": "Ledger54 settlement trace viewer",
+          "priority": "P2",
+          "status": "📋 Planned",
+          "effort": "M",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-markets",
+          "quarter": "SDK & Events",
+          "repo": "terminal-os"
+        },
+        {
+          "name": "Real-time PANX price feed",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "XL",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-protocols",
+          "quarter": "Real-Time & Mobile",
+          "repo": "terminal-os"
+        },
+        {
+          "name": "Mobile-responsive TradeDesk54",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-mobile",
+          "quarter": "Real-Time & Mobile",
+          "repo": "terminal-os"
+        },
+        {
+          "name": "EIX order book in TradeDesk54",
+          "priority": "P3",
+          "status": "🧊 Icebox",
+          "effort": "L",
+          "owner": "@amanianai",
+          "dependencies": "gtcx-markets",
+          "quarter": "Real-Time & Mobile",
+          "repo": "terminal-os"
+        }
+      ]
+    },
+    {
+      "repo": "terra-os",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "veritas-ai",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    },
+    {
+      "repo": "workstream",
+      "hasRoadmap": false,
+      "northStar": "",
+      "owner": "",
+      "lastUpdated": "",
+      "epicCount": 0,
+      "p1Count": 0,
+      "epics": []
+    }
+  ]
+}
