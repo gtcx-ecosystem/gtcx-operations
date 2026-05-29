@@ -38,6 +38,7 @@
     "remediate:security": "tsx scripts/security-auto-remediate.ts",
     "schedule:updates": "tsx scripts/dependency-update-scheduler.ts",
     "track:todos": "tsx scripts/todo-prioritizer.ts",
+    "analyze:impact": "tsx scripts/ecosystem-impact-analyzer.ts",
     "track:docs": "tsx scripts/documentation-freshness-tracker.ts",
     "check-credentials": "tsx scripts/check-credentials.ts",
     "test:integrations": "tsx scripts/test-integrations.ts",
