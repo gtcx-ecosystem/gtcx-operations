@@ -35,6 +35,7 @@
     "generate:changelog": "tsx scripts/generate-ecosystem-changelog.ts",
     "score:dependencies": "tsx scripts/dependency-freshness-scorer.ts",
     "audit:security": "tsx scripts/security-audit-scheduler.ts",
+    "track:docs": "tsx scripts/documentation-freshness-tracker.ts",
     "check-credentials": "tsx scripts/check-credentials.ts",
     "test:integrations": "tsx scripts/test-integrations.ts",
     "test": "vitest run",
