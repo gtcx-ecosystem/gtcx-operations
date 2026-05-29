@@ -5,3 +5,13 @@ node_modules/
 .DS_Store
 .secrets/
 dist/
+
+# Auto-added by ecosystem-self-heal
+Thumbs.db
+logs/
+coverage/
+.nyc_output/
+build/
+.turbo/
+.next/
+out/
