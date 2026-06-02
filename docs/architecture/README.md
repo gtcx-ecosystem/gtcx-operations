@@ -16,8 +16,8 @@ review_cycle: "on-change"
 title: 'Architecture'
 status: 'current'
 date: '2026-05-27'
-owner: 'ops@gtcx.trade'
-role: 'ops@gtcx.trade'
+owner: 'ops@gtcx.io'
+role: 'ops@gtcx.io'
 tier: 'standard'
 tags: ['architecture']
 review_cycle: 'on-change'
@@ -147,7 +147,7 @@ Service account authentication with domain-wide delegation:
 | **Drive** | `drive`, `drive.file` | Store contracts, pitch decks | `src/utils/drive-client.ts` |
 | **Sheets** | `spreadsheets` | Budget dashboards, investor reports | `src/utils/sheets-client.ts` |
 
-**Auth:** JWT-based service account (`src/utils/google-auth.ts`) with domain-wide delegation for `ops@gtcx.trade`.
+**Auth:** JWT-based service account (`src/utils/google-auth.ts`) with domain-wide delegation for `ops@gtcx.io`.
 
 ### Data Flow
 
@@ -252,7 +252,7 @@ pnpm test:integrations # Test all API integrations (dry-run)
 
 - **`.secrets/`** is gitignored — never commit credentials
 - Service account keys rotated every 90 days
-- Domain-wide delegation restricted to `ops@gtcx.trade`
+- Domain-wide delegation restricted to `ops@gtcx.io`
 - Email audit trail in `email/sent/` (JSON logs with timestamps)
 - WhatsApp message audit trail in `whatsapp/sent/` (JSON logs)
 

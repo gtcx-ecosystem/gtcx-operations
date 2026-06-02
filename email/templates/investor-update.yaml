@@ -20,7 +20,7 @@ body_text: |
   The GTCX Team
 
   ---
-  GTCX Protocol | https://gtcx.trade
+  GTCX Protocol | https://gtcx.io
   Unsubscribe: {{unsubscribe_link}}
 variables:
   - first_name

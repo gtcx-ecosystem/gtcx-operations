@@ -16,8 +16,8 @@ review_cycle: "on-change"
 title: 'GTCX Operations — Product Backlog'
 status: 'current'
 date: '2026-05-27'
-owner: 'ops@gtcx.trade'
-role: 'ops@gtcx.trade'
+owner: 'ops@gtcx.io'
+role: 'ops@gtcx.io'
 tier: 'standard'
 tags: ['backlog', 'planning', 'operations']
 review_cycle: 'on-change'

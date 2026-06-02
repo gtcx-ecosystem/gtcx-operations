@@ -16,8 +16,8 @@ review_cycle: "on-change"
 title: 'Reference'
 status: 'current'
 date: '2026-05-27'
-owner: 'ops@gtcx.trade'
-role: 'ops@gtcx.trade'
+owner: 'ops@gtcx.io'
+role: 'ops@gtcx.io'
 tier: 'standard'
 tags: ['reference', 'research']
 review_cycle: 'quarterly'

@@ -99,7 +99,7 @@ console.log('');
 
 if (allValid) {
   console.log('✅ All credentials are valid. You can now run:');
-  console.log('   pnpm email:send --template=investor-update --to="your-email@gtcx.trade"');
+  console.log('   pnpm email:send --template=investor-update --to="your-email@gtcx.io"');
   console.log('   pnpm calendar:schedule');
   console.log('   pnpm sheets:sync-budgets');
 } else {

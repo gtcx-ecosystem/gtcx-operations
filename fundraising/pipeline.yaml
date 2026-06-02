@@ -3,7 +3,7 @@ pipeline:
   target_raise: 5000000
   currency: USD
   target_close: "2026-09-30"
-  owner: "founders@gtcx.trade"
+  owner: "founders@gtcx.io"
 
 stages:
   - name: "Prospecting"

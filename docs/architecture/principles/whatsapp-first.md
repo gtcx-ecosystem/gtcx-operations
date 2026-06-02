@@ -16,8 +16,8 @@ review_cycle: "on-change"
 title: 'WhatsApp-First Communications Strategy'
 status: 'current'
 date: '2026-05-27'
-owner: 'founders@gtcx.trade'
-role: 'ops@gtcx.trade'
+owner: 'founders@gtcx.io'
+role: 'ops@gtcx.io'
 tier: 'standard'
 tags: ['communications', 'architecture', 'principles']
 review_cycle: 'on-change'

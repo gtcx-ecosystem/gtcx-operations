@@ -5,7 +5,7 @@ const validBudget = {
   quarter: 'Q2-2026',
   period: { start: '2026-04-01', end: '2026-06-30' },
   currency: 'USD',
-  owner: 'finance@gtcx.trade',
+  owner: 'finance@gtcx.io',
   version: '1.0',
   categories: {
     engineering: {

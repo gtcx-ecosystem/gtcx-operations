@@ -30,7 +30,7 @@ describe('EmailLogSchema', () => {
     const log = {
       id: 'EML-ABC123',
       to: ['test@example.com'],
-      from: 'ops@gtcx.trade',
+      from: 'ops@gtcx.io',
       subject: 'Test',
       body_preview: 'Hello world',
       sent_at: '2026-05-17T10:00:00Z',
@@ -43,7 +43,7 @@ describe('EmailLogSchema', () => {
     const bad = {
       id: 'INVALID',
       to: ['test@example.com'],
-      from: 'ops@gtcx.trade',
+      from: 'ops@gtcx.io',
       subject: 'Test',
       body_preview: 'Hello',
       sent_at: '2026-05-17T10:00:00Z',
@@ -56,7 +56,7 @@ describe('EmailProviderConfigSchema', () => {
   it('accepts mock provider config', () => {
     const config = {
       provider: 'mock',
-      from_address: 'ops@gtcx.trade',
+      from_address: 'ops@gtcx.io',
     };
     expect(EmailProviderConfigSchema.safeParse(config).success).toBe(true);
   });
@@ -64,7 +64,7 @@ describe('EmailProviderConfigSchema', () => {
   it('rejects unknown provider', () => {
     const bad = {
       provider: 'unknown',
-      from_address: 'ops@gtcx.trade',
+      from_address: 'ops@gtcx.io',
     };
     expect(EmailProviderConfigSchema.safeParse(bad).success).toBe(false);
   });

@@ -16,8 +16,8 @@ review_cycle: "on-change"
 title: 'GTCX Operations — Roadmap 2026'
 status: 'current'
 date: '2026-05-27'
-owner: 'ops@gtcx.trade'
-role: 'ops@gtcx.trade'
+owner: 'ops@gtcx.io'
+role: 'ops@gtcx.io'
 tier: 'standard'
 tags: ['roadmap', 'planning', 'operations']
 review_cycle: 'on-change'
@@ -94,7 +94,7 @@ Auto                                     [====P2====]
 
 ### P1: Place Google Workspace Credentials
 
-**Description:** Google Workspace service account JSON files need to be placed in `.secrets/`. Domain-wide delegation must be configured for `ops@gtcx.trade`.  
+**Description:** Google Workspace service account JSON files need to be placed in `.secrets/`. Domain-wide delegation must be configured for `ops@gtcx.io`.  
 **Acceptance Criteria:**
 - [ ] `.secrets/gmail-credentials.json` exists and is valid
 - [ ] `.secrets/workspace-credentials.json` exists and is valid

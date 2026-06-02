@@ -57,7 +57,7 @@ jobs:
         if: github.event_name == 'schedule'
         run: |
           git config user.name "gtcx-agent"
-          git config user.email "agent@gtcx.trade"
+          git config user.email "agent@gtcx.io"
           git add -A
           if git diff --cached --quiet; then
             echo "No changes to commit"

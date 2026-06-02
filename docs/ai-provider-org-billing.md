@@ -105,7 +105,7 @@ OPENAI_API_KEY → gtcx/openai/project-terraos
 **Org structure:** Google Cloud Project → API Keys + Service Accounts
 
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
-2. Create or select org: `gtcx.trade` (requires Google Workspace / Cloud Identity)
+2. Create or select org: `gtcx.io` (requires Google Workspace / Cloud Identity)
 3. Create projects:
    - `gtcx-terraos`
    - `gtcx-explorationos`
@@ -131,7 +131,7 @@ GEMINI_API_KEY → gtcx/gcp/service-account-terraos (JSON key content)
 
 DeepSeek has minimal org features. Recommendation:
 
-1. Create one account with a shared `ai-ops@gtcx.trade` email
+1. Create one account with a shared `ai-ops@gtcx.io` email
 2. Generate one API key
 3. Track usage manually (DeepSeek has a simple dashboard)
 4. Set a low top-up amount ($50-100) to limit blast radius
@@ -166,7 +166,7 @@ DeepSeek has minimal org features. Recommendation:
 
 **Org structure:** Developer portal → Organization (limited)
 
-xAI's org features are nascent. Use a shared `ai-ops@gtcx.trade` account with:
+xAI's org features are nascent. Use a shared `ai-ops@gtcx.io` account with:
 - One production key
 - One sandbox/testing key
 
@@ -254,7 +254,7 @@ Without a unified gateway, you rely on provider dashboards. Here's the mapping:
 
 | Step | Who | Time |
 |------|-----|------|
-| Create Gmail / Google Workspace for `ai-ops@gtcx.trade` | You (human) | 30 min |
+| Create Gmail / Google Workspace for `ai-ops@gtcx.io` | You (human) | 30 min |
 | Sign up org accounts at Anthropic, OpenAI, Mistral, Cohere, Together | You (human) | 2 hours |
 | Add payment methods, set spend caps | You (human) | 1 hour |
 | Create workspaces/projects per OS | You (human) | 1 hour |

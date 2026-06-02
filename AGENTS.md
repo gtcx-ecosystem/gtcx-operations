@@ -94,7 +94,7 @@ GTCX Operations is the corporate functions layer of the GTCX ecosystem. It house
 
 All automated commits from this repo are authored by:
 - **Name:** `gtcx-agent`
-- **Email:** `agent@gtcx.trade`
+- **Email:** `agent@gtcx.io`
 - **GitHub:** [@gtcx-agent](https://github.com/gtcx-agent)
 
 This account is used for:

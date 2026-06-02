@@ -17,7 +17,7 @@ components:
         - "15K users, $120K revenue, 89% retention"
         - "Series A close, Ghana expansion"
   - type: footer
-    text: "GTCX Protocol | https://gtcx.trade"
+    text: "GTCX Protocol | https://gtcx.io"
 variables:
   - first_name
   - month

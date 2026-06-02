@@ -135,7 +135,7 @@ describe('Contract Generation', () => {
   type: nda
   version: "1.2"
   effective_date: 2026-05-25
-  owner: legal@gtcx.trade
+  owner: legal@gtcx.io
   status: active
   ---
   ```

@@ -3,7 +3,7 @@ period:
   start: "2026-04-01"
   end: "2026-06-30"
 currency: USD
-owner: "finance@gtcx.trade"
+owner: "finance@gtcx.io"
 version: "1.0"
 
 # Top-level categories
@@ -91,7 +91,7 @@ categories:
 # Variance alerts
 alerts:
   threshold_percent: 10
-  notify: ["finance@gtcx.trade", "ops@gtcx.trade"]
+  notify: ["finance@gtcx.io", "ops@gtcx.io"]
 
 # Totals
 total:

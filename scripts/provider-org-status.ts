@@ -77,7 +77,7 @@ function buildStatus(): ProviderOrgStatus[] {
         notes = 'DeepSeek has minimal org features. Recommend using via OpenRouter/LiteLLM proxy.';
         break;
       case 'grok':
-        notes = 'xAI org features are nascent. Use shared ai-ops@gtcx.trade account.';
+        notes = 'xAI org features are nascent. Use shared ai-ops@gtcx.io account.';
         break;
       case 'copernicus':
         notes = 'Free tier; org not required. Set COPERNICUS_CLIENT_ID + COPERNICUS_CLIENT_SECRET.';
