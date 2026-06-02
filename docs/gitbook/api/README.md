@@ -16,8 +16,8 @@ review_cycle: "on-change"
 title: 'GTCX Operations — API Reference'
 status: 'current'
 date: '2026-05-27'
-owner: 'ops@gtcx.io'
-role: 'ops@gtcx.io'
+owner: 'ops@gtcx.trade'
+role: 'ops@gtcx.trade'
 tier: 'standard'
 tags: ['api', 'reference']
 review_cycle: 'on-change'
@@ -41,7 +41,7 @@ import { authenticate, GoogleAuthConfig } from './utils/google-auth.js';
 const auth = await authenticate({
   credentialsPath: '.secrets/workspace-credentials.json',
   scopes: ['https://www.googleapis.com/auth/gmail.send'],
-  userId: 'ops@gtcx.io',  // For domain-wide delegation
+  userId: 'ops@gtcx.trade',  // For domain-wide delegation
 });
 ```
 
@@ -61,7 +61,7 @@ await gmail.sendMessage({
   to: 'investor@example.com',
   subject: 'Q2 Update',
   body: '...',
-  from: 'ops@gtcx.io',
+  from: 'ops@gtcx.trade',
 });
 
 // List inbox
@@ -192,7 +192,7 @@ await provider.send({
   to: 'investor@example.com',
   subject: 'Investor Update',
   body: markdownBody,
-  from: 'ops@gtcx.io',
+  from: 'ops@gtcx.trade',
 });
 ```
 

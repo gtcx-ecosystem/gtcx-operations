@@ -9,14 +9,14 @@ meta:
   phone_number_id: "123456789012345"
   api_key_env: WHATSAPP_API_KEY
   template_namespace: "gtcx_protocol"
-  webhook_url: "https://api.gtcx.io/webhook/whatsapp"
+  webhook_url: "https://api.gtcx.trade/webhook/whatsapp"
   webhook_verify_token_env: WHATSAPP_VERIFY_TOKEN
 
 # Twilio (alternative provider)
 twilio:
   account_sid: "ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   auth_token_env: TWILIO_AUTH_TOKEN
-  webhook_url: "https://api.gtcx.io/webhook/whatsapp/twilio"
+  webhook_url: "https://api.gtcx.trade/webhook/whatsapp/twilio"
 
 # Mock provider (for testing without real credentials)
 mock:

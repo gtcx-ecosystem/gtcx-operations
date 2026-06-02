@@ -16,8 +16,8 @@ review_cycle: "on-change"
 title: 'Operations'
 status: 'current'
 date: '2026-05-27'
-owner: 'ops@gtcx.io'
-role: 'ops@gtcx.io'
+owner: 'ops@gtcx.trade'
+role: 'ops@gtcx.trade'
 tier: 'standard'
 tags: ['operations', 'runbooks']
 review_cycle: 'on-change'

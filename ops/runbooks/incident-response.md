@@ -3,7 +3,7 @@ id: RUNBOOK-001
 title: "Incident Response"
 version: "1.0"
 effective_date: "2026-05-17"
-owner: "ops@gtcx.io"
+owner: "ops@gtcx.trade"
 trigger: "Production outage, security breach, or data loss"
 severity_levels:
   - p1-critical: "Complete service outage, data breach"
@@ -55,6 +55,6 @@ severity_levels:
 
 ## Contacts
 
-- On-call: oncall@gtcx.io
-- Security: security@gtcx.io
-- Leadership: founders@gtcx.io
+- On-call: oncall@gtcx.trade
+- Security: security@gtcx.trade
+- Leadership: founders@gtcx.trade

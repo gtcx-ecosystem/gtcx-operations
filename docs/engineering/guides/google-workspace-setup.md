@@ -16,8 +16,8 @@ review_cycle: "on-change"
 title: 'Google Workspace API Setup'
 status: 'current'
 date: '2026-05-27'
-owner: 'ops@gtcx.io'
-role: 'ops@gtcx.io'
+owner: 'ops@gtcx.trade'
+role: 'ops@gtcx.trade'
 tier: 'standard'
 tags: ['engineering', 'guides', 'google']
 review_cycle: 'on-change'
@@ -27,7 +27,7 @@ review_cycle: 'on-change'
 
 > **Goal:** Enable gtcx-agent to send Gmail, schedule Calendar events, sync Contacts, upload to Drive, and update Sheets.
 > **Time:** 15 minutes for Phase 1 (Gmail). 10 minutes per additional service.
-> **Prerequisites:** Google Workspace admin access for gtcx.io
+> **Prerequisites:** Google Workspace admin access for gtcx.trade
 
 ## Phase 1: Gmail API (15 minutes)
 
@@ -36,7 +36,7 @@ review_cycle: 'on-change'
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
 2. Click project selector → **New Project**
 3. Name: `gtcx-operations`
-4. Organization: your gtcx.io domain
+4. Organization: your gtcx.trade domain
 5. Click **Create**
 
 ### Step 2: Enable Gmail API
@@ -70,7 +70,7 @@ review_cycle: 'on-change'
 
 ### Step 5: Configure Domain-Wide Delegation (Critical)
 
-> Without this, the service account cannot send email as ops@gtcx.io
+> Without this, the service account cannot send email as ops@gtcx.trade
 
 1. In the service account details, click **Advanced Settings → View Google Workspace Admin Console**
 2. Or go directly to [admin.google.com](https://admin.google.com) → **Security → Access and Data Control → API Controls**
@@ -103,15 +103,15 @@ cp ~/Downloads/gmail-credentials.json .secrets/gmail-credentials.json
 ### Step 7: Test Gmail Send
 
 ```bash
-pnpm email:send --dry-run --template=investor-update --to="your-email@gtcx.io"
+pnpm email:send --dry-run --template=investor-update --to="your-email@gtcx.trade"
 ```
 
 If dry-run works, test live:
 ```bash
-pnpm email:send --template=investor-update --to="your-email@gtcx.io"
+pnpm email:send --template=investor-update --to="your-email@gtcx.trade"
 ```
 
-Check your inbox. The email should arrive from `ops@gtcx.io`.
+Check your inbox. The email should arrive from `ops@gtcx.trade`.
 
 ---
 
@@ -174,7 +174,7 @@ This pushes your CRM contacts to Google Contacts.
 - Re-add scopes in Admin Console.
 
 ### "User does not exist" error
-- The `ops@gtcx.io` account must exist in your Google Workspace.
+- The `ops@gtcx.trade` account must exist in your Google Workspace.
 - Create it if it doesn't exist.
 
 ### Emails not arriving
@@ -195,7 +195,7 @@ This pushes your CRM contacts to Google Contacts.
 ## Next Steps After Setup
 
 1. Create Gmail labels: `Investors`, `Legal`, `Vendors`, `Follow-up`
-2. Set up a dedicated `ops@gtcx.io` inbox
+2. Set up a dedicated `ops@gtcx.trade` inbox
 3. Configure email templates with real copy
 4. Schedule `pnpm calendar:schedule` as a daily cron job
 5. Add `GTCX_AGENT_TOKEN` to GitHub secrets for CI email sending

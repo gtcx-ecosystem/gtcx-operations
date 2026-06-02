@@ -1,0 +1,44 @@
+{
+  "projectRoot": "/Users/amanianai/Sites/gtcx-ecosystem/gtcx-operations",
+  "name": "@gtcx/operations",
+  "knowledge": [
+    "./docs",
+    "./.cursor",
+    "./.kimi",
+    "./README.md",
+    "./AGENTS.md",
+    "./CONVENTIONS.md"
+  ],
+  "include": [
+    "**/*.md",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.json",
+    "**/*.yml",
+    "**/*.yaml"
+  ],
+  "exclude": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.git/**",
+    "**/.turbo/**",
+    "**/coverage/**",
+    "**/.baseline/data/**",
+    "**/.baseline/index/**",
+    "**/.baseline/checkpoints/**"
+  ],
+  "paths": {
+    "data": ".baseline",
+    "index": ".baseline/index",
+    "checkpoints": ".baseline/checkpoints"
+  },
+  "rag": {
+    "budget": {
+      "maxTokens": 1200
+    }
+  },
+  "workflows": []
+}
