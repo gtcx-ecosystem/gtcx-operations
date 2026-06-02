@@ -16,8 +16,8 @@ review_cycle: "on-change"
 title: 'Investor Communication Preferences — Desk Research'
 status: 'current'
 date: '2026-05-27'
-owner: 'founders@gtcx.io'
-role: 'ops@gtcx.io'
+owner: 'founders@gtcx.trade'
+role: 'ops@gtcx.trade'
 tier: 'informational'
 tags: ['research', 'communications', 'investors']
 review_cycle: 'quarterly'

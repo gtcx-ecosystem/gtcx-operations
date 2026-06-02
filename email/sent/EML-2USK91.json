@@ -6,7 +6,7 @@
   ],
   "cc": [],
   "bcc": [],
-  "from": "ops@gtcx.io",
+  "from": "ops@gtcx.trade",
   "subject": "GTCX Protocol — {{month}} {{year}} Update",
   "body_preview": "Hi {{first_name}},\n\nHere's our {{month}} update:\n\n🚀 Traction\n{{traction_summary}}\n\n📊 Metrics\n{{metrics_summary}}\n\n🎯 Next Month\n{{next_month_goals}}\n\nBest,\nThe GTCX Team\n\n---\nGTCX Protocol | https:/",
   "sent_at": "2026-05-27T05:12:12.096Z",

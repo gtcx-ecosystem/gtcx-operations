@@ -16,8 +16,8 @@ review_cycle: "on-change"
 title: 'Nyota ↔ Operations Integration Strategy'
 status: 'current'
 date: '2026-05-27'
-owner: 'founders@gtcx.io'
-role: 'ops@gtcx.io'
+owner: 'founders@gtcx.trade'
+role: 'ops@gtcx.trade'
 tier: 'standard'
 tags: ['planning', 'integration', 'nyota']
 review_cycle: 'on-change'

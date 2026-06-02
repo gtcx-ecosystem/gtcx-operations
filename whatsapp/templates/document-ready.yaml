@@ -10,7 +10,7 @@ components:
       body_text:
         - "Jane"
         - "Series A Term Sheet"
-        - "https://gtcx.io/docs/series-a-term-sheet"
+        - "https://gtcx.trade/docs/series-a-term-sheet"
   - type: footer
     text: "GTCX Protocol"
 variables:

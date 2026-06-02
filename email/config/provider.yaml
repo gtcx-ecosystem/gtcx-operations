@@ -3,9 +3,9 @@
 # This config exists for legal requirements and investor preferences only
 
 provider: mock
-from_address: ops@gtcx.io
+from_address: ops@gtcx.trade
 from_name: GTCX Operations
-reply_to: founders@gtcx.io
+reply_to: founders@gtcx.trade
 rate_limit_per_second: 10
 
 # Usage rules:

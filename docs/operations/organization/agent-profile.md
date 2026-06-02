@@ -16,8 +16,8 @@ review_cycle: "on-change"
 title: 'GTCX Operations — Agent Operating Profile'
 status: 'current'
 date: '2026-05-27'
-owner: 'ops@gtcx.io'
-role: 'ops@gtcx.io'
+owner: 'ops@gtcx.trade'
+role: 'ops@gtcx.trade'
 tier: 'standard'
 tags: ['agentic', 'operations']
 review_cycle: 'on-change'

@@ -16,8 +16,8 @@ review_cycle: "on-change"
 title: 'GTCX Agent Bot Identity'
 status: 'current'
 date: '2026-05-27'
-owner: 'ops@gtcx.io'
-role: 'ops@gtcx.io'
+owner: 'ops@gtcx.trade'
+role: 'ops@gtcx.trade'
 tier: 'standard'
 tags: ['operations', 'security']
 review_cycle: 'on-change'
@@ -30,7 +30,7 @@ review_cycle: 'on-change'
 | Field | Value |
 |-------|-------|
 | GitHub Username | [@gtcx-agent](https://github.com/gtcx-agent) |
-| Git Email | `agent@gtcx.io` |
+| Git Email | `agent@gtcx.trade` |
 | Git Name | `gtcx-agent` |
 | Account Type | Service account (bot) |
 | Managed By | GTCX Operations team |
@@ -86,7 +86,7 @@ If agent commits are failing:
 1. Check `GTCX_AGENT_TOKEN` expiry
 2. Verify repo permissions
 3. Review GitHub Actions logs
-4. Escalate to `ops@gtcx.io`
+4. Escalate to `ops@gtcx.trade`
 
 ## Rotation Schedule
 
