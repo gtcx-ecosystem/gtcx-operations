@@ -77,7 +77,7 @@ Read from roadmap heading:
 2. **Phase 5.4:** `pnpm agent:next-work`.
 3. State story ID in session summary — no menu, no ask.
 4. Mark `in_progress` in `docs/strategy/execution-roadmap.md`.
-5. Run verification ladder (Protocol 27): `pnpm validate`, `pnpm test`, `pnpm typecheck`.
+5. Run verification ladder (Protocol 27): `pnpm agent:verify-ladder` — report exit codes.
 6. Mark `done`; refresh `auto-dev-state.md` and `.baseline/memory/session.md`.
 7. Re-run `pnpm agent:next-work`.
 

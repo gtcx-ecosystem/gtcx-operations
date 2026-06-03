@@ -26,6 +26,8 @@
     "sync:agentic-attestation": "tsx scripts/sync-agentic-attestation.ts",
     "agent:next-work": "node scripts/agent-next-work.mjs",
     "agent:work-selection:check": "node scripts/check-agent-work-selection.mjs",
+    "agent:verify-ladder": "node scripts/agent-verify-ladder.mjs",
+    "agent:execution-obligation:check": "node scripts/check-agent-execution-obligation.mjs",
     "ecosystem:health": "tsx scripts/ecosystem-health.ts",
     "ecosystem:dirty-audit": "tsx scripts/dirty-file-audit.ts",
     "verify:slsa": "tsx scripts/verify-slsa.ts",

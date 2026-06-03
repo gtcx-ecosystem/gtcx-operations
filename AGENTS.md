@@ -92,6 +92,29 @@ Agents **must not** ask the operator what to build next when this repo has an ex
 
 P0 on sibling repo → ticket + `ecosystem:repo:report-work` in the **same session**. Link evidence; do not duplicate protocols source or deployment-proof-index.
 
+## 1.9 Agent Execution Obligation (Protocol 27) — MANDATORY
+
+Agents **run** verification commands in-session before claiming work is done.
+
+| Resource | Path |
+|----------|------|
+| Ecosystem protocol | `gtcx-docs/docs/governance/protocols/27-agent-execution-obligation/protocol.md` |
+| Repo manifest | [`docs/operations/agent-execution-obligation.md`](docs/operations/agent-execution-obligation.md) |
+| Ladder command | `pnpm agent:verify-ladder` |
+| Wiring check | `pnpm agent:execution-obligation:check` |
+
+**Verification ladder (V2–V4, match CI):**
+
+| Step | Command |
+|------|---------|
+| V2 | `pnpm typecheck` |
+| V2 | `pnpm validate` |
+| V3 | `pnpm test` |
+| V2 | `pnpm lint:policies` (when policies touched) |
+| V4 | `pnpm agent:work-selection:check` (when governance touched) |
+
+**Rules:** Report `command → exit code` in session output. If blocked, emit **Permission Unblock Report** — never “verify locally.” Cross-repo INF-86 checks run in `gtcx-protocols` checkout (V6).
+
 ### Context Refresh (every 2 hours or task switch)
 - Re-read `.baseline/memory/session.md`
 - Re-check `git status`

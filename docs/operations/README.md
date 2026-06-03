@@ -79,6 +79,8 @@ Refresh register: `pnpm sync:agentic-attestation`
 | [AGENT-PROTOCOL-22-BRIEF](./AGENT-PROTOCOL-22-BRIEF.md) | Paste block for agents |
 | [Cross-repo coordination (P24)](./cross-repo-coordination.md) | Tickets, escalation, link-only hub |
 | [Protocol adoption registry](./protocol-adoption-registry.md) | INST-003, P19, P22, P24, P26, P27 |
+| [Agent execution obligation (P27)](./agent-execution-obligation.md) | `pnpm agent:verify-ladder` |
+| [AGENT-PROTOCOL-27-BRIEF](./AGENT-PROTOCOL-27-BRIEF.md) | Paste block — run tests yourself |
 
 ---
 

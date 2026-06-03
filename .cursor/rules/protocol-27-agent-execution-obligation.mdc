@@ -1,0 +1,26 @@
+---
+description: Protocol 27 — run validate/test/typecheck in-session; Permission Unblock Report if blocked
+alwaysApply: true
+---
+
+# Protocol 27 — Agent execution obligation (gtcx-operations)
+
+**Run commands in this session.** The user is not your remote terminal.
+
+## Before claiming done
+
+1. Run applicable gates: `git status`, `pnpm typecheck`, `pnpm validate`, `pnpm test`, `pnpm lint:policies`, `pnpm agent:work-selection:check`.
+2. Report each: `command` → exit code.
+3. Cross-repo INF-86 verify: run in **gtcx-protocols** checkout (`pnpm check:inf86-xr401-preceremony`) — not “verify locally”.
+4. Quick ladder: `pnpm agent:verify-ladder`.
+
+## Forbidden
+
+- “Verify locally: …” / “You should run `pnpm test`” when Shell is available
+- Asking user to paste output the agent could obtain
+
+## If blocked
+
+Emit **Permission Unblock Report** per `docs/operations/agent-execution-obligation.md`. Re-run after enable.
+
+**Spec:** `gtcx-docs/docs/governance/protocols/27-agent-execution-obligation/protocol.md`
