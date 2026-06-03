@@ -48,3 +48,18 @@ focus: "Baseline initialization — discovery and enrichment"
 ### Cross-repo
 - Evidence SoR: `gtcx-protocols/docs/audit/evidence/inf-86-xr-401-agentic-attestation-latest.json`
 - Gate: `pnpm check:inf86-xr401-attestation` (protocols)
+
+---
+
+## Session: Agent protocols complete (2026-06-03)
+
+### What Was Done
+- Established **P26** (`agent-proceed-confirmation.md`, brief, Cursor rule, `agent:proceed-confirmation:check`)
+- Established **P19** manifest + `agent:credentials:check`
+- **P21** marked not-applicable (`agent-ux-documentation-ops.md`)
+- Unified gate: `pnpm agent:protocols:check` (P19, P22+P24, P26, P27); CI uses unified check
+- `AGENT-PROTOCOL-ALL-BRIEF.md`; registry updated; P27 renumbered to §1.10 in AGENTS.md
+
+### Verify
+- `pnpm agent:protocols:check` → pass
+- `pnpm test` → 32 pass
