@@ -40,12 +40,12 @@ Run `pnpm agent:next-work` for authoritative selection.
 
 | Step | Owner | Status |
 | --- | --- | --- |
-| 1 XR-402 + SPKI | gtcx-infrastructure → protocols #61 | **waiting** (not gtcx-operations) |
-| 2 XR-403 | gtcx-protocols after SPKI | **waiting** |
-| 3 report-work | baseline-os | **waiting** (see protocols MESSAGE-baseline-os-report-work) |
+| 1 XR-402 + SPKI | gtcx-infrastructure → protocols #61 | **active** — infra’s turn (real `spki_sha256`) |
+| 2 XR-403 | gtcx-protocols after SPKI | **standing by** — protocols until SPKI ready |
+| 3 report-work | baseline-os | **waiting** — MESSAGE-baseline-os-report-work |
 | 4 compliance mirror | gtcx-operations | **done** — `pnpm sync:agentic-attestation` |
 
-Pointer: `docs/coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md`
+Canonical SoR: `gtcx-protocols` `docs/coordination/messages` (`ff21706a`). Pointer: `docs/coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md`
 
 ## Cross-repo blockers
 

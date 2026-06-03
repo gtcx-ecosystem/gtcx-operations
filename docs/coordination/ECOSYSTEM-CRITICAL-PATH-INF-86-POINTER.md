@@ -5,28 +5,41 @@ date: 2026-06-03
 owner: gtcx-operations
 document_id: COORD-OPS-CP-INF86-001
 review_cycle: on-change
+protocols_canonical_commit: ff21706a
 ---
 
 # INF-86 ecosystem critical path — gtcx-operations
 
-**Do not fork message bodies.** Canonical copy/paste and ordering live on **gtcx-protocols**:
+**Do not fork message bodies.** Canonical copy/paste and ordering live on **gtcx-protocols** (`ff21706a` and later on `main`).
 
 | Resource | URL / path |
 | --- | --- |
-| **Messages hub** | https://github.com/gtcx-ecosystem/gtcx-protocols/tree/main/docs/coordination/messages |
-| **Critical path doc** | `gtcx-protocols/docs/coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-2026-06-03.md` |
-| **Hub register (read-only)** | `gtcx-docs` INF-86 register — updated when siblings close steps; **no implementation in gtcx-docs** |
+| **Messages SoR (canonical)** | https://github.com/gtcx-ecosystem/gtcx-protocols/tree/main/docs/coordination/messages |
+| **One-pager** | [`ECOSYSTEM-CRITICAL-PATH-INF-86-2026-06-03.md`](https://github.com/gtcx-ecosystem/gtcx-protocols/blob/main/docs/coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-2026-06-03.md) |
+| **Local checkout** | `../gtcx-protocols/docs/coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-2026-06-03.md` |
+| **Hub register (read-only)** | `gtcx-docs` INF-86 register — update when siblings close steps; **no Terraform, CSP, runners, or product code in gtcx-docs** — link to `messages/` only |
+
+## Ecosystem state (2026-06-03)
+
+| Step | Owner | Status | gtcx-operations |
+| --- | --- | --- | --- |
+| **1** | gtcx-infrastructure | **Active** — XR-402 + real `spki_sha256` on protocols **#61** | None |
+| **2** | gtcx-protocols | **Standing by** — XR-403 after SPKI ready (`.der` not in git) | None — read-only verify |
+| **3** | baseline-os | **Waiting** — `ecosystem:repo:report-work` after evidence merges | None |
+| **4** | gtcx-operations | **Done** — optional compliance mirror | This repo |
+
+**Protocols trigger:** Infra posts #61 with real `spki_sha256` from `shasum -a 256 /secure/gh-bog.pub.der` → protocols SPKI ready → XR-403. Placeholder #61 posts do not start XR-403 ([locked response message](https://github.com/gtcx-ecosystem/gtcx-protocols/blob/main/docs/coordination/messages/MESSAGE-gtcx-protocols-issue-61-locked-response-2026-06-03.md)).
+
+**Parallel (done):** gtcx-agentic XR-401-A/B/C — [`MESSAGE-gtcx-agentic-handoff-complete-2026-06-03.md`](https://github.com/gtcx-ecosystem/gtcx-protocols/blob/main/docs/coordination/messages/MESSAGE-gtcx-agentic-handoff-complete-2026-06-03.md).
 
 ## Ordered steps (sibling repos — not hub)
 
-| Step | Owner | Work | gtcx-operations role |
+| Step | Owner | Work | Message |
 | --- | --- | --- | --- |
-| **1** | gtcx-infrastructure | XR-402 terraform + SPKI → post protocols **#61** | **None** — no KMS/Terraform |
-| **2** | gtcx-protocols | XR-403 `bog.json` after SPKI ready | **None** — read-only verify |
-| **3** | baseline-os | `ecosystem:repo:report-work` per message | **None** — ops does not run baseline-os CLI |
-| **4** | **gtcx-operations** | Optional compliance mirror | **Done** — see below |
-
-**Parallel (done):** gtcx-agentic XR-401-A/B/C evidence on protocols `main`.
+| **1** | gtcx-infrastructure | XR-402 terraform + SPKI → post protocols **#61** | [`MESSAGE-gtcx-infrastructure-issue-61-spki-2026-06-03.md`](https://github.com/gtcx-ecosystem/gtcx-protocols/blob/main/docs/coordination/messages/MESSAGE-gtcx-infrastructure-issue-61-spki-2026-06-03.md) |
+| **2** | gtcx-protocols | XR-403 `bog.json` after SPKI ready | `pnpm coordination:xr-403-checklist` (protocols) |
+| **3** | baseline-os | `ecosystem:repo:report-work` | [`MESSAGE-baseline-os-report-work-2026-06-03.md`](https://github.com/gtcx-ecosystem/gtcx-protocols/blob/main/docs/coordination/messages/MESSAGE-baseline-os-report-work-2026-06-03.md) |
+| **4** | **gtcx-operations** | Optional compliance mirror | [`MESSAGE-gtcx-operations-compliance-mirror-2026-06-03.md`](https://github.com/gtcx-ecosystem/gtcx-protocols/blob/main/docs/coordination/messages/MESSAGE-gtcx-operations-compliance-mirror-2026-06-03.md) |
 
 ## Step 4 — what we did
 
@@ -37,18 +50,16 @@ review_cycle: on-change
 | Sync command | `pnpm sync:agentic-attestation` | Done |
 | Procurement wording | [`../operations/compliance/procurement-attestation-wording.md`](../operations/compliance/procurement-attestation-wording.md) | Done |
 
-**Canonical message (protocols):** [`MESSAGE-gtcx-operations-compliance-mirror-2026-06-03.md`](https://github.com/gtcx-ecosystem/gtcx-protocols/blob/main/docs/coordination/messages/MESSAGE-gtcx-operations-compliance-mirror-2026-06-03.md)
-
 ## Refresh after siblings close items
 
-When protocols `main` gains new INF-86 evidence (e.g. post–XR-402 SPKI, post–XR-403):
+When protocols `main` gains new INF-86 evidence (post–XR-402 SPKI, post–XR-403):
 
 ```bash
 pnpm sync:agentic-attestation
 pnpm validate
 ```
 
-Add register rows only for artifacts that exist under `gtcx-protocols/docs/audit/evidence/` — do not invent URIs.
+Add register rows only for artifacts under `gtcx-protocols/docs/audit/evidence/` — do not invent URIs.
 
 ## Verify (read-only)
 

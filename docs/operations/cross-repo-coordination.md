@@ -53,4 +53,5 @@ review_cycle: on-change
 | [from-gtcx-protocols-inf-86-agentic-attestations-2026-06-03.md](../coordination/from-gtcx-protocols-inf-86-agentic-attestations-2026-06-03.md) | protocols / agentic |
 | [from-gtcx-protocols-agentic-trust-2026-06-03.md](../coordination/from-gtcx-protocols-agentic-trust-2026-06-03.md) | XR-401-A detail |
 
-**Messages SoR:** https://github.com/gtcx-ecosystem/gtcx-protocols/tree/main/docs/coordination/messages — do not duplicate bodies in this repo.
+**Messages SoR:** https://github.com/gtcx-ecosystem/gtcx-protocols/tree/main/docs/coordination/messages (`ff21706a+`)  
+**One-pager:** `gtcx-protocols/docs/coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-2026-06-03.md` — do not duplicate bodies in this repo.

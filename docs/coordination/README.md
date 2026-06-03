@@ -13,16 +13,18 @@ Cross-repo specs are authored in **gtcx-protocols** per Protocol 24. This repo h
 
 ## INF-86 ecosystem critical path (step 4 of 4)
 
-**Canonical messages (do not fork):** https://github.com/gtcx-ecosystem/gtcx-protocols/tree/main/docs/coordination/messages
+**Canonical SoR:** https://github.com/gtcx-ecosystem/gtcx-protocols/tree/main/docs/coordination/messages (`gtcx-protocols` `ff21706a+`)
 
-| Step | Owner | Ops role |
-| --- | --- | --- |
-| 1 | gtcx-infrastructure | XR-402 → protocols #61 — **not us** |
-| 2 | gtcx-protocols | XR-403 after SPKI — **not us** |
-| 3 | baseline-os | report-work — **not us** |
-| 4 | **gtcx-operations** | Optional compliance mirror — **[done](./ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md)** |
+**One-pager:** [ECOSYSTEM-CRITICAL-PATH-INF-86-2026-06-03.md](https://github.com/gtcx-ecosystem/gtcx-protocols/blob/main/docs/coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-2026-06-03.md)
 
-Hub `gtcx-docs` INF-86 register stays current when siblings close items; no product implementation in gtcx-docs.
+| Step | Owner | Ops role | Now |
+| --- | --- | --- | --- |
+| 1 | gtcx-infrastructure | XR-402 → protocols #61 — **not us** | **Infra’s turn** (real `spki_sha256`) |
+| 2 | gtcx-protocols | XR-403 after SPKI — **not us** | **Standing by** |
+| 3 | baseline-os | report-work — **not us** | Waiting on evidence |
+| 4 | **gtcx-operations** | Optional compliance mirror — **[done](./ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md)** | Mirror complete |
+
+Hub `gtcx-docs` INF-86 register: update when siblings close steps; link to `messages/` only — no Terraform, CSP, runners, or product code in gtcx-docs.
 
 ## Index
 
@@ -37,6 +39,8 @@ Hub `gtcx-docs` INF-86 register stays current when siblings close items; no prod
 | Artifact | Location |
 | --- | --- |
 | Coordination index | `gtcx-protocols/docs/coordination/README.md` |
+| Critical path one-pager | `gtcx-protocols/docs/coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-2026-06-03.md` |
+| Messages hub | `gtcx-protocols/docs/coordination/messages/` |
 | Full spec (COORD-ATR-001) | `gtcx-protocols/docs/coordination/agentic-trust-roles-24x7-2026-06-03.md` |
 | Evidence (A/B/C) | `gtcx-protocols/docs/audit/evidence/inf-86-xr-401*-latest.json` |
 | Implementation owner | **gtcx-agentic** (`agents/reviewers/trust-attestation/`) |

@@ -22,7 +22,7 @@ Protocols required for agents operating on this repo. Hub: `gtcx-docs/docs/gover
 | P27 | Execution obligation | **established** | [`agent-execution-obligation.md`](./agent-execution-obligation.md) | `pnpm agent:verify-ladder` |
 | ALL | Unified gate | — | [`AGENT-PROTOCOL-ALL-BRIEF.md`](./AGENT-PROTOCOL-ALL-BRIEF.md) | `pnpm agent:protocols:check` |
 | COORD-ATR-001 | Agentic trust roles (INF-86) | **mirror** | [`docs/coordination/`](../coordination/) | `pnpm sync:agentic-attestation` |
-| COORD-CP-INF86 | INF-86 critical path (step 4) | **done** | [`ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md`](../coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md) | Link only — messages on protocols |
+| COORD-CP-INF86 | INF-86 critical path (step 4) | **done** | [`ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md`](../coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md) | Canonical: protocols `messages/` (`ff21706a`) |
 
 ## Not owned here
 

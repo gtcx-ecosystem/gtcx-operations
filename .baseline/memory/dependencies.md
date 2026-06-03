@@ -11,6 +11,9 @@
 | Investor portal notification ingest | gtcx-markets | planned | OPS-09 | Yes (Q3) |
 | INF-86 attestation evidence | gtcx-protocols | satisfied | OPS-01 | No |
 | Attestation runners | gtcx-agentic | satisfied | OPS-01 | No |
+| INF-86 XR-402 / SPKI (#61) | gtcx-infrastructure | **active** | — | No (ops step 4 done) |
+| INF-86 XR-403 (`bog.json`) | gtcx-protocols | **blocked on SPKI** | — | No |
+| INF-86 report-work | baseline-os | waiting | — | No |
 
 ## Soft Dependencies (Nice to have)
 
