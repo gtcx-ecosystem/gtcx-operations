@@ -15,7 +15,8 @@ Cross-repo specs are authored in **gtcx-protocols** per Protocol 24. This repo h
 
 | Doc | Purpose |
 | --- | --- |
-| [from-gtcx-protocols-agentic-trust-2026-06-03.md](./from-gtcx-protocols-agentic-trust-2026-06-03.md) | INF-86 XR-401-A agentic attestation — operations consumer role |
+| [from-gtcx-protocols-inf-86-agentic-attestations-2026-06-03.md](./from-gtcx-protocols-inf-86-agentic-attestations-2026-06-03.md) | **INF-86 XR-401 A/B/C** — mirror index + verify commands |
+| [from-gtcx-protocols-agentic-trust-2026-06-03.md](./from-gtcx-protocols-agentic-trust-2026-06-03.md) | XR-401-A detail + pickup checklist |
 
 ## Canonical hub (read-only)
 
@@ -23,7 +24,7 @@ Cross-repo specs are authored in **gtcx-protocols** per Protocol 24. This repo h
 | --- | --- |
 | Coordination index | `gtcx-protocols/docs/coordination/README.md` |
 | Full spec (COORD-ATR-001) | `gtcx-protocols/docs/coordination/agentic-trust-roles-24x7-2026-06-03.md` |
-| Evidence sink | `gtcx-protocols/docs/audit/evidence/inf-86-xr-401-agentic-attestation-latest.json` |
+| Evidence (A/B/C) | `gtcx-protocols/docs/audit/evidence/inf-86-xr-401*-latest.json` |
 | Implementation owner | **gtcx-agentic** (`agents/reviewers/trust-attestation/`) |
 
 Do not copy protocol source into this repo; link only.

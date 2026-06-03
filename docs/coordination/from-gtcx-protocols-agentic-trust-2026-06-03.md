@@ -27,7 +27,9 @@ review_cycle: on-change
 | Mirror (this repo) | gtcx-operations | [`docs/operations/compliance/attestation-register.yaml`](../operations/compliance/attestation-register.yaml) |
 | Ceremony | gtcx-infrastructure | After XR-401-A gate passes |
 
-**Gate (protocols):** `pnpm check:inf86-xr401-attestation` in gtcx-protocols — fails until agentic commits evidence.
+**Gate (protocols):** `pnpm check:inf86-xr401-attestation` (A); full preceremony: `pnpm check:inf86-xr401-preceremony` (A+B+C).
+
+**All three work IDs:** see [from-gtcx-protocols-inf-86-agentic-attestations-2026-06-03.md](./from-gtcx-protocols-inf-86-agentic-attestations-2026-06-03.md).
 
 ---
 

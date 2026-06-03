@@ -3,19 +3,45 @@
 # Refresh: pnpm sync:agentic-attestation
 
 version: '1.0'
-updated_at: '2026-06-03T10:33:42.696Z'
+updated_at: '2026-06-03T11:50:58.429Z'
 records:
   - work_id: XR-401-A
     coordination_spec: COORD-ATR-001
     pilot: gh-bog
     algorithm: ECC_NIST_P256
     evidence_uri: gtcx-protocols/docs/audit/evidence/inf-86-xr-401-agentic-attestation-latest.json
-    evidence_sha256: cada8400140945ec521855dcf30004cc0878ce8c83d290ffd85ccf396cd40cd5
-    attested_at: '2026-06-03T10:32:37.540Z'
+    evidence_sha256: d76942de224d797568259ae150a34524eea28c9ca9fc02dac83fce35c91d3d74
+    attested_at: '2026-06-03T11:42:21.480Z'
     implementation_owner: gtcx-agentic
-    protocols_repo_commit: 3f1fa4ab9eb13660b4df0a03097baf33cc3e9f3d
+    protocols_repo_commit: dcab0abfb507bc7bd79be725151911494ac4bcd0
     soc2_controls:
       - CC8.1
-    mirrored_at: '2026-06-03T10:33:42.695Z'
+    mirrored_at: '2026-06-03T11:50:58.351Z'
     external_wording: Algorithm approval recorded per COORD-ATR-001 agentic attestation artifact
-    notes: First INF-86 Option A dual attestation (security-engineer + platform-architect).
+    notes: INF-86 Option A — security-engineer + platform-architect dual attestation.
+  - work_id: XR-401-B
+    coordination_spec: COORD-ATR-001
+    pilot: gh-bog
+    algorithm: ECC_NIST_P256
+    evidence_uri: gtcx-protocols/docs/audit/evidence/inf-86-xr-401b-custodian-roster-latest.json
+    evidence_sha256: d89306f2e4c525d93979131cb14c70c74b424cd9702a1580742cc8ca400180e6
+    attested_at: '2026-06-03T11:42:22.478Z'
+    implementation_owner: gtcx-agentic
+    soc2_controls:
+      - CC8.1
+    mirrored_at: '2026-06-03T11:50:58.425Z'
+    external_wording: Custodian roster recorded per COORD-ATR-001 agentic ceremony model (XR-401-B)
+    notes: Dual custodian + ceremony-witness roster for INF-86-H02-GHBOG-2026.
+  - work_id: XR-401-C
+    coordination_spec: COORD-ATR-001
+    pilot: gh-bog
+    algorithm: ECC_NIST_P256
+    evidence_uri: gtcx-protocols/docs/audit/evidence/inf-86-xr-401c-ceremony-authorization-latest.json
+    evidence_sha256: 5c235bc849d45c26a2c5659c0a9a54b7be9ee3da0b07d4de64f7022e530c6b2f
+    attested_at: '2026-06-03T11:42:22.648Z'
+    implementation_owner: gtcx-agentic
+    soc2_controls:
+      - CC8.1
+    mirrored_at: '2026-06-03T11:50:58.429Z'
+    external_wording: Pilot ceremony authorization recorded per COORD-ATR-001 (XR-401-C; agentic path)
+    notes: Release-governance + security-engineer authorization — pilot gh-bog only.

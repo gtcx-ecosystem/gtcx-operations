@@ -15,8 +15,8 @@ Use when INF-86 / XR-401-A used the **agentic** path (not a human CISO signature
 
 - [ ] Do **not** claim “CISO personally signed” if only XR-401-A agentic path was used
 - [ ] Use: **“Algorithm approval recorded per COORD-ATR-001 agentic attestation artifact”**
-- [ ] Link evidence: `gtcx-protocols/docs/audit/evidence/inf-86-xr-401-agentic-attestation-latest.json`
-- [ ] Cite mirror row: [`attestation-register.yaml`](./attestation-register.yaml) (`work_id: XR-401-A`)
+- [ ] Link evidence (as applicable): XR-401-A / B / C under `gtcx-protocols/docs/audit/evidence/`
+- [ ] Cite mirror rows: [`attestation-register.yaml`](./attestation-register.yaml) (`work_id: XR-401-A`, `XR-401-B`, `XR-401-C`)
 - [ ] Implementation owner for runners: **gtcx-agentic** (not gtcx-operations)
 
 ## Canonical references
