@@ -14,6 +14,7 @@ protocols_canonical_commit: ff21706a
 
 | Resource | URL / path |
 | --- | --- |
+| **AI-native trust (all repos)** | https://github.com/gtcx-ecosystem/gtcx-protocols/blob/main/docs/coordination/inf-86-ai-native-trust-model-ecosystem-2026-06-03.md |
 | **Messages SoR (canonical)** | https://github.com/gtcx-ecosystem/gtcx-protocols/tree/main/docs/coordination/messages |
 | **One-pager** | [`ECOSYSTEM-CRITICAL-PATH-INF-86-2026-06-03.md`](https://github.com/gtcx-ecosystem/gtcx-protocols/blob/main/docs/coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-2026-06-03.md) |
 | **Local checkout** | `../gtcx-protocols/docs/coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-2026-06-03.md` |
