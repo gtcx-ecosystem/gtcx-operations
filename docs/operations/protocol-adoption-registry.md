@@ -20,6 +20,7 @@ Protocols required for agents operating on this repo. Hub: `gtcx-docs/docs/gover
 | P26 | Proceed confirmation | **referenced** | `AGENTS.md` Phase 5.6 | Proceed brief in session |
 | P27 | Execution obligation | **referenced** | `AGENTS.md` Phase 5.7 | Command + exit code in output |
 | COORD-ATR-001 | Agentic trust roles (INF-86) | **mirror** | [`docs/coordination/`](../coordination/) | `pnpm sync:agentic-attestation` |
+| COORD-CP-INF86 | INF-86 critical path (step 4) | **done** | [`ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md`](../coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md) | Link only — messages on protocols |
 
 ## Not owned here
 

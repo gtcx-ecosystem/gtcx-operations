@@ -49,5 +49,8 @@ review_cycle: on-change
 
 | Doc | Target |
 | --- | --- |
+| [ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md](../coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md) | INF-86 step 4 — mirror only |
 | [from-gtcx-protocols-inf-86-agentic-attestations-2026-06-03.md](../coordination/from-gtcx-protocols-inf-86-agentic-attestations-2026-06-03.md) | protocols / agentic |
 | [from-gtcx-protocols-agentic-trust-2026-06-03.md](../coordination/from-gtcx-protocols-agentic-trust-2026-06-03.md) | XR-401-A detail |
+
+**Messages SoR:** https://github.com/gtcx-ecosystem/gtcx-protocols/tree/main/docs/coordination/messages — do not duplicate bodies in this repo.

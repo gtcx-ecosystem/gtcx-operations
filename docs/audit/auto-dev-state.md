@@ -36,6 +36,17 @@ Run `pnpm agent:next-work` for authoritative selection.
 | OPS-01 | INF-86 XR-401 A/B/C compliance mirror | 2026-06-03 |
 | OPS-04 | Protocol 22 + P24 governance wiring | 2026-06-03 |
 
+## INF-86 critical path (sibling repos)
+
+| Step | Owner | Status |
+| --- | --- | --- |
+| 1 XR-402 + SPKI | gtcx-infrastructure → protocols #61 | **waiting** (not gtcx-operations) |
+| 2 XR-403 | gtcx-protocols after SPKI | **waiting** |
+| 3 report-work | baseline-os | **waiting** (see protocols MESSAGE-baseline-os-report-work) |
+| 4 compliance mirror | gtcx-operations | **done** — `pnpm sync:agentic-attestation` |
+
+Pointer: `docs/coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md`
+
 ## Cross-repo blockers
 
 | Story | Blocked on | Ticket / path |

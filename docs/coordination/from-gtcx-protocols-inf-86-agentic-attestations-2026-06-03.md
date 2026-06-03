@@ -12,6 +12,8 @@ review_cycle: on-change
 
 **Do not run KMS or Terraform.** Mirror URIs + SHA-256 into the compliance register only.
 
+**Ecosystem critical path (step 4/4):** [`ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md`](./ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md) · Messages hub: `gtcx-protocols/docs/coordination/messages/`
+
 **Implementation owner:** **gtcx-agentic** (runners, vault, 24/7 schedule).  
 **Evidence SoR:** **gtcx-protocols** `docs/audit/evidence/`.  
 **This repo:** [`attestation-register.yaml`](../operations/compliance/attestation-register.yaml) + procurement wording.

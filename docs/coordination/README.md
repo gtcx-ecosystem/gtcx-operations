@@ -11,6 +11,19 @@ review_cycle: on-change
 
 Cross-repo specs are authored in **gtcx-protocols** per Protocol 24. This repo holds **implementation pointers** and **compliance mirrors** only — not runtime trust runners.
 
+## INF-86 ecosystem critical path (step 4 of 4)
+
+**Canonical messages (do not fork):** https://github.com/gtcx-ecosystem/gtcx-protocols/tree/main/docs/coordination/messages
+
+| Step | Owner | Ops role |
+| --- | --- | --- |
+| 1 | gtcx-infrastructure | XR-402 → protocols #61 — **not us** |
+| 2 | gtcx-protocols | XR-403 after SPKI — **not us** |
+| 3 | baseline-os | report-work — **not us** |
+| 4 | **gtcx-operations** | Optional compliance mirror — **[done](./ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md)** |
+
+Hub `gtcx-docs` INF-86 register stays current when siblings close items; no product implementation in gtcx-docs.
+
 ## Index
 
 | Doc | Purpose |
