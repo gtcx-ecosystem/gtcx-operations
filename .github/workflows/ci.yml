@@ -34,8 +34,7 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm test
-      - run: pnpm agent:work-selection:check
-      - run: pnpm agent:execution-obligation:check
+      - run: pnpm agent:protocols:check
 
   validate:
     runs-on: ubuntu-latest

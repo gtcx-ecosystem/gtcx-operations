@@ -14,11 +14,13 @@ Protocols required for agents operating on this repo. Hub: `gtcx-docs/docs/gover
 | ID | Protocol | Status | Repo artifact | Verify |
 | --- | --- | --- | --- | --- |
 | INST-003 | Agent startup | **established** | `AGENTS.md` §1.6, Phases 5.4–5.7 | Startup attestation in PR |
-| P19 | Credential access | **established** | `AGENTS.md` (vault MCP) | No secrets in git |
+| P19 | Credential access | **established** | [`agent-credential-access.md`](./agent-credential-access.md) | `pnpm agent:credentials:check` |
+| P21 | UX documentation ops | **not-applicable** | [`agent-ux-documentation-ops.md`](./agent-ux-documentation-ops.md) | — |
 | P22 | Agent work selection | **established** | [`agent-work-selection.md`](./agent-work-selection.md) | `pnpm agent:work-selection:check` |
 | P24 | Cross-repo coordination | **established** | [`cross-repo-coordination.md`](./cross-repo-coordination.md) | `docs/coordination/` + `dependencies.md` |
-| P26 | Proceed confirmation | **referenced** | `AGENTS.md` Phase 5.6 | Proceed brief in session |
+| P26 | Proceed confirmation | **established** | [`agent-proceed-confirmation.md`](./agent-proceed-confirmation.md) | `pnpm agent:proceed-confirmation:check` |
 | P27 | Execution obligation | **established** | [`agent-execution-obligation.md`](./agent-execution-obligation.md) | `pnpm agent:verify-ladder` |
+| ALL | Unified gate | — | [`AGENT-PROTOCOL-ALL-BRIEF.md`](./AGENT-PROTOCOL-ALL-BRIEF.md) | `pnpm agent:protocols:check` |
 | COORD-ATR-001 | Agentic trust roles (INF-86) | **mirror** | [`docs/coordination/`](../coordination/) | `pnpm sync:agentic-attestation` |
 | COORD-CP-INF86 | INF-86 critical path (step 4) | **done** | [`ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md`](../coordination/ECOSYSTEM-CRITICAL-PATH-INF-86-POINTER.md) | Link only — messages on protocols |
 
@@ -33,4 +35,4 @@ Protocols required for agents operating on this repo. Hub: `gtcx-docs/docs/gover
 
 ## Session opener (all protocols)
 
-See [`AGENT-PROTOCOL-22-BRIEF.md`](./AGENT-PROTOCOL-22-BRIEF.md) plus INST-003 Phases 1–5.7 in `AGENTS.md`.
+See [`AGENT-PROTOCOL-ALL-BRIEF.md`](./AGENT-PROTOCOL-ALL-BRIEF.md) plus INST-003 Phases 1–5.7 in `AGENTS.md`.

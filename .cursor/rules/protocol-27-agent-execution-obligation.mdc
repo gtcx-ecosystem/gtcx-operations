@@ -9,7 +9,7 @@ alwaysApply: true
 
 ## Before claiming done
 
-1. Run applicable gates: `git status`, `pnpm typecheck`, `pnpm validate`, `pnpm test`, `pnpm lint:policies`, `pnpm agent:work-selection:check`.
+1. Run applicable gates: `git status`, `pnpm typecheck`, `pnpm validate`, `pnpm test`, `pnpm lint:policies`, `pnpm agent:protocols:check`.
 2. Report each: `command` → exit code.
 3. Cross-repo INF-86 verify: run in **gtcx-protocols** checkout (`pnpm check:inf86-xr401-preceremony`) — not “verify locally”.
 4. Quick ladder: `pnpm agent:verify-ladder`.

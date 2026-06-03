@@ -27,11 +27,11 @@ adoption_status: established
 | **V2** | `pnpm validate` | Domain YAML/JSON/MD changes |
 | **V2** | `pnpm lint:policies` | HR/ops/legal policy changes |
 | **V3** | `pnpm test` | Code or schema changes |
-| **V4** | `pnpm agent:work-selection:check` | Governance / AGENTS / roadmap changes |
+| **V4** | `pnpm agent:protocols:check` | Governance / AGENTS / roadmap changes |
 | **V4** | `pnpm sync:agentic-attestation` + `pnpm validate` | After protocols evidence updates |
 | **V6** | `cd ../gtcx-protocols && pnpm check:inf86-xr401-preceremony` | INF-86 cross-repo verify (read-only) |
 
-**CI parity:** `.github/workflows/ci.yml` runs `typecheck`, `test`, `validate`, `agent:work-selection:check`.
+**CI parity:** `.github/workflows/ci.yml` runs `typecheck`, `test`, `validate`, `agent:protocols:check`.
 
 ---
 

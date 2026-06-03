@@ -31,6 +31,9 @@ if (pkgRaw) {
   if (!pkg.scripts?.['agent:execution-obligation:check']) {
     errors.push('package.json missing script: agent:execution-obligation:check');
   }
+  if (!pkg.scripts?.['agent:protocols:check']) {
+    errors.push('package.json missing script: agent:protocols:check');
+  }
 }
 
 const agents = requireFile('AGENTS.md', 'AGENTS.md');
@@ -38,8 +41,8 @@ if (agents) {
   if (!agents.includes('Phase 5.7')) {
     errors.push('AGENTS.md missing Phase 5.7');
   }
-  if (!agents.includes('## 1.9 Agent Execution Obligation')) {
-    errors.push('AGENTS.md missing §1.9 Agent Execution Obligation');
+  if (!agents.includes('## 1.10 Agent Execution Obligation')) {
+    errors.push('AGENTS.md missing §1.10 Agent Execution Obligation');
   }
 }
 

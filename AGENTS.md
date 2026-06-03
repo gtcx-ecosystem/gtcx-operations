@@ -63,6 +63,7 @@ Before making any code changes, architectural decisions, or recommendations, com
 - [x] Phase 5: Context attested
 - [x] Phase 5.4: Next work unit selected via Protocol 22
 - [x] Phase 5.5: Cross-repo gate (Protocol 24) — N/A or ticket filed
+- [x] Phase 5.6: Proceed Brief issued (Protocol 26)
 - [x] Phase 5.7: Verification ladder run with exit codes
 ```
 
@@ -92,7 +93,20 @@ Agents **must not** ask the operator what to build next when this repo has an ex
 
 P0 on sibling repo → ticket + `ecosystem:repo:report-work` in the **same session**. Link evidence; do not duplicate protocols source or deployment-proof-index.
 
-## 1.9 Agent Execution Obligation (Protocol 27) — MANDATORY
+## 1.9 Agent Proceed Confirmation (Protocol 26) — MANDATORY
+
+Agents **recommend and proceed**; humans **stop**, **correct**, or supply a story ID.
+
+| Resource | Path |
+|----------|------|
+| Ecosystem protocol | `gtcx-docs/docs/governance/protocols/26-agent-proceed-confirmation/protocol.md` |
+| Repo manifest | [`docs/operations/agent-proceed-confirmation.md`](docs/operations/agent-proceed-confirmation.md) |
+| Brief | [`docs/operations/AGENT-PROTOCOL-26-BRIEF.md`](docs/operations/AGENT-PROTOCOL-26-BRIEF.md) |
+| Wiring check | `pnpm agent:proceed-confirmation:check` |
+
+**Rules:** After Phase 5.4, emit **Proceed Brief** then start work in the same turn. **Forbidden:** "Which should I do?" / option menus.
+
+## 1.10 Agent Execution Obligation (Protocol 27) — MANDATORY
 
 Agents **run** verification commands in-session before claiming work is done.
 
@@ -111,7 +125,7 @@ Agents **run** verification commands in-session before claiming work is done.
 | V2 | `pnpm validate` |
 | V3 | `pnpm test` |
 | V2 | `pnpm lint:policies` (when policies touched) |
-| V4 | `pnpm agent:work-selection:check` (when governance touched) |
+| V4 | `pnpm agent:protocols:check` (when governance touched) |
 
 **Rules:** Report `command → exit code` in session output. If blocked, emit **Permission Unblock Report** — never “verify locally.” Cross-repo INF-86 checks run in `gtcx-protocols` checkout (V6).
 
@@ -203,4 +217,30 @@ This repo operates as a **Tier 2/3 hybrid** — corporate operations satellite w
 - `pnpm validate` — Schema validation for all YAML/JSON contracts
 - `pnpm lint:policies` — Check policy frontmatter completeness
 - `pnpm check:budgets` — Variance analysis and alerts
-\n## Credential Access\n\nThe credential vault is managed by **gtcx-agentic** (consumes `@baselineos/vault` from baseline-os).\n\nAgents access credentials via the MCP tool:\n\n```\nTool: baseline_vault\n  action: "list"     → show available credentials and trust requirements\n  action: "get"      → retrieve a value (requires: name, agentId)\n  action: "status"   → vault health check\n```\n\nThe vault is centrally located at `~/.baseline/vault` (SQLite, AES-256 encrypted).\nTrust-score gated. All access is audited.\n\nStandard env vars: `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `DATABASE_URL`, `REDIS_URL`, `BASELINE_MASTER_KEY`.\n\nNever commit secrets. Never ask users for credentials in chat.\nRead Protocol 19 (`gtcx-docs/docs/governance/protocols/19-agent-credential-access/protocol.md`) for the full standard.
+- `pnpm agent:protocols:check` — P19, P22, P24, P26, P27 wiring (CI)
+
+## Credential Access (Protocol 19)
+
+The credential vault is managed by **gtcx-agentic** (consumes `@baselineos/vault` from baseline-os).
+
+| Resource | Path |
+|----------|------|
+| Repo manifest | [`docs/operations/agent-credential-access.md`](docs/operations/agent-credential-access.md) |
+| Wiring check | `pnpm agent:credentials:check` |
+
+Agents access credentials via the MCP tool:
+
+```
+Tool: baseline_vault
+  action: "list"     → show available credentials and trust requirements
+  action: "get"      → retrieve a value (requires: name, agentId)
+  action: "status"   → vault health check
+```
+
+The vault is centrally located at `~/.baseline/vault` (SQLite, AES-256 encrypted).
+Trust-score gated. All access is audited.
+
+Standard env vars: `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `DATABASE_URL`, `REDIS_URL`, `BASELINE_MASTER_KEY`.
+
+Never commit secrets. Never ask users for credentials in chat.
+Read Protocol 19 (`gtcx-docs/docs/governance/protocols/19-agent-credential-access/protocol.md`) for the full standard.

@@ -1,0 +1,12 @@
+---
+description: Protocol 26 — Proceed Brief after agent:next-work; never ask human to choose
+alwaysApply: true
+---
+
+# Protocol 26 — Proceed Confirmation
+
+Manifest: `docs/operations/agent-proceed-confirmation.md`
+
+After `pnpm agent:next-work`, issue **Proceed Brief** then start work unless **stop** / **correct:** / approval gate.
+
+Forbidden: "Which should I do?" / "Option A or B?" / menus instead of a recommendation.

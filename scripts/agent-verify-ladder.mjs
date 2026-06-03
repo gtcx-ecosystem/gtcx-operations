@@ -15,7 +15,7 @@ const STEPS = [
   { id: 'V2', name: 'validate', command: 'pnpm', args: ['validate'] },
   { id: 'V3', name: 'test', command: 'pnpm', args: ['test'] },
   { id: 'V2', name: 'lint:policies', command: 'pnpm', args: ['lint:policies'] },
-  { id: 'V4', name: 'agent:work-selection:check', command: 'pnpm', args: ['agent:work-selection:check'] },
+  { id: 'V4', name: 'agent:protocols:check', command: 'pnpm', args: ['agent:protocols:check'] },
 ];
 
 function runStep(step) {
