@@ -61,6 +61,16 @@ operations/
 | [ClickUp Sync Workflow](./runbooks/clickup-sync.md) | Sync follow-ups and sprints to ClickUp |
 | [Cross-Channel Orchestration](./runbooks/cross-channel-orchestration.md) | Automated follow-up sequences across channels |
 
+### Compliance
+
+| Document | Description |
+|----------|-------------|
+| [Attestation register](./compliance/attestation-register.yaml) | Mirror of INF-86 XR-401 agentic attestations (COORD-ATR-001) |
+| [Procurement wording](./compliance/procurement-attestation-wording.md) | External pack checklist — agentic vs human CISO claims |
+| [Coordination pointer](../coordination/from-gtcx-protocols-agentic-trust-2026-06-03.md) | Link to protocols spec; owner = gtcx-agentic |
+
+Refresh register: `pnpm sync:agentic-attestation`
+
 ---
 
 ## Operational Cadence

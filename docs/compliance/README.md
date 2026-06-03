@@ -14,4 +14,14 @@ review_cycle: "on-change"
 
 # Compliance
 
-> Canonical folder per Protocol 1 v2.1. Content to be migrated or added.
+> Regulatory mirrors, attestation registers, and procurement wording for corporate ops.
+
+## Contents
+
+| Artifact | Path |
+| --- | --- |
+| Agentic attestation register | [`../operations/compliance/attestation-register.yaml`](../operations/compliance/attestation-register.yaml) |
+| Procurement wording (XR-401-A) | [`../operations/compliance/procurement-attestation-wording.md`](../operations/compliance/procurement-attestation-wording.md) |
+| Cross-repo coordination pointer | [`../coordination/from-gtcx-protocols-agentic-trust-2026-06-03.md`](../coordination/from-gtcx-protocols-agentic-trust-2026-06-03.md) |
+
+Evidence source of truth: `gtcx-protocols/docs/audit/evidence/inf-86-xr-401-agentic-attestation-latest.json` (produced by **gtcx-agentic**).

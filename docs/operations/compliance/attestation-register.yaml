@@ -1,0 +1,21 @@
+# Agentic attestation compliance mirror (COORD-ATR-001)
+# Source of truth: gtcx-protocols/docs/audit/evidence/
+# Refresh: pnpm sync:agentic-attestation
+
+version: '1.0'
+updated_at: '2026-06-03T10:33:42.696Z'
+records:
+  - work_id: XR-401-A
+    coordination_spec: COORD-ATR-001
+    pilot: gh-bog
+    algorithm: ECC_NIST_P256
+    evidence_uri: gtcx-protocols/docs/audit/evidence/inf-86-xr-401-agentic-attestation-latest.json
+    evidence_sha256: cada8400140945ec521855dcf30004cc0878ce8c83d290ffd85ccf396cd40cd5
+    attested_at: '2026-06-03T10:32:37.540Z'
+    implementation_owner: gtcx-agentic
+    protocols_repo_commit: 3f1fa4ab9eb13660b4df0a03097baf33cc3e9f3d
+    soc2_controls:
+      - CC8.1
+    mirrored_at: '2026-06-03T10:33:42.695Z'
+    external_wording: Algorithm approval recorded per COORD-ATR-001 agentic attestation artifact
+    notes: First INF-86 Option A dual attestation (security-engineer + platform-architect).
