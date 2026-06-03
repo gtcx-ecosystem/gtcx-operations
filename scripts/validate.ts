@@ -2,6 +2,7 @@
 /**
  * Validate all YAML/JSON contracts, budgets, policies, IP assets, emails, and CRM data
  */
+import { existsSync } from 'fs';
 import { join } from 'path';
 import { REPO_ROOT, readYaml, readJson, readMarkdownWithFrontmatter, getFilesByExtension } from '../src/utils/files.js';
 import { validateWithZod, printResults, type ValidationResult } from '../src/utils/validate.js';
@@ -12,6 +13,7 @@ import { ContractFrontmatterSchema, PolicyFrontmatterSchema } from '../src/schem
 import { EmailProviderConfigSchema, EmailTemplateSchema, EmailLogSchema, EmailCampaignSchema } from '../src/schemas/email.js';
 import { WhatsAppProviderSchema, WhatsAppTemplateSchema, WhatsAppMessageSchema } from '../src/schemas/whatsapp.js';
 import { CrmRegistrySchema, CrmContactSchema, CrmCompanySchema, CrmInteractionSchema } from '../src/schemas/crm.js';
+import { AttestationRegisterSchema } from '../src/schemas/agentic-attestation.js';
 
 const results: ValidationResult[] = [];
 
@@ -137,6 +139,25 @@ for (const file of whatsappLogFiles) {
     results.push(validateWithZod(file, data, WhatsAppMessageSchema));
   } catch (e) {
     results.push({ path: file, valid: false, errors: [`Parse error: ${e}`], warnings: [] });
+  }
+}
+
+// Validate agentic attestation compliance register
+const attestationRegisterPath = join(
+  REPO_ROOT,
+  'docs/operations/compliance/attestation-register.yaml'
+);
+if (existsSync(attestationRegisterPath)) {
+  try {
+    const data = readYaml(attestationRegisterPath);
+    results.push(validateWithZod(attestationRegisterPath, data, AttestationRegisterSchema));
+  } catch (e) {
+    results.push({
+      path: attestationRegisterPath,
+      valid: false,
+      errors: [`Parse error: ${e}`],
+      warnings: [],
+    });
   }
 }
 
