@@ -49,7 +49,11 @@ Before making any code changes, architectural decisions, or recommendations, com
 
 ### Phase 5: Attest & Begin (30 sec)
 14. Summarize context in 3–5 sentences
-15. Add attestation block to commit/PR:
+15. **Phase 5.4:** Run `pnpm agent:next-work` — read [`docs/operations/agent-work-selection.md`](docs/operations/agent-work-selection.md); mark story `in_progress` in [`docs/strategy/execution-roadmap.md`](docs/strategy/execution-roadmap.md). **Do not ask the human which story to pick.**
+16. **Phase 5.5:** If P0 blocked on a sibling repo, file `docs/coordination/to-<repo>-*.md` and update `.baseline/memory/dependencies.md` in this session ([Protocol 24](docs/operations/cross-repo-coordination.md)).
+17. **Phase 5.6:** Issue Proceed Brief (one recommended action + because) unless user said **stop** or named a story ID ([Protocol 26](https://github.com/gtcx-ecosystem/gtcx-docs/blob/main/docs/governance/protocols/26-agent-proceed-confirmation/protocol.md)).
+18. **Phase 5.7:** Run verification in-session (`pnpm validate`, `pnpm test`, `pnpm typecheck`) and report exit codes ([Protocol 27](https://github.com/gtcx-ecosystem/gtcx-docs/blob/main/docs/governance/protocols/27-agent-execution-obligation/protocol.md)).
+19. Add attestation block to commit/PR:
 ```markdown
 ## Agent Context Attestation
 - [x] Phase 1: Baseline loaded
@@ -57,7 +61,36 @@ Before making any code changes, architectural decisions, or recommendations, com
 - [x] Phase 3: Current state discovered
 - [x] Phase 4: Persona & frame selected
 - [x] Phase 5: Context attested
+- [x] Phase 5.4: Next work unit selected via Protocol 22
+- [x] Phase 5.5: Cross-repo gate (Protocol 24) — N/A or ticket filed
+- [x] Phase 5.7: Verification ladder run with exit codes
 ```
+
+## 1.7 Agent Work Selection (Protocol 22) — MANDATORY
+
+Agents **must not** ask the operator what to build next when this repo has an execution roadmap.
+
+| Resource | Path |
+|----------|------|
+| Ecosystem protocol | `gtcx-docs/docs/governance/protocols/22-agent-work-selection/protocol.md` |
+| Repo manifest | [`docs/operations/agent-work-selection.md`](docs/operations/agent-work-selection.md) |
+| Story register | [`docs/strategy/execution-roadmap.md`](docs/strategy/execution-roadmap.md) |
+| Command | `pnpm agent:next-work` |
+| Session pointer | [`docs/audit/auto-dev-state.md`](docs/audit/auto-dev-state.md) |
+| Adoption registry | [`docs/operations/protocol-adoption-registry.md`](docs/operations/protocol-adoption-registry.md) |
+
+**Rules:** Run `pnpm agent:next-work` after Phase 3; handoffs (H-CLICKUP, H-GW) outrank unrelated polish; refresh `auto-dev-state.md` after each story. **Forbidden:** asking which story to pick.
+
+## 1.8 Cross-Repo Coordination (Protocol 24)
+
+| Resource | Path |
+|----------|------|
+| Repo guide | [`docs/operations/cross-repo-coordination.md`](docs/operations/cross-repo-coordination.md) |
+| Coordination docs | [`docs/coordination/`](docs/coordination/) |
+| Dependencies | [`.baseline/memory/dependencies.md`](.baseline/memory/dependencies.md) |
+| Hub report | `baseline-os/workstream/coordination/coordination-report-latest.md` |
+
+P0 on sibling repo → ticket + `ecosystem:repo:report-work` in the **same session**. Link evidence; do not duplicate protocols source or deployment-proof-index.
 
 ### Context Refresh (every 2 hours or task switch)
 - Re-read `.baseline/memory/session.md`

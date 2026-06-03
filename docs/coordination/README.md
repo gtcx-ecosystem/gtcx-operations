@@ -17,6 +17,7 @@ Cross-repo specs are authored in **gtcx-protocols** per Protocol 24. This repo h
 | --- | --- |
 | [from-gtcx-protocols-inf-86-agentic-attestations-2026-06-03.md](./from-gtcx-protocols-inf-86-agentic-attestations-2026-06-03.md) | **INF-86 XR-401 A/B/C** — mirror index + verify commands |
 | [from-gtcx-protocols-agentic-trust-2026-06-03.md](./from-gtcx-protocols-agentic-trust-2026-06-03.md) | XR-401-A detail + pickup checklist |
+| [Protocol adoption registry](../operations/protocol-adoption-registry.md) | P19, P22, P24, P26, P27, COORD-ATR-001 |
 
 ## Canonical hub (read-only)
 

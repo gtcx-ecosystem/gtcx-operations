@@ -71,6 +71,15 @@ operations/
 
 Refresh register: `pnpm sync:agentic-attestation`
 
+### Agent protocols
+
+| Document | Description |
+|----------|-------------|
+| [Agent work selection (P22)](./agent-work-selection.md) | Manifest — `pnpm agent:next-work` |
+| [AGENT-PROTOCOL-22-BRIEF](./AGENT-PROTOCOL-22-BRIEF.md) | Paste block for agents |
+| [Cross-repo coordination (P24)](./cross-repo-coordination.md) | Tickets, escalation, link-only hub |
+| [Protocol adoption registry](./protocol-adoption-registry.md) | INST-003, P19, P22, P24, P26, P27 |
+
 ---
 
 ## Operational Cadence

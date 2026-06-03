@@ -34,6 +34,7 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm test
+      - run: pnpm agent:work-selection:check
 
   validate:
     runs-on: ubuntu-latest
@@ -47,4 +48,5 @@ jobs:
           node-version: '22'
           cache: 'pnpm'
       - run: pnpm install
+      - run: pnpm validate
       - run: pnpm run ecosystem:validate
