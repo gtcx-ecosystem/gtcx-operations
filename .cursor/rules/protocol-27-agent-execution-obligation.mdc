@@ -1,26 +1,35 @@
 ---
-description: Protocol 27 — run validate/test/typecheck in-session; Permission Unblock Report if blocked
+description: Protocol 27 — Agent Execution Obligation (run commands; diagnose before delegating)
+globs: ["**/*"]
 alwaysApply: true
 ---
 
-# Protocol 27 — Agent execution obligation (gtcx-operations)
+# Protocol 27: Agent Execution Obligation (AGENT-EXEC-OBL)
 
-**Run commands in this session.** The user is not your remote terminal.
+> **Normative:** `gtcx-docs/docs/governance/protocols/27-agent-execution-obligation/protocol.md` (v1.1.0)
+> **Phase:** 5.7 (after Protocol 26 Proceed Brief)
 
-## Before claiming done
+## Rule
 
-1. Run applicable gates: `git status`, `pnpm typecheck`, `pnpm validate`, `pnpm test`, `pnpm lint:policies`, `pnpm agent:protocols:check`.
-2. Report each: `command` → exit code.
-3. Cross-repo INF-86 verify: run in **gtcx-protocols** checkout (`pnpm check:inf86-xr401-preceremony`) — not “verify locally”.
-4. Quick ladder: `pnpm agent:verify-ladder`.
+**You run commands; the human does not substitute for your shell.**
+
+1. Run gates, smoke, **dev servers**, and device reload steps in-session.
+2. Report **command + exit code** — never end with “run locally” / “focus your terminal” without trying §9 first.
+3. Metro/Expo: start in **background**; probe with `curl`/`lsof`; Android via **`adb`** — not “press r/a” as the only step.
+4. Blocked: complete **diagnosis ladder D1–D6**, then **Permission Unblock Report** — re-run when unblocked.
+
+## Diagnosis ladder (before asking human)
+
+D1 Shell → D2 background Shell → D3 node child_process → D4 owner-repo cwd → D5 ecosystem scripts → D6 Unblock Report → D7 human (rare)
 
 ## Forbidden
 
-- “Verify locally: …” / “You should run `pnpm test`” when Shell is available
-- Asking user to paste output the agent could obtain
+- “Verify locally” / “run in your terminal” / “run these commands”
+- “Focus the Cursor terminal” / “press a/r in Metro” (without adb/API attempt)
+- “I can't send keystrokes” (without adb reload attempt)
+- “Let me know when you've run …”
 
-## If blocked
+## Ecosystem helpers
 
-Emit **Permission Unblock Report** per `docs/operations/agent-execution-obligation.md`. Re-run after enable.
-
-**Spec:** `gtcx-docs/docs/governance/protocols/27-agent-execution-obligation/protocol.md`
+- Git push (harness): `pnpm --dir ../gtcx-agentic ecosystem:push-all`
+- Normative spec: gtcx-docs Protocol 27 §8–§9
