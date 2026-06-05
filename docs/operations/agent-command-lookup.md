@@ -14,12 +14,12 @@ review_cycle: on-change
 
 **Mnemonic:** `session` → `next` → `gates` → `hub` → `push`
 
-| Remember  | Run from `gtcx-operations`                                                      |
-| --------- | --------------------------------------------------------------------------- |
-| **start** | `pnpm session` or `baseline session`                                        |
-| **next**  | `pnpm next`                                                                 |
-| **gates** | `pnpm gates`                                                                |
-| **hub**   | `pnpm hub`                                                                  |
+| Remember  | Run from `gtcx-operations`                                                        |
+| --------- | ----------------------------------------------------------------------------- |
+| **start** | `pnpm session` or `baseline session`                                          |
+| **next**  | `pnpm next`                                                                   |
+| **gates** | `pnpm gates`                                                                  |
+| **hub**   | `pnpm hub`                                                                    |
 | **push**  | `pnpm --dir ../gtcx-agentic ecosystem:git-push --repo gtcx-operations` (IDE-safe) |
 
 **Ecosystem push all ahead repos:** `pnpm --dir ../gtcx-agentic ecosystem:push-all`
