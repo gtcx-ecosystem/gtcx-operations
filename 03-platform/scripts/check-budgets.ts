@@ -3,8 +3,8 @@
  * Budget variance analysis and alerts
  */
 import { join } from 'path';
-import { REPO_ROOT, readYaml, getFilesByExtension } from '../03-platform/src/utils/files.js';
-import type { Budget, BudgetCategory } from '../03-platform/src/schemas/budget.js';
+import { domainPath, REPO_ROOT, readYaml, getFilesByExtension } from '../src/utils/files.js';
+import type { Budget, BudgetCategory } from '../src/schemas/budget.js';
 
 interface VarianceAlert {
   file: string;
@@ -71,7 +71,7 @@ function checkCategory(file: string, key: string, cat: BudgetCategory): void {
   }
 }
 
-const budgetFiles = getFilesByExtension(join(REPO_ROOT, 'finance'), '.yaml');
+const budgetFiles = getFilesByExtension(domainPath('finance'), '.yaml');
 
 for (const file of budgetFiles) {
   try {

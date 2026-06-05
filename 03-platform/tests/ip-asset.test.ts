@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { IpAssetSchema, IpRegistrySchema } from '../03-platform/src/schemas/ip-asset.js';
+import { IpAssetSchema, IpRegistrySchema } from '../src/schemas/ip-asset.js';
 
 describe('IpAssetSchema', () => {
   it('accepts a valid patent', () => {

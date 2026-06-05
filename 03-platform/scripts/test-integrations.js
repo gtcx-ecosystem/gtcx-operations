@@ -6,13 +6,13 @@
  */
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT } from '../03-platform/src/utils/files.js';
-import { authenticate } from '../03-platform/src/utils/google-auth.js';
-import { GmailClient } from '../03-platform/src/utils/gmail-client.js';
-import { CalendarClient } from '../03-platform/src/utils/calendar-client.js';
-import { ContactsClient } from '../03-platform/src/utils/contacts-client.js';
-import { DriveClient } from '../03-platform/src/utils/drive-client.js';
-import { SheetsClient } from '../03-platform/src/utils/sheets-client.js';
+import { REPO_ROOT } from '../src/utils/files.js';
+import { authenticate } from '../src/utils/google-auth.js';
+import { GmailClient } from '../src/utils/gmail-client.js';
+import { CalendarClient } from '../src/utils/calendar-client.js';
+import { ContactsClient } from '../src/utils/contacts-client.js';
+import { DriveClient } from '../src/utils/drive-client.js';
+import { SheetsClient } from '../src/utils/sheets-client.js';
 const results = [];
 function logResult(result) {
     results.push(result);

@@ -3,7 +3,7 @@
  * Budget variance analysis and alerts
  */
 import { join } from 'path';
-import { REPO_ROOT, readYaml, getFilesByExtension } from '../03-platform/src/utils/files.js';
+import { domainPath, REPO_ROOT, readYaml, getFilesByExtension } from '../src/utils/files.js';
 const alerts = [];
 function checkCategory(file, key, cat) {
     // Check overspend
@@ -56,7 +56,7 @@ function checkCategory(file, key, cat) {
         }
     }
 }
-const budgetFiles = getFilesByExtension(join(REPO_ROOT, 'finance'), '.yaml');
+const budgetFiles = getFilesByExtension(domainPath('finance'), '.yaml');
 for (const file of budgetFiles) {
     try {
         const budget = readYaml(file);

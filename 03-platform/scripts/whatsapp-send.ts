@@ -4,10 +4,10 @@
  */
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readYaml } from '../03-platform/src/utils/files.js';
-import { WhatsAppProviderSchema, WhatsAppMessageSchema, WhatsAppTemplateSchema } from '../03-platform/src/schemas/whatsapp.js';
-import { getWhatsAppClient, generateWhatsAppId } from '../03-platform/src/utils/whatsapp-client.js';
-import type { WhatsAppMessage, WhatsAppTemplate, WhatsAppProvider } from '../03-platform/src/schemas/whatsapp.js';
+import { domainPath, REPO_ROOT, readYaml } from '../src/utils/files.js';
+import { WhatsAppProviderSchema, WhatsAppMessageSchema, WhatsAppTemplateSchema } from '../src/schemas/whatsapp.js';
+import { getWhatsAppClient, generateWhatsAppId } from '../src/utils/whatsapp-client.js';
+import type { WhatsAppMessage, WhatsAppTemplate, WhatsAppProvider } from '../src/schemas/whatsapp.js';
 
 interface SendArgs {
   template?: string;
@@ -36,7 +36,7 @@ function parseArgs(): SendArgs {
 const args = parseArgs();
 
 // Load config
-const configPath = join(REPO_ROOT, 'whatsapp', 'config', 'provider.yaml');
+const configPath = domainPath('whatsapp', 'config', 'provider.yaml');
 if (!existsSync(configPath)) {
   console.error('❌ WhatsApp config not found');
   process.exit(1);
@@ -51,11 +51,11 @@ let message: WhatsAppMessage;
 let template: WhatsAppTemplate | undefined;
 
 if (args.template) {
-  const templatePath = join(REPO_ROOT, 'whatsapp', 'templates', `${args.template}.yaml`);
+  const templatePath = domainPath('whatsapp', 'templates', `${args.template}.yaml`);
   if (!existsSync(templatePath)) {
     console.error(`❌ Template not found: ${args.template}`);
     console.error('Available:');
-    const templatesDir = join(REPO_ROOT, 'whatsapp', 'templates');
+    const templatesDir = domainPath('whatsapp', 'templates');
     if (existsSync(templatesDir)) {
       const { readdirSync } = await import('fs');
       for (const f of readdirSync(templatesDir)) {
@@ -159,7 +159,7 @@ if (args.dryRun) {
 }
 
 // Log
-const logDir = join(REPO_ROOT, 'whatsapp', 'sent');
+const logDir = domainPath('whatsapp', 'sent');
 const logPath = join(logDir, `${message.id}.json`);
 writeFileSync(logPath, JSON.stringify(message, null, 2));
 console.log(`📝 Logged to ${logPath}`);

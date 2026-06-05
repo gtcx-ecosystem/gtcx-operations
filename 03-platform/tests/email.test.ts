@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { EmailTemplateSchema, EmailLogSchema, EmailProviderConfigSchema } from '../03-platform/src/schemas/email.js';
+import { EmailTemplateSchema, EmailLogSchema, EmailProviderConfigSchema } from '../src/schemas/email.js';
 
 describe('EmailTemplateSchema', () => {
   it('accepts a valid template', () => {

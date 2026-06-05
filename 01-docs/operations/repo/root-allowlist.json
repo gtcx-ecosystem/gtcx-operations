@@ -4,10 +4,7 @@
   "schema_version": "1.0.0",
   "updated": "2026-06-05",
   "description": "Root allowlist for gtcx-operations (five-hub v2).",
-  "required_files": [
-    "README.md",
-    "AGENTS.md"
-  ],
+  "required_files": ["README.md", "AGENTS.md"],
   "allowed_files": [
     ".dockerignore",
     ".editorconfig",
@@ -35,6 +32,7 @@
     "baseline.config.ts",
     "commitlint.config.js",
     "eslint.config.js",
+    "eslint.config.mjs",
     "hygiene.config.json",
     "package.json",
     "pnpm-lock.yaml",
@@ -50,7 +48,9 @@
     ".cursor",
     ".gemini",
     ".github",
+    ".husky",
     ".kimi",
+    ".turbo",
     "00-archive",
     "01-docs",
     "02-ops",
@@ -58,20 +58,7 @@
     "04-ship",
     "05-audit",
     "config",
-    "crm",
-    "dist",
-    "email",
-    "finance",
-    "fundraising",
-    "hr",
-    "ip",
-    "legal",
-    "ops",
-    "orchestration",
-    "rust",
-    "threads",
-    "whatsapp",
-    "workstream"
+    "rust"
   ],
   "allowed_dot_directories": [
     ".github",
@@ -87,13 +74,8 @@
     ".changeset",
     ".vitepress"
   ],
-  "ignored_prefixes": [
-    ".",
-    "node_modules"
-  ],
-  "ignored_exact": [
-    "node_modules"
-  ],
+  "ignored_prefixes": [".", "node_modules"],
+  "ignored_exact": ["node_modules"],
   "forbidden_root_names": {
     "audit": "Move to 01-docs/05-audit/.",
     "coverage": "Build artifact — gitignored.",
@@ -101,17 +83,26 @@
     "_archive": "Gitignored at root.",
     "Dockerfile": "Use 04-ship/docker/Dockerfile.",
     "docker-compose.yml": "Use 04-ship/docker/docker-compose.yml.",
+    "dist": "Build artifact — gitignored.",
+    "crm": "Use 03-platform/crm/.",
+    "email": "Use 03-platform/email/.",
+    "finance": "Use 03-platform/finance/.",
+    "fundraising": "Use 03-platform/fundraising/.",
+    "hr": "Use 03-platform/hr/.",
+    "ip": "Use 03-platform/ip/.",
+    "legal": "Use 03-platform/legal/.",
+    "ops": "Use 03-platform/ops/ (not 02-ops hub).",
+    "orchestration": "Use 03-platform/orchestration/.",
+    "threads": "Use 03-platform/threads/.",
+    "whatsapp": "Use 03-platform/whatsapp/.",
+    "workstream": "Use 03-platform/workstream/.",
     "typedoc.json": "Use config/toolchain/typedoc.json.",
     "vitest.workspace.ts": "Use config/toolchain/vitest.workspace.ts.",
     "CLAUDE.md": "Use .claude/CLAUDE.md.",
     "GEMINI.md": "Use .gemini/GEMINI.md.",
     "CONVENTIONS.md": "Use 01-docs/conventions.md."
   },
-  "forbidden_name_prefixes": [
-    "IMG_",
-    "Screenshot",
-    "Untitled"
-  ],
+  "forbidden_name_prefixes": ["IMG_", "Screenshot", "Untitled"],
   "human_owned_paths": {
     "_delete": {
       "owner": "repository maintainer (manual)",
@@ -125,6 +116,7 @@
     "audits": "01-docs/05-audit/",
     "repo_policy": "01-docs/operations/repo/",
     "ship_docker": "04-ship/docker/",
-    "toolchain": "config/toolchain/"
+    "toolchain": "config/toolchain/",
+    "corporate_domains": "03-platform/{crm,email,finance,...}/"
   }
 }

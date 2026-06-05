@@ -4,10 +4,10 @@
  */
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readJson } from '../03-platform/src/utils/files.js';
-import { CalendarClient } from '../03-platform/src/utils/calendar-client.js';
-import type { GoogleAuthConfig } from '../03-platform/src/utils/google-auth.js';
-import type { CrmInteraction, CrmContact } from '../03-platform/src/schemas/crm.js';
+import { domainPath, REPO_ROOT, readJson } from '../src/utils/files.js';
+import { CalendarClient } from '../src/utils/calendar-client.js';
+import type { GoogleAuthConfig } from '../src/utils/google-auth.js';
+import type { CrmInteraction, CrmContact } from '../src/schemas/crm.js';
 
 const MS_PER_DAY = 1000 * 60 * 60 * 24;
 
@@ -18,8 +18,8 @@ function daysUntil(dateStr: string): number {
 }
 
 // Load CRM data
-const interactionsPath = join(REPO_ROOT, 'crm', 'interactions.json');
-const contactsPath = join(REPO_ROOT, 'crm', 'contacts.json');
+const interactionsPath = domainPath('crm', 'interactions.json');
+const contactsPath = domainPath('crm', 'contacts.json');
 
 if (!existsSync(interactionsPath) || !existsSync(contactsPath)) {
   console.error('❌ CRM data not found');

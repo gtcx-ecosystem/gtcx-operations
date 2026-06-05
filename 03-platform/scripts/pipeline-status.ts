@@ -3,10 +3,10 @@
  * Fundraising pipeline status report
  */
 import { join } from 'path';
-import { REPO_ROOT, readYaml, getFilesByExtension } from '../03-platform/src/utils/files.js';
-import type { Pipeline, Stage } from '../03-platform/src/schemas/fundraising.js';
+import { domainPath, REPO_ROOT, readYaml, getFilesByExtension } from '../src/utils/files.js';
+import type { Pipeline, Stage } from '../src/schemas/fundraising.js';
 
-const pipelineFiles = getFilesByExtension(join(REPO_ROOT, 'fundraising'), '.yaml');
+const pipelineFiles = getFilesByExtension(domainPath('fundraising'), '.yaml');
 
 for (const file of pipelineFiles) {
   try {

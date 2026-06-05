@@ -8,7 +8,7 @@
  */
 import { writeFileSync, existsSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readJson } from '../03-platform/src/utils/files.js';
+import { domainPath, REPO_ROOT, readJson } from '../src/utils/files.js';
 const MS_PER_HOUR = 1000 * 60 * 60;
 const MS_PER_DAY = MS_PER_HOUR * 24;
 // Audience-aware routing helpers
@@ -203,7 +203,7 @@ const rules = [
     },
 ];
 // Load threads
-const registryPath = join(REPO_ROOT, 'threads', 'registry.json');
+const registryPath = domainPath('threads', 'registry.json');
 if (!existsSync(registryPath)) {
     console.error('❌ Thread registry not found. Run: pnpm threads:build');
     process.exit(1);
@@ -253,7 +253,7 @@ if (newFollowUps.length > 0) {
         md += `- **Scheduled:** ${new Date(followUp.scheduled_at).toLocaleDateString()}\n`;
         md += `- **Auto-trigger:** ${followUp.auto_trigger ? 'Yes' : 'No'}\n\n`;
     }
-    const reportPath = join(REPO_ROOT, 'orchestration', 'report.md');
+    const reportPath = domainPath('orchestration', 'report.md');
     writeFileSync(reportPath, md);
     console.log(`📝 Report: ${reportPath}`);
 }

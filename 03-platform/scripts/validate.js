@@ -4,19 +4,19 @@
  */
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readYaml, readJson, readMarkdownWithFrontmatter, getFilesByExtension } from '../03-platform/src/utils/files.js';
-import { validateWithZod, printResults } from '../03-platform/src/utils/validate.js';
-import { BudgetSchema } from '../03-platform/src/schemas/budget.js';
-import { IpRegistrySchema } from '../03-platform/src/schemas/ip-asset.js';
-import { PipelineSchema } from '../03-platform/src/schemas/fundraising.js';
-import { ContractFrontmatterSchema, PolicyFrontmatterSchema } from '../03-platform/src/schemas/contract.js';
-import { EmailProviderConfigSchema, EmailTemplateSchema, EmailLogSchema } from '../03-platform/src/schemas/email.js';
-import { WhatsAppProviderSchema, WhatsAppTemplateSchema, WhatsAppMessageSchema } from '../03-platform/src/schemas/whatsapp.js';
-import { CrmContactSchema, CrmCompanySchema, CrmInteractionSchema } from '../03-platform/src/schemas/crm.js';
-import { AttestationRegisterSchema } from '../03-platform/src/schemas/agentic-attestation.js';
+import { domainPath, REPO_ROOT, readYaml, readJson, readMarkdownWithFrontmatter, getFilesByExtension } from '../src/utils/files.js';
+import { validateWithZod, printResults } from '../src/utils/validate.js';
+import { BudgetSchema } from '../src/schemas/budget.js';
+import { IpRegistrySchema } from '../src/schemas/ip-asset.js';
+import { PipelineSchema } from '../src/schemas/fundraising.js';
+import { ContractFrontmatterSchema, PolicyFrontmatterSchema } from '../src/schemas/contract.js';
+import { EmailProviderConfigSchema, EmailTemplateSchema, EmailLogSchema } from '../src/schemas/email.js';
+import { WhatsAppProviderSchema, WhatsAppTemplateSchema, WhatsAppMessageSchema } from '../src/schemas/whatsapp.js';
+import { CrmContactSchema, CrmCompanySchema, CrmInteractionSchema } from '../src/schemas/crm.js';
+import { AttestationRegisterSchema } from '../src/schemas/agentic-attestation.js';
 const results = [];
 // Validate budgets
-const budgetFiles = getFilesByExtension(join(REPO_ROOT, 'finance'), '.yaml');
+const budgetFiles = getFilesByExtension(domainPath('finance'), '.yaml');
 for (const file of budgetFiles) {
     try {
         const data = readYaml(file);
@@ -27,7 +27,7 @@ for (const file of budgetFiles) {
     }
 }
 // Validate IP registry
-const ipFiles = getFilesByExtension(join(REPO_ROOT, 'ip'), '.json');
+const ipFiles = getFilesByExtension(domainPath('ip'), '.json');
 for (const file of ipFiles) {
     try {
         const data = readJson(file);
@@ -38,7 +38,7 @@ for (const file of ipFiles) {
     }
 }
 // Validate fundraising pipeline
-const pipelineFiles = getFilesByExtension(join(REPO_ROOT, 'fundraising'), '.yaml');
+const pipelineFiles = getFilesByExtension(domainPath('fundraising'), '.yaml');
 for (const file of pipelineFiles) {
     try {
         const data = readYaml(file);
@@ -50,7 +50,7 @@ for (const file of pipelineFiles) {
 }
 // Validate contracts (markdown with frontmatter)
 // Skip templates — they use Handlebars variables that don't pass strict validation
-const contractFiles = getFilesByExtension(join(REPO_ROOT, 'legal'), '.md')
+const contractFiles = getFilesByExtension(domainPath('legal'), '.md')
     .filter((f) => !f.includes('/templates/'));
 for (const file of contractFiles) {
     try {
@@ -62,9 +62,9 @@ for (const file of contractFiles) {
     }
 }
 // Validate policies (markdown with frontmatter)
-const policyFiles = getFilesByExtension(join(REPO_ROOT, 'hr'), '.md')
-    .concat(getFilesByExtension(join(REPO_ROOT, 'ops'), '.md'))
-    .concat(getFilesByExtension(join(REPO_ROOT, 'legal/policies'), '.md'));
+const policyFiles = getFilesByExtension(domainPath('hr'), '.md')
+    .concat(getFilesByExtension(domainPath('ops'), '.md'))
+    .concat(getFilesByExtension(domainPath('legal', 'policies'), '.md'));
 for (const file of policyFiles) {
     try {
         const { frontmatter } = readMarkdownWithFrontmatter(file);
@@ -75,7 +75,7 @@ for (const file of policyFiles) {
     }
 }
 // Validate email config
-const emailConfigFiles = getFilesByExtension(join(REPO_ROOT, 'email', 'config'), '.yaml');
+const emailConfigFiles = getFilesByExtension(domainPath('email', 'config'), '.yaml');
 for (const file of emailConfigFiles) {
     try {
         const data = readYaml(file);
@@ -86,7 +86,7 @@ for (const file of emailConfigFiles) {
     }
 }
 // Validate email templates
-const emailTemplateFiles = getFilesByExtension(join(REPO_ROOT, 'email', 'templates'), '.yaml');
+const emailTemplateFiles = getFilesByExtension(domainPath('email', 'templates'), '.yaml');
 for (const file of emailTemplateFiles) {
     try {
         const data = readYaml(file);
@@ -97,7 +97,7 @@ for (const file of emailTemplateFiles) {
     }
 }
 // Validate email logs
-const emailLogFiles = getFilesByExtension(join(REPO_ROOT, 'email', 'sent'), '.json');
+const emailLogFiles = getFilesByExtension(domainPath('email', 'sent'), '.json');
 for (const file of emailLogFiles) {
     try {
         const data = readJson(file);
@@ -108,7 +108,7 @@ for (const file of emailLogFiles) {
     }
 }
 // Validate WhatsApp config
-const whatsappConfigFiles = getFilesByExtension(join(REPO_ROOT, 'whatsapp', 'config'), '.yaml');
+const whatsappConfigFiles = getFilesByExtension(domainPath('whatsapp', 'config'), '.yaml');
 for (const file of whatsappConfigFiles) {
     try {
         const data = readYaml(file);
@@ -119,7 +119,7 @@ for (const file of whatsappConfigFiles) {
     }
 }
 // Validate WhatsApp templates
-const whatsappTemplateFiles = getFilesByExtension(join(REPO_ROOT, 'whatsapp', 'templates'), '.yaml');
+const whatsappTemplateFiles = getFilesByExtension(domainPath('whatsapp', 'templates'), '.yaml');
 for (const file of whatsappTemplateFiles) {
     try {
         const data = readYaml(file);
@@ -130,7 +130,7 @@ for (const file of whatsappTemplateFiles) {
     }
 }
 // Validate WhatsApp logs
-const whatsappLogFiles = getFilesByExtension(join(REPO_ROOT, 'whatsapp', 'sent'), '.json');
+const whatsappLogFiles = getFilesByExtension(domainPath('whatsapp', 'sent'), '.json');
 for (const file of whatsappLogFiles) {
     try {
         const data = readJson(file);
@@ -157,7 +157,7 @@ if (existsSync(attestationRegisterPath)) {
     }
 }
 // Validate CRM data
-const crmContactFiles = getFilesByExtension(join(REPO_ROOT, 'crm'), '.json');
+const crmContactFiles = getFilesByExtension(domainPath('crm'), '.json');
 for (const file of crmContactFiles) {
     try {
         const data = readJson(file);

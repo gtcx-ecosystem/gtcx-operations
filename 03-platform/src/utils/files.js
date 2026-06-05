@@ -14,6 +14,10 @@ function findRepoRoot() {
     return process.cwd();
 }
 export const REPO_ROOT = findRepoRoot();
+export const PLATFORM_ROOT = join(REPO_ROOT, '03-platform');
+export function domainPath(...segments) {
+    return join(PLATFORM_ROOT, ...segments);
+}
 export function walkDir(dir, callback) {
     for (const entry of readdirSync(dir)) {
         const fullPath = join(dir, entry);

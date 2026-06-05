@@ -3,8 +3,8 @@
  * Fundraising pipeline status report
  */
 import { join } from 'path';
-import { REPO_ROOT, readYaml, getFilesByExtension } from '../03-platform/src/utils/files.js';
-const pipelineFiles = getFilesByExtension(join(REPO_ROOT, 'fundraising'), '.yaml');
+import { domainPath, REPO_ROOT, readYaml, getFilesByExtension } from '../src/utils/files.js';
+const pipelineFiles = getFilesByExtension(domainPath('fundraising'), '.yaml');
 for (const file of pipelineFiles) {
     try {
         const data = readYaml(file);

@@ -64,7 +64,7 @@ function countLines(output: string): number {
 }
 
 function loadPreviousReport(): RepoSnapshot[] | null {
-  const files = run("gtcx-operations", "ls -1 workstream/health-history/ 2>/dev/null | sort -r | head -1");
+  const files = run("gtcx-operations", "ls -1 03-platform/workstream/health-history/ 2>/dev/null | sort -r | head -1");
   if (!files) return null;
   const path = join(ECOSYSTEM_ROOT, "gtcx-operations", "workstream", "health-history", files.trim());
   if (!existsSync(path)) return null;

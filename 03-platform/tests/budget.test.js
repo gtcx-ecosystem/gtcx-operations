@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { BudgetSchema, LineItemSchema } from '../03-platform/src/schemas/budget.js';
+import { BudgetSchema, LineItemSchema } from '../src/schemas/budget.js';
 const validBudget = {
     quarter: 'Q2-2026',
     period: { start: '2026-04-01', end: '2026-06-30' },

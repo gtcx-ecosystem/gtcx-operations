@@ -4,13 +4,13 @@
  */
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readJson } from '../03-platform/src/utils/files.js';
-import { ContactsClient } from '../03-platform/src/utils/contacts-client.js';
-import type { GoogleAuthConfig } from '../03-platform/src/utils/google-auth.js';
-import type { CrmContact, CrmCompany } from '../03-platform/src/schemas/crm.js';
+import { domainPath, REPO_ROOT, readJson } from '../src/utils/files.js';
+import { ContactsClient } from '../src/utils/contacts-client.js';
+import type { GoogleAuthConfig } from '../src/utils/google-auth.js';
+import type { CrmContact, CrmCompany } from '../src/schemas/crm.js';
 
-const contactsPath = join(REPO_ROOT, 'crm', 'contacts.json');
-const companiesPath = join(REPO_ROOT, 'crm', 'companies.json');
+const contactsPath = domainPath('crm', 'contacts.json');
+const companiesPath = domainPath('crm', 'companies.json');
 
 if (!existsSync(contactsPath)) {
   console.error('❌ CRM contacts not found');

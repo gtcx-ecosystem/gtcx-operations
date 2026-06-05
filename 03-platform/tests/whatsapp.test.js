@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { WhatsAppProviderSchema, WhatsAppTemplateSchema, WhatsAppMessageSchema } from '../03-platform/src/schemas/whatsapp.js';
+import { WhatsAppProviderSchema, WhatsAppTemplateSchema, WhatsAppMessageSchema } from '../src/schemas/whatsapp.js';
 describe('WhatsAppProviderSchema', () => {
     it('accepts mock provider', () => {
         const config = {

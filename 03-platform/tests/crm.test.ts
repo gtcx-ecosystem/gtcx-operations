@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { CrmContactSchema, CrmCompanySchema, CrmInteractionSchema } from '../03-platform/src/schemas/crm.js';
+import { CrmContactSchema, CrmCompanySchema, CrmInteractionSchema } from '../src/schemas/crm.js';
 
 describe('CrmContactSchema', () => {
   it('accepts a valid contact', () => {

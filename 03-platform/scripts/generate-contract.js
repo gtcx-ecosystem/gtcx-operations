@@ -5,7 +5,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import Handlebars from 'handlebars';
-import { REPO_ROOT } from '../03-platform/src/utils/files.js';
+import { domainPath, REPO_ROOT } from '../src/utils/files.js';
 function parseArgs() {
     const args = {};
     for (let i = 2; i < process.argv.length; i++) {
@@ -40,7 +40,7 @@ if (!args.template || !args.party) {
     console.log('Available templates:');
     process.exit(1);
 }
-const templatePath = join(REPO_ROOT, 'legal', 'templates', `${args.template}.md`);
+const templatePath = domainPath('legal', 'templates', `${args.template}.md`);
 if (!existsSync(templatePath)) {
     console.error(`❌ Template not found: ${templatePath}`);
     console.error('Available templates in legal/templates/:');

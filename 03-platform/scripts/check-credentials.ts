@@ -5,7 +5,7 @@
  */
 import { existsSync, readFileSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT } from '../03-platform/src/utils/files.js';
+import { REPO_ROOT } from '../src/utils/files.js';
 
 interface CredentialCheck {
   name: string;

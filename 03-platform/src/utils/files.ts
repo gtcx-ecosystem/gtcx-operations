@@ -17,6 +17,12 @@ function findRepoRoot(): string {
 }
 
 export const REPO_ROOT = findRepoRoot();
+export const PLATFORM_ROOT = join(REPO_ROOT, '03-platform');
+
+/** Corporate-ops domain content (CRM, finance, legal, …) under 03-platform/. */
+export function domainPath(...segments: string[]): string {
+  return join(PLATFORM_ROOT, ...segments);
+}
 
 export function walkDir(dir: string, callback: (path: string) => void): void {
   for (const entry of readdirSync(dir)) {

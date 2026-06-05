@@ -4,12 +4,12 @@
  */
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readYaml } from '../03-platform/src/utils/files.js';
-import { EmailProviderConfigSchema, EmailLogSchema, EmailTemplateSchema } from '../03-platform/src/schemas/email.js';
-import { GmailClient } from '../03-platform/src/utils/gmail-client.js';
-import { getProvider, generateEmailId } from '../03-platform/src/utils/email-provider.js';
-import type { EmailLog, EmailTemplate, EmailProviderConfig } from '../03-platform/src/schemas/email.js';
-import type { GoogleAuthConfig } from '../03-platform/src/utils/google-auth.js';
+import { domainPath, REPO_ROOT, readYaml } from '../src/utils/files.js';
+import { EmailProviderConfigSchema, EmailLogSchema, EmailTemplateSchema } from '../src/schemas/email.js';
+import { GmailClient } from '../src/utils/gmail-client.js';
+import { getProvider, generateEmailId } from '../src/utils/email-provider.js';
+import type { EmailLog, EmailTemplate, EmailProviderConfig } from '../src/schemas/email.js';
+import type { GoogleAuthConfig } from '../src/utils/google-auth.js';
 
 interface SendArgs {
   template?: string;
@@ -39,7 +39,7 @@ function parseArgs(): SendArgs {
 const args = parseArgs();
 
 // Load config
-const configPath = join(REPO_ROOT, 'email', 'config', 'provider.yaml');
+const configPath = domainPath('email', 'config', 'provider.yaml');
 if (!existsSync(configPath)) {
   console.error('❌ Email provider config not found. Run: pnpm email:config');
   process.exit(1);
@@ -53,11 +53,11 @@ let log: EmailLog;
 let template: EmailTemplate | undefined;
 
 if (args.template) {
-  const templatePath = join(REPO_ROOT, 'email', 'templates', `${args.template}.yaml`);
+  const templatePath = domainPath('email', 'templates', `${args.template}.yaml`);
   if (!existsSync(templatePath)) {
     console.error(`❌ Template not found: ${args.template}`);
     console.error('Available templates:');
-    const templatesDir = join(REPO_ROOT, 'email', 'templates');
+    const templatesDir = domainPath('email', 'templates');
     if (existsSync(templatesDir)) {
       const { readdirSync } = await import('fs');
       for (const f of readdirSync(templatesDir)) {
@@ -179,7 +179,7 @@ if (args.dryRun) {
 }
 
 // Log to file
-const logDir = join(REPO_ROOT, 'email', 'sent');
+const logDir = domainPath('email', 'sent');
 const logPath = join(logDir, `${log.id}.json`);
 writeFileSync(logPath, JSON.stringify(log, null, 2));
 console.log(`📝 Logged to ${logPath}`);

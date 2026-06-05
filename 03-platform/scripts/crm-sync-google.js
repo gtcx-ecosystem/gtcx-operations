@@ -4,10 +4,10 @@
  */
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readJson } from '../03-platform/src/utils/files.js';
-import { ContactsClient } from '../03-platform/src/utils/contacts-client.js';
-const contactsPath = join(REPO_ROOT, 'crm', 'contacts.json');
-const companiesPath = join(REPO_ROOT, 'crm', 'companies.json');
+import { domainPath, REPO_ROOT, readJson } from '../src/utils/files.js';
+import { ContactsClient } from '../src/utils/contacts-client.js';
+const contactsPath = domainPath('crm', 'contacts.json');
+const companiesPath = domainPath('crm', 'companies.json');
 if (!existsSync(contactsPath)) {
     console.error('❌ CRM contacts not found');
     process.exit(1);

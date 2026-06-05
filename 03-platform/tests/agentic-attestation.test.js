@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { AgenticAttestationRecordSchema, AttestationRegisterSchema, } from '../03-platform/src/schemas/agentic-attestation.js';
+import { AgenticAttestationRecordSchema, AttestationRegisterSchema, } from '../src/schemas/agentic-attestation.js';
 const validRecord = {
     work_id: 'XR-401-A',
     coordination_spec: 'COORD-ATR-001',

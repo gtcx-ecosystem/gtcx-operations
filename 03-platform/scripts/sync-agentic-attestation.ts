@@ -7,12 +7,12 @@ import { createHash } from 'crypto';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import yaml from 'js-yaml';
-import { REPO_ROOT, readYaml } from '../03-platform/src/utils/files.js';
+import { REPO_ROOT, readYaml } from '../src/utils/files.js';
 import {
   AttestationRegisterSchema,
   type AgenticAttestationRecord,
   type AttestationRegister,
-} from '../03-platform/src/schemas/agentic-attestation.js';
+} from '../src/schemas/agentic-attestation.js';
 
 const EVIDENCE_MANIFEST: Array<{
   rel: string;

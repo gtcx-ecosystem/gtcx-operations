@@ -4,15 +4,15 @@
  */
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readYaml } from '../03-platform/src/utils/files.js';
-import { SheetsClient } from '../03-platform/src/utils/sheets-client.js';
+import { domainPath, REPO_ROOT, readYaml } from '../src/utils/files.js';
+import { SheetsClient } from '../src/utils/sheets-client.js';
 const configPath = join(REPO_ROOT, '.secrets', 'sheets-config.json');
 let sheetsConfig = {};
 if (existsSync(configPath)) {
     sheetsConfig = JSON.parse(readFileSync(configPath, 'utf-8'));
 }
 const budgetFiles = [];
-const financeDir = join(REPO_ROOT, 'finance', 'budgets');
+const financeDir = domainPath('finance', 'budgets');
 if (existsSync(financeDir)) {
     const { readdirSync } = await import('fs');
     for (const f of readdirSync(financeDir)) {

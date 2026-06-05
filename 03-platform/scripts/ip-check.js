@@ -3,7 +3,7 @@
  * IP Asset Registry — check deadlines, generate reports
  */
 import { join } from 'path';
-import { REPO_ROOT, readJson, getFilesByExtension } from '../03-platform/src/utils/files.js';
+import { domainPath, REPO_ROOT, readJson, getFilesByExtension } from '../src/utils/files.js';
 const MS_PER_DAY = 1000 * 60 * 60 * 24;
 function daysUntil(dateStr) {
     const target = new Date(dateStr);
@@ -19,7 +19,7 @@ function getPriorityColor(priority) {
         default: return '⚪';
     }
 }
-const ipFiles = getFilesByExtension(join(REPO_ROOT, 'ip'), '.json');
+const ipFiles = getFilesByExtension(domainPath('ip'), '.json');
 const allAssets = [];
 for (const file of ipFiles) {
     try {

@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import {
   AgenticAttestationRecordSchema,
   AttestationRegisterSchema,
-} from '../03-platform/src/schemas/agentic-attestation.js';
+} from '../src/schemas/agentic-attestation.js';
 
 const validRecord = {
   work_id: 'XR-401-A',

@@ -5,8 +5,8 @@
  */
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readJson } from '../03-platform/src/utils/files.js';
-import type { Thread, ThreadFollowUp } from '../03-platform/src/schemas/thread.js';
+import { domainPath, REPO_ROOT, readJson } from '../src/utils/files.js';
+import type { Thread, ThreadFollowUp } from '../src/schemas/thread.js';
 
 const CLICKUP_API_BASE = 'https://api.clickup.com/api/v2';
 const API_TOKEN = process.env.CLICKUP_API_TOKEN;
@@ -54,7 +54,7 @@ async function createClickUpTask(listId: string, task: ClickUpTask): Promise<{ i
 }
 
 // Load threads
-const registryPath = join(REPO_ROOT, 'threads', 'registry.json');
+const registryPath = domainPath('threads', 'registry.json');
 if (!existsSync(registryPath)) {
   console.error('❌ Thread registry not found. Run: pnpm threads:build');
   process.exit(1);
@@ -160,6 +160,6 @@ console.log(`\n📊 Sync complete: ${created} tasks created, ${skipped} skipped`
 
 if (!listId) {
   console.log(`\n⚠️  No ClickUp list ID found for gtcx-operations.`);
-  console.log(`   Add it to workstream/coordination/clickup-mapping.json`);
+  console.log(`   Add it to 03-platform/workstream/coordination/clickup-mapping.json`);
   console.log(`   Or set CLICKUP_API_TOKEN and CLICKUP_TEAM_ID env vars.`);
 }

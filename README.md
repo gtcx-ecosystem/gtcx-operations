@@ -215,8 +215,8 @@ pnpm test:integrations
 - **`.secrets/`** is gitignored — never commit credentials
 - Service account keys rotated every 90 days
 - Domain-wide delegation restricted to `ops@gtcx.trade`
-- Email audit trail in `email/sent/` (JSON logs)
-- WhatsApp message audit trail in `whatsapp/sent/` (JSON logs)
+- Email audit trail in `03-platform/email/sent/` (JSON logs)
+- WhatsApp message audit trail in `03-platform/whatsapp/sent/` (JSON logs)
 
 ## Status
 

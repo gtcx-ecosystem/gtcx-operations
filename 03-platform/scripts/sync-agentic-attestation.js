@@ -7,8 +7,8 @@ import { createHash } from 'crypto';
 import { existsSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import yaml from 'js-yaml';
-import { REPO_ROOT, readYaml } from '../03-platform/src/utils/files.js';
-import { AttestationRegisterSchema, } from '../03-platform/src/schemas/agentic-attestation.js';
+import { REPO_ROOT, readYaml } from '../src/utils/files.js';
+import { AttestationRegisterSchema, } from '../src/schemas/agentic-attestation.js';
 const EVIDENCE_MANIFEST = [
     {
         rel: '01-docs/05-audit/evidence/inf-86-xr-401-agentic-attestation-latest.json',

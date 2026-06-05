@@ -4,8 +4,8 @@
  */
 import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readJson } from '../03-platform/src/utils/files.js';
-import type { CrmRegistry, CrmContact, CrmInteraction } from '../03-platform/src/schemas/crm.js';
+import { domainPath, REPO_ROOT, readJson } from '../src/utils/files.js';
+import type { CrmRegistry, CrmContact, CrmInteraction } from '../src/schemas/crm.js';
 
 const MS_PER_DAY = 1000 * 60 * 60 * 24;
 
@@ -24,9 +24,9 @@ function daysUntil(dateStr: string): number {
 // Load CRM data
 let registry: CrmRegistry;
 try {
-  const contacts = readJson(join(REPO_ROOT, 'crm', 'contacts.json'));
-  const companies = readJson(join(REPO_ROOT, 'crm', 'companies.json'));
-  const interactions = readJson(join(REPO_ROOT, 'crm', 'interactions.json'));
+  const contacts = readJson(domainPath('crm', 'contacts.json'));
+  const companies = readJson(domainPath('crm', 'companies.json'));
+  const interactions = readJson(domainPath('crm', 'interactions.json'));
   registry = {
     version: '1.0',
     last_updated: new Date().toISOString(),
@@ -128,6 +128,6 @@ if (pendingFollowUps.length > 0) {
   }
 }
 
-const reportPath = join(REPO_ROOT, 'crm', 'report.md');
+const reportPath = domainPath('crm', 'report.md');
 writeFileSync(reportPath, md);
 console.log(`\n📝 Report written to ${reportPath}`);

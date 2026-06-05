@@ -4,7 +4,7 @@
  */
 import { writeFileSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readJson } from '../03-platform/src/utils/files.js';
+import { domainPath, REPO_ROOT, readJson } from '../src/utils/files.js';
 const MS_PER_DAY = 1000 * 60 * 60 * 24;
 function daysSince(dateStr) {
     const date = new Date(dateStr);
@@ -19,9 +19,9 @@ function daysUntil(dateStr) {
 // Load CRM data
 let registry;
 try {
-    const contacts = readJson(join(REPO_ROOT, 'crm', 'contacts.json'));
-    const companies = readJson(join(REPO_ROOT, 'crm', 'companies.json'));
-    const interactions = readJson(join(REPO_ROOT, 'crm', 'interactions.json'));
+    const contacts = readJson(domainPath('crm', 'contacts.json'));
+    const companies = readJson(domainPath('crm', 'companies.json'));
+    const interactions = readJson(domainPath('crm', 'interactions.json'));
     registry = {
         version: '1.0',
         last_updated: new Date().toISOString(),
@@ -114,7 +114,7 @@ if (pendingFollowUps.length > 0) {
         md += `- ${interaction.follow_up_action}\n\n`;
     }
 }
-const reportPath = join(REPO_ROOT, 'crm', 'report.md');
+const reportPath = domainPath('crm', 'report.md');
 writeFileSync(reportPath, md);
 console.log(`\n📝 Report written to ${reportPath}`);
 //# sourceMappingURL=crm-report.js.map

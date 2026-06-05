@@ -40,7 +40,7 @@ Before making any code changes, architectural decisions, or recommendations, com
 ### Phase 3: Discover Current State (30 sec)
 8. Run `git status` — uncommitted changes, modified files
 9. Run `git log --oneline -10` — recent work, current branch
-10. Check `workstream/` or `.baseline/memory/session.md` for active tasks
+10. Check `03-platform/workstream/` or `.baseline/memory/session.md` for active tasks
 
 ### Phase 4: Select Persona & Frame (30 sec)
 11. Map task to persona: developer (default), trade-analyst, compliance-officer, field-inspector, protocol-engineer, platform-architect, product-strategist, security-engineer
@@ -153,12 +153,12 @@ GTCX Operations is the corporate functions layer of the GTCX ecosystem. It house
 
 ## Conventions
 
-1. **Contracts** — Store as YAML frontmatter + markdown body. Use `legal/contracts/` with naming: `{type}-{party}-{date}.md`
+1. **Contracts** — Store as YAML frontmatter + markdown body. Use `03-platform/legal/contracts/` with naming: `{type}-{party}-{date}.md`
 2. **Policies** — Versioned markdown with `version`, `effective_date`, `owner` in frontmatter
-3. **Budgets** — YAML files in `finance/budgets/` with quarters as top-level keys
-4. **IP Assets** — JSON registry in `ip/assets.json` with patent/trademark/secret entries
-5. **Fundraising** — Deal pipeline as YAML in `fundraising/pipeline.yaml`
-6. **Runbooks** — Markdown in `ops/runbooks/` with `trigger`, `steps`, `escalation` fields
+3. **Budgets** — YAML files in `03-platform/finance/budgets/` with quarters as top-level keys
+4. **IP Assets** — JSON registry in `03-platform/ip/assets.json` with patent/trademark/secret entries
+5. **Fundraising** — Deal pipeline as YAML in `03-platform/fundraising/pipeline.yaml`
+6. **Runbooks** — Markdown in `03-platform/ops/runbooks/` with `trigger`, `steps`, `escalation` fields
 
 ## Agent Identity
 
@@ -205,7 +205,7 @@ This repo operates as a **Tier 2/3 hybrid** — corporate operations satellite w
 | **Blocker query** | Read `baseline-os/workstream/coordination/coordination-report-latest.md` |
 | **Builder trust** | ≥70 |
 | **Ecosystem graph** | Consumes `gtcx-agile/dist/ecosystem-graph.js` for repo dependency mapping |
-| **Health monitoring** | `pnpm ecosystem:health` → generates `workstream/ecosystem-health.json` and `workstream/ecosystem-health.md` |
+| **Health monitoring** | `pnpm ecosystem:health` → generates `03-platform/workstream/ecosystem-health.json` and `03-platform/workstream/ecosystem-health.md` |
 
 **Agent workflow:**
 1. Run `pnpm ecosystem:health` to assess ecosystem state
@@ -357,7 +357,7 @@ _Rubric version: 1.0 (2026-05-27)_
 | Token usage aggregate         | `baseline-os`  | `baseline cost-stats --json`                                  |
 | Agent vault (populate/verify) | `gtcx-agentic` | `pnpm agent:vault:verify`                                     |
 | Staging vs production keys    | `gtcx-agentic` | `01-docs/operators/vault-environments.md`                        |
-| Ecosystem coordination        | `baseline-os`  | `workstream/coordination/ECOSYSTEM-COST-ROUTER-2026-06-03.md` |
+| Ecosystem coordination        | `baseline-os`  | `03-platform/workstream/coordination/ECOSYSTEM-COST-ROUTER-2026-06-03.md` |
 
 **Do not** use `baseline-os/04-ship/docker/.env.staging` for production vault work.
 
@@ -387,7 +387,7 @@ When a story is **blocked on a sibling repo** or you **hand off** cross-repo wor
 | **4. Hub if P0**    | Ecosystem-critical path: from `baseline-os`, `pnpm ecosystem:repo:report-work --repo=<repo> --item="..." --status=blocked`. Use `gtcx-docs/01-docs/08-gtm/inbound-tickets/` only when the **docs hub** is the coordination witness (releases, standards).                            |
 | **5. No duplicate** | Link [deployment-proof-index](https://github.com/gtcx-ecosystem/gtcx-protocols/blob/main/01-docs/05-audit/evidence/deployment-proof-index.md) and protocol contracts — **do not** copy harness YAML, evidence indexes, or normative protocol text into product repos.                |
 
-**Not in this repo:** inbound archive SoR for ecosystem-wide weekly reports — that stays **`baseline-os`** (`workstream/coordination/`).
+**Not in this repo:** inbound archive SoR for ecosystem-wide weekly reports — that stays **`baseline-os`** (`03-platform/workstream/coordination/`).
 
 **Evidence paths (link only):** production smoke and EAP issuance artifacts live in owning repos per deployment-proof-index (e.g. `gtcx-intelligence/01-docs/05-audit/evidence/`).
 

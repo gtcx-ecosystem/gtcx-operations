@@ -4,8 +4,8 @@
  */
 import { existsSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readJson } from '../03-platform/src/utils/files.js';
-import { CalendarClient } from '../03-platform/src/utils/calendar-client.js';
+import { domainPath, REPO_ROOT, readJson } from '../src/utils/files.js';
+import { CalendarClient } from '../src/utils/calendar-client.js';
 const MS_PER_DAY = 1000 * 60 * 60 * 24;
 function daysUntil(dateStr) {
     const date = new Date(dateStr);
@@ -13,8 +13,8 @@ function daysUntil(dateStr) {
     return Math.ceil((date.getTime() - now.getTime()) / MS_PER_DAY);
 }
 // Load CRM data
-const interactionsPath = join(REPO_ROOT, 'crm', 'interactions.json');
-const contactsPath = join(REPO_ROOT, 'crm', 'contacts.json');
+const interactionsPath = domainPath('crm', 'interactions.json');
+const contactsPath = domainPath('crm', 'contacts.json');
 if (!existsSync(interactionsPath) || !existsSync(contactsPath)) {
     console.error('❌ CRM data not found');
     process.exit(1);

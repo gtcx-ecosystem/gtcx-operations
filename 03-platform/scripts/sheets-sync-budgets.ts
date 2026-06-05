@@ -4,10 +4,10 @@
  */
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readYaml } from '../03-platform/src/utils/files.js';
-import { SheetsClient } from '../03-platform/src/utils/sheets-client.js';
-import type { GoogleAuthConfig } from '../03-platform/src/utils/google-auth.js';
-import type { Budget } from '../03-platform/src/schemas/budget.js';
+import { domainPath, REPO_ROOT, readYaml } from '../src/utils/files.js';
+import { SheetsClient } from '../src/utils/sheets-client.js';
+import type { GoogleAuthConfig } from '../src/utils/google-auth.js';
+import type { Budget } from '../src/schemas/budget.js';
 
 interface SheetsConfig {
   spreadsheet_id?: string;
@@ -21,7 +21,7 @@ if (existsSync(configPath)) {
 }
 
 const budgetFiles = [];
-const financeDir = join(REPO_ROOT, 'finance', 'budgets');
+const financeDir = domainPath('finance', 'budgets');
 if (existsSync(financeDir)) {
   const { readdirSync } = await import('fs');
   for (const f of readdirSync(financeDir)) {

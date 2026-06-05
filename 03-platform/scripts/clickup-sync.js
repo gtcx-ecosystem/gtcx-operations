@@ -5,7 +5,7 @@
  */
 import { writeFileSync, existsSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readJson } from '../03-platform/src/utils/files.js';
+import { domainPath, REPO_ROOT, readJson } from '../src/utils/files.js';
 const CLICKUP_API_BASE = 'https://api.clickup.com/api/v2';
 const API_TOKEN = process.env.CLICKUP_API_TOKEN;
 const TEAM_ID = process.env.CLICKUP_TEAM_ID;
@@ -37,7 +37,7 @@ async function createClickUpTask(listId, task) {
     }
 }
 // Load threads
-const registryPath = join(REPO_ROOT, 'threads', 'registry.json');
+const registryPath = domainPath('threads', 'registry.json');
 if (!existsSync(registryPath)) {
     console.error('❌ Thread registry not found. Run: pnpm threads:build');
     process.exit(1);

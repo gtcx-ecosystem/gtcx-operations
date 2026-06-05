@@ -1,4 +1,6 @@
 export declare const REPO_ROOT: string;
+export declare const PLATFORM_ROOT: string;
+export declare function domainPath(...segments: string[]): string;
 export declare function walkDir(dir: string, callback: (path: string) => void): void;
 export declare function readYaml<T>(path: string): T;
 export declare function readJson<T>(path: string): T;

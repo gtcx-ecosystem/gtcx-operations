@@ -5,11 +5,11 @@
  */
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readJson } from '../03-platform/src/utils/files.js';
-import type { EmailLog } from '../03-platform/src/schemas/email.js';
-import type { WhatsAppMessage } from '../03-platform/src/schemas/whatsapp.js';
-import type { CrmContact, CrmInteraction, CrmCompany } from '../03-platform/src/schemas/crm.js';
-import type { Thread, ThreadMessage, ThreadRegistry } from '../03-platform/src/schemas/thread.js';
+import { domainPath, REPO_ROOT, readJson } from '../src/utils/files.js';
+import type { EmailLog } from '../src/schemas/email.js';
+import type { WhatsAppMessage } from '../src/schemas/whatsapp.js';
+import type { CrmContact, CrmInteraction, CrmCompany } from '../src/schemas/crm.js';
+import type { Thread, ThreadMessage, ThreadRegistry } from '../src/schemas/thread.js';
 
 function generateThreadId(): string {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -22,7 +22,7 @@ function generateThreadId(): string {
 
 // Load all data sources
 function loadEmailLogs(): EmailLog[] {
-  const dir = join(REPO_ROOT, 'email', 'sent');
+  const dir = domainPath('email', 'sent');
   if (!existsSync(dir)) return [];
   const logs: EmailLog[] = [];
   for (const f of readdirSync(dir)) {
@@ -36,7 +36,7 @@ function loadEmailLogs(): EmailLog[] {
 }
 
 function loadWhatsAppLogs(): WhatsAppMessage[] {
-  const dir = join(REPO_ROOT, 'whatsapp', 'sent');
+  const dir = domainPath('whatsapp', 'sent');
   if (!existsSync(dir)) return [];
   const logs: WhatsAppMessage[] = [];
   for (const f of readdirSync(dir)) {
@@ -50,14 +50,14 @@ function loadWhatsAppLogs(): WhatsAppMessage[] {
 }
 
 function loadCRM(): { contacts: CrmContact[]; companies: CrmCompany[]; interactions: CrmInteraction[] } {
-  const contacts = existsSync(join(REPO_ROOT, 'crm', 'contacts.json'))
-    ? readJson(join(REPO_ROOT, 'crm', 'contacts.json'))
+  const contacts = existsSync(domainPath('crm', 'contacts.json'))
+    ? readJson(domainPath('crm', 'contacts.json'))
     : { contacts: [] };
-  const companies = existsSync(join(REPO_ROOT, 'crm', 'companies.json'))
-    ? readJson(join(REPO_ROOT, 'crm', 'companies.json'))
+  const companies = existsSync(domainPath('crm', 'companies.json'))
+    ? readJson(domainPath('crm', 'companies.json'))
     : { companies: [] };
-  const interactions = existsSync(join(REPO_ROOT, 'crm', 'interactions.json'))
-    ? readJson(join(REPO_ROOT, 'crm', 'interactions.json'))
+  const interactions = existsSync(domainPath('crm', 'interactions.json'))
+    ? readJson(domainPath('crm', 'interactions.json'))
     : { interactions: [] };
   return { contacts: contacts.contacts || [], companies: companies.companies || [], interactions: interactions.interactions || [] };
 }
@@ -215,7 +215,7 @@ const registry: ThreadRegistry = {
 };
 
 // Write output
-const outputPath = join(REPO_ROOT, 'threads', 'registry.json');
+const outputPath = domainPath('threads', 'registry.json');
 writeFileSync(outputPath, JSON.stringify(registry, null, 2));
 
 // Generate markdown report
@@ -257,7 +257,7 @@ for (const thread of registry.threads.sort((a, b) =>
   md += '\n---\n\n';
 }
 
-const mdPath = join(REPO_ROOT, 'threads', 'report.md');
+const mdPath = domainPath('threads', 'report.md');
 writeFileSync(mdPath, md);
 
 console.log(`\n🧵 Unified Threads: ${registry.threads.length} threads`);

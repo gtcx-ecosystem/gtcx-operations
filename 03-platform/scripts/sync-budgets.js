@@ -4,12 +4,12 @@
  */
 import { writeFileSync } from 'fs';
 import { join } from 'path';
-import { REPO_ROOT, readYaml, getFilesByExtension } from '../03-platform/src/utils/files.js';
+import { domainPath, REPO_ROOT, readYaml, getFilesByExtension } from '../src/utils/files.js';
 const summary = {
     generated_at: new Date().toISOString(),
     budgets: [],
 };
-const budgetFiles = getFilesByExtension(join(REPO_ROOT, 'finance'), '.yaml');
+const budgetFiles = getFilesByExtension(domainPath('finance'), '.yaml');
 for (const file of budgetFiles) {
     try {
         const budget = readYaml(file);
@@ -47,7 +47,7 @@ for (const file of budgetFiles) {
     }
 }
 // Write summary
-const outputPath = join(REPO_ROOT, 'finance', 'budget-summary.json');
+const outputPath = domainPath('finance', 'budget-summary.json');
 writeFileSync(outputPath, JSON.stringify(summary, null, 2));
 console.log(`✅ Budget summary written to ${outputPath}`);
 // Also write markdown report
@@ -66,7 +66,7 @@ for (const b of summary.budgets) {
     }
     md += '\n';
 }
-const mdPath = join(REPO_ROOT, 'finance', 'budget-summary.md');
+const mdPath = domainPath('finance', 'budget-summary.md');
 writeFileSync(mdPath, md);
 console.log(`✅ Budget report written to ${mdPath}`);
 //# sourceMappingURL=sync-budgets.js.map

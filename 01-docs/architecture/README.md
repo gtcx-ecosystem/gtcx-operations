@@ -99,12 +99,12 @@ This folder contains system design, data models, design principles, and architec
 
 | Module | Format | Location | Purpose |
 |--------|--------|----------|---------|
-| **Legal** | YAML | `legal/contracts/`, `legal/policies/` | Contract templates, policy definitions, jurisdiction configs |
-| **HR** | YAML | `hr/roles/`, `hr/policies/` | Role definitions, compensation bands, policy handbooks |
-| **Finance** | YAML | `finance/budgets/` | Department budgets with variance tracking, runway projections |
-| **IP** | JSON | `ip/registry.json` | Patent, trademark, trade secret registry with status pipelines |
-| **Fundraising** | JSON/YAML | `fundraising/pipeline/`, `fundraising/investors/` | Deal stages, investor profiles, pitch materials |
-| **CRM** | JSON | `crm/contacts.json`, `crm/companies.json`, `crm/interactions.json` | Contact management with interaction history |
+| **Legal** | YAML | `03-platform/legal/contracts/`, `03-platform/legal/policies/` | Contract templates, policy definitions, jurisdiction configs |
+| **HR** | YAML | `03-platform/hr/roles/`, `03-platform/hr/policies/` | Role definitions, compensation bands, policy handbooks |
+| **Finance** | YAML | `03-platform/finance/budgets/` | Department budgets with variance tracking, runway projections |
+| **IP** | JSON | `03-platform/ip/registry.json` | Patent, trademark, trade secret registry with status pipelines |
+| **Fundraising** | JSON/YAML | `03-platform/fundraising/pipeline/`, `03-platform/fundraising/investors/` | Deal stages, investor profiles, pitch materials |
+| **CRM** | JSON | `03-platform/crm/contacts.json`, `03-platform/crm/companies.json`, `03-platform/crm/interactions.json` | Contact management with interaction history |
 
 #### 2. Communications Layer
 
@@ -128,7 +128,7 @@ Multi-channel communication with audience-aware routing:
 
 The cross-channel orchestration engine (`03-platform/scripts/orchestrate-cross-channel.ts`) manages:
 
-- **Unified Thread Registry** (`threads/registry.json`) — all conversations across all channels in one place
+- **Unified Thread Registry** (`03-platform/threads/registry.json`) — all conversations across all channels in one place
 - **Audience-Aware Routing** — determines primary channel based on contact type
 - **Follow-Up Sequences** — time-based drip campaigns per audience segment
 - **WhatsApp-First Rules** — 24h, 72h, 7-day no-reply triggers
@@ -253,8 +253,8 @@ pnpm test:integrations # Test all API integrations (dry-run)
 - **`.secrets/`** is gitignored — never commit credentials
 - Service account keys rotated every 90 days
 - Domain-wide delegation restricted to `ops@gtcx.trade`
-- Email audit trail in `email/sent/` (JSON logs with timestamps)
-- WhatsApp message audit trail in `whatsapp/sent/` (JSON logs)
+- Email audit trail in `03-platform/email/sent/` (JSON logs with timestamps)
+- WhatsApp message audit trail in `03-platform/whatsapp/sent/` (JSON logs)
 
 ### Integration Points
 

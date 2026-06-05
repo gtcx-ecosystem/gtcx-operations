@@ -3,7 +3,7 @@
  * Lint policy and runbook markdown files for completeness
  */
 import { join } from 'path';
-import { REPO_ROOT, readMarkdownWithFrontmatter, getFilesByExtension } from '../03-platform/src/utils/files.js';
+import { domainPath, REPO_ROOT, readMarkdownWithFrontmatter, getFilesByExtension } from '../src/utils/files.js';
 
 interface PolicyIssue {
   file: string;
@@ -17,9 +17,9 @@ const issues: PolicyIssue[] = [];
 const requiredPolicyFields = ['title', 'version', 'effective_date'];
 const recommendedPolicyFields = ['owner', 'review_date', 'status'];
 
-const policyFiles = getFilesByExtension(join(REPO_ROOT, 'hr'), '.md')
-  .concat(getFilesByExtension(join(REPO_ROOT, 'ops'), '.md'))
-  .concat(getFilesByExtension(join(REPO_ROOT, 'legal/policies'), '.md'));
+const policyFiles = getFilesByExtension(domainPath('hr'), '.md')
+  .concat(getFilesByExtension(domainPath('ops'), '.md'))
+  .concat(getFilesByExtension(domainPath('legal', 'policies'), '.md'));
 
 for (const file of policyFiles) {
   try {
