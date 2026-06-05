@@ -58,7 +58,15 @@
     "test:integrations": "tsx scripts/test-integrations.ts",
     "test": "vitest run",
     "test:watch": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "agent:sync": "node scripts/agent-sync/sync.mjs",
+    "agent:check": "node scripts/agent-sync/sync.mjs --check",
+    "agent:start": "node scripts/agent-start.mjs",
+    "agent:session-start": "pnpm run agent:start",
+    "session": "pnpm --dir ../baseline-os session",
+    "next": "pnpm --dir ../baseline-os next",
+    "gates": "pnpm --dir ../baseline-os gates",
+    "hub": "pnpm --dir ../baseline-os hub"
   },
   "devDependencies": {
     "typescript": "^5.4.0",
