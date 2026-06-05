@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Protocol 26 — Proceed Confirmation
 
-Manifest: `docs/operations/agent-proceed-confirmation.md`
+Manifest: `01-docs/04-ops/agent-proceed-confirmation.md`
 
 After `pnpm agent:next-work`, issue **Proceed Brief** then start work unless **stop** / **correct:** / approval gate.
 

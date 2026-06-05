@@ -37,8 +37,8 @@ Access control policy is documented and approved. IAM configurations enforce rol
 
 ## Evidence Reference
 
-- Access Control Policy (docs/governance/access-control-policy.md)
-- IAM configuration exports (infra/iam/*.tf or cloud console reports)
+- Access Control Policy (01-docs/governance/access-control-policy.md)
+- IAM configuration exports (04-ship/iam/*.tf or cloud console reports)
 - Quarterly access review tickets/meeting notes
 
 ---

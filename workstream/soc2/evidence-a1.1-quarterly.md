@@ -20,9 +20,9 @@ The entity monitors system availability.
 
 ## Evidence Sources
 
-- [ ] docs/operations/sla.md
+- [ ] 01-docs/04-ops/sla.md
 - [ ] status page URL
-- [ ] docs/operations/dr-drill-evidence.md
+- [ ] 01-docs/04-ops/dr-drill-evidence.md
 
 ## Evidence Collection Log
 

@@ -10,5 +10,5 @@
 
 ## Documentation
 **Discovered:** 2026-05-27
-- No docs/ directory found
+- No 01-docs/ directory found
 - Missing root README.md

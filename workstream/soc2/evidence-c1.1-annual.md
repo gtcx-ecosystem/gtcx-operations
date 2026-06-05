@@ -20,7 +20,7 @@ Data classified as Public/Internal/Restricted/Evidence. Secret scanning gates CI
 
 ## Evidence Sources
 
-- [ ] docs/security/classification-policy.md
+- [ ] 01-docs/09-security/classification-policy.md
 - [ ] .github/workflows/ci.yml
 - [ ] k8s secret configs
 

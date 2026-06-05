@@ -42,20 +42,20 @@ pnpm clickup:sync
 
 | Doc | Location | Description |
 |-----|----------|-------------|
-| **System Architecture** | [docs/architecture/overview.md](docs/architecture/overview.md) | Full architecture diagram, data flows, component breakdown |
-| **API Reference** | [docs/api/README.md](docs/api/README.md) | Google Workspace clients, WhatsApp client, email provider, schemas, CLI scripts |
-| **ClickUp Sync** | [docs/workflows/clickup-sync.md](docs/workflows/clickup-sync.md) | Follow-up → ClickUp task sync workflow |
-| **Cross-Channel Orchestration** | [docs/workflows/cross-channel-orchestration.md](docs/workflows/cross-channel-orchestration.md) | WhatsApp-first rules, audience routing, thread lifecycle |
-| **Google Workspace Setup** | [docs/ops/google-workspace-setup.md](docs/ops/google-workspace-setup.md) | Service account creation, domain-wide delegation, API enablement |
-| **Audience Segmentation** | [docs/strategy/audience-segmented-communications.md](docs/strategy/audience-segmented-communications.md) | Channel selection by contact type |
-| **WhatsApp-First Strategy** | [docs/strategy/whatsapp-first-communications.md](docs/strategy/whatsapp-first-communications.md) | Why WhatsApp for African frontier markets |
-| **Investor Communication** | [docs/strategy/investor-communication-research.md](docs/strategy/investor-communication-research.md) | Why platform portals, not Telegram/WhatsApp, for LPs |
+| **System Architecture** | [01-docs/architecture/overview.md](01-docs/architecture/overview.md) | Full architecture diagram, data flows, component breakdown |
+| **API Reference** | [01-docs/api/README.md](01-docs/api/README.md) | Google Workspace clients, WhatsApp client, email provider, schemas, CLI scripts |
+| **ClickUp Sync** | [01-docs/workflows/clickup-sync.md](01-docs/workflows/clickup-sync.md) | Follow-up → ClickUp task sync workflow |
+| **Cross-Channel Orchestration** | [01-docs/workflows/cross-channel-orchestration.md](01-docs/workflows/cross-channel-orchestration.md) | WhatsApp-first rules, audience routing, thread lifecycle |
+| **Google Workspace Setup** | [01-docs/ops/google-workspace-setup.md](01-docs/ops/google-workspace-setup.md) | Service account creation, domain-wide delegation, API enablement |
+| **Audience Segmentation** | [01-docs/strategy/audience-segmented-communications.md](01-docs/strategy/audience-segmented-communications.md) | Channel selection by contact type |
+| **WhatsApp-First Strategy** | [01-docs/strategy/whatsapp-first-communications.md](01-docs/strategy/whatsapp-first-communications.md) | Why WhatsApp for African frontier markets |
+| **Investor Communication** | [01-docs/strategy/investor-communication-research.md](01-docs/strategy/investor-communication-research.md) | Why platform portals, not Telegram/WhatsApp, for LPs |
 
 ## Directory Structure
 
 ```
 gtcx-operations/
-├── src/
+├── 03-platform/src/
 │   ├── schemas/           # Zod validation schemas for all domains
 │   │   ├── budget.ts
 │   │   ├── contract.ts
@@ -76,7 +76,7 @@ gtcx-operations/
 │       ├── sheets-client.ts
 │       ├── validate.ts
 │       └── whatsapp-client.ts
-├── scripts/               # Automation scripts
+├── 03-platform/scripts/               # Automation scripts
 │   ├── calendar-schedule.ts
 │   ├── check-budgets.ts
 │   ├── check-credentials.ts
@@ -124,7 +124,7 @@ gtcx-operations/
 ├── ip/                    # IP registry (JSON)
 ├── fundraising/           # Fundraising pipeline (JSON/YAML)
 ├── ops/                   # Operations runbooks
-├── docs/                  # Documentation
+├── 01-docs/                  # Documentation
 │   ├── architecture/
 │   ├── workflows/
 │   ├── api/
@@ -190,7 +190,7 @@ cp ~/Downloads/gmail-credentials.json .secrets/
 cp ~/Downloads/workspace-credentials.json .secrets/
 ```
 
-See [Google Workspace Setup](docs/ops/google-workspace-setup.md) for full instructions.
+See [Google Workspace Setup](01-docs/ops/google-workspace-setup.md) for full instructions.
 
 ## Validation & Testing
 
@@ -221,3 +221,16 @@ pnpm test:integrations
 ## Status
 
 🟢 **Operational** — Core integrations (Google Workspace, WhatsApp, ClickUp) are implemented and tested. Cross-channel orchestration is active. Documentation is comprehensive.
+
+## Agent & workspace index
+
+| Resource | Path |
+| -------- | ---- |
+| **Any terminal** | [`agents/README.md`](./agents/README.md) |
+| **Cursor** | [`AGENTS.md`](./AGENTS.md) |
+| **Operational SoR** | [`workspace/`](./workspace/) — `pnpm workspace:check` |
+| **Docs map** | [`01-docs/README.md`](./01-docs/README.md) |
+
+Protocol [P29 workspace domains](https://github.com/gtcx-ecosystem/gtcx-docs/blob/main/01-docs/governance/protocols/29-agent-workspace-domains/protocol.md).
+
+<!-- gtcx-agents-index -->

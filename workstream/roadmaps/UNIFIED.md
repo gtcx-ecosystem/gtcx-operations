@@ -99,11 +99,11 @@ terminal-os
 
 ### compliance-os
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### exploration-os
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### griot-ai
 
@@ -127,11 +127,11 @@ terminal-os
 
 ### gtcx-agentic
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### gtcx-agile
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### gtcx-core
 
@@ -157,19 +157,19 @@ terminal-os
 
 ### gtcx-docs
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### gtcx-hardware
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### gtcx-infrastructure
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### gtcx-intelligence
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### gtcx-markets
 
@@ -204,7 +204,7 @@ terminal-os
 
 ### gtcx-mobile
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### gtcx-operations
 
@@ -284,23 +284,23 @@ terminal-os
 
 ### ledger-ui
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### ledger-ui-archive
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### nyota-ai
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### scripts
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### sensei-ai
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### terminal-os
 
@@ -324,13 +324,13 @@ terminal-os
 
 ### terra-os
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### veritas-ai
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 
 ### workstream
 
-⚠️ No roadmap found. Create `docs/agile/roadmap.md`.
+⚠️ No roadmap found. Create `01-docs/05-audit/agile/roadmap.md`.
 

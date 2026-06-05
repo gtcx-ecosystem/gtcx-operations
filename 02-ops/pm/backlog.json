@@ -1,0 +1,10 @@
+{
+  "$schema": "gtcx://workspace/pm-backlog/v1",
+  "repo": "gtcx-operations",
+  "updated": null,
+  "syncSource": "pnpm pm:sync",
+  "active": null,
+  "backlogClear": null,
+  "stories": [],
+  "crossRepoRefs": []
+}

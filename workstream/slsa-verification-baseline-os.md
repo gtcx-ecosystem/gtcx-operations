@@ -9,7 +9,7 @@
 | SBOM artifact exists | ❌ FAIL | No SBOM files found |
 | Provenance attestation exists | ❌ FAIL | No provenance files found |
 | Cosign signing configured | ✅ PASS | Cosign signing found in release workflow |
-| Reproducible build script exists | ✅ PASS | scripts/reproducible-builds.sh found |
+| Reproducible build script exists | ✅ PASS | 03-platform/scripts/reproducible-builds.sh found |
 
 ## SLSA Level Assessment
 

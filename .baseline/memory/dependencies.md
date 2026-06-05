@@ -36,8 +36,8 @@
 
 | Direction | Path pattern |
 | --- | --- |
-| Outbound tickets | `docs/coordination/to-<repo>-<topic>-YYYY-MM-DD.md` |
-| Inbound pointers | `docs/coordination/from-<repo>-<topic>-YYYY-MM-DD.md` |
+| Outbound tickets | `01-docs/06-coordination/to-<repo>-<topic>-YYYY-MM-DD.md` |
+| Inbound pointers | `01-docs/06-coordination/from-<repo>-<topic>-YYYY-MM-DD.md` |
 
 ---
 *Protocol 24 — update when filing P0 tickets or closing blockers.*

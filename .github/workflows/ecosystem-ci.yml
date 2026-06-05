@@ -6,7 +6,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'scripts/**'
+      - '03-platform/scripts/**'
       - '.github/workflows/ecosystem-ci.yml'
   workflow_dispatch:
 
