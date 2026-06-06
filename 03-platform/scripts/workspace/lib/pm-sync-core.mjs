@@ -94,7 +94,7 @@ export function syncProductManagement() {
   const rootManifest = readJson('workspace/manifest.json');
   const repo = rootManifest?.repo ?? pmManifest?.repo ?? 'unknown';
 
-  const nextWorkScript = pmManifest?.local?.nextWorkScript ?? '03-platform/scripts/agent-next-work.mjs';
+  const nextWorkScript = pmManifest?.local?.nextWorkScript ?? '03-platform/scripts/agent/agent-next-work.mjs';
   const nextJson = runNextWork(nextWorkScript);
 
   const roadmapPath = resolveRoadmap(pmManifest);

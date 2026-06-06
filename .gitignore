@@ -10,6 +10,9 @@ dist/
 03-platform/src/**/*.js
 03-platform/src/**/*.d.ts
 03-platform/src/**/*.map
+03-platform/scripts/**/*.js
+03-platform/scripts/**/*.d.ts
+03-platform/scripts/**/*.map
 
 # Auto-added by ecosystem-self-heal
 Thumbs.db

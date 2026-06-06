@@ -26,7 +26,7 @@ reference_implementation: exploration-os
 | Session pointer | [`01-docs/05-audit/auto-dev-state.md`](../05-audit/auto-dev-state.md) |
 | Baseline session memory | [`.baseline/memory/session.md`](../../.baseline/memory/session.md) |
 | Cross-repo blockers | [`.baseline/memory/dependencies.md`](../../.baseline/memory/dependencies.md) |
-| Selection script | [`03-platform/scripts/agent-next-work.mjs`](../../03-platform/scripts/agent-next-work.mjs) |
+| Selection script | [`03-platform/scripts/agent/agent-next-work.mjs`](../../03-platform/scripts/agent/agent-next-work.mjs) |
 
 ## Commands
 
