@@ -158,7 +158,7 @@ function main() {
   const passedChecks = results.reduce((s, r) => s + r.checks.filter(c => c.passed).length, 0);
   console.log(`\nTotal: ${passedChecks}/${totalChecks} (${Math.round((passedChecks / totalChecks) * 100)}%)`);
 
-  const mdPath = join(ECOSYSTEM_ROOT, "gtcx-operations", "workstream", "ecosystem-consistency.md");
+  const mdPath = join(ECOSYSTEM_ROOT, "gtcx-operations", "06-workstream", "ecosystem-consistency.md");
   writeFileSync(mdPath, generateMarkdown(results));
   console.log(`Report: ${mdPath}`);
 }

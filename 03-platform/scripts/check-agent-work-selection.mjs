@@ -17,11 +17,11 @@ function requireFile(relPath, label) {
   return readFileSync(abs, 'utf8');
 }
 
-const manifest = requireFile('01-docs/04-ops/agent-work-selection.md', 'work-selection manifest');
+const manifest = requireFile('01-docs/operations/agent-work-selection.md', 'work-selection manifest');
 requireFile('03-platform/scripts/agent-next-work.mjs', 'selection script');
 requireFile('01-docs/strategy/execution-roadmap.md', 'execution roadmap');
 const autoDev = requireFile('01-docs/05-audit/auto-dev-state.md', 'session pointer');
-requireFile('01-docs/04-ops/AGENT-PROTOCOL-22-BRIEF.md', 'agent brief');
+requireFile('01-docs/operations/AGENT-PROTOCOL-22-BRIEF.md', 'agent brief');
 
 const pkgRaw = requireFile('package.json', 'package.json');
 if (pkgRaw) {
@@ -60,9 +60,9 @@ if (autoDev && !autoDev.includes('Next work')) {
   errors.push('auto-dev-state.md missing "Next work" section');
 }
 
-const p24 = requireFile('01-docs/04-ops/cross-repo-coordination.md', 'Protocol 24 doc');
+const p24 = requireFile('01-docs/operations/cross-repo-coordination.md', 'Protocol 24 doc');
 if (!p24?.includes('Protocol 24')) {
-  errors.push('Missing or incomplete 01-docs/04-ops/cross-repo-coordination.md');
+  errors.push('Missing or incomplete 01-docs/operations/cross-repo-coordination.md');
 }
 
 if (errors.length > 0) {

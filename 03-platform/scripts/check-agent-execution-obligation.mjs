@@ -17,8 +17,8 @@ function requireFile(rel, label) {
   return readFileSync(abs, 'utf8');
 }
 
-requireFile('01-docs/04-ops/agent-execution-obligation.md', 'P27 manifest');
-requireFile('01-docs/04-ops/AGENT-PROTOCOL-27-BRIEF.md', 'P27 brief');
+requireFile('01-docs/operations/agent-execution-obligation.md', 'P27 manifest');
+requireFile('01-docs/operations/AGENT-PROTOCOL-27-BRIEF.md', 'P27 brief');
 requireFile('03-platform/scripts/agent-verify-ladder.mjs', 'verify ladder script');
 requireFile('.cursor/rules/protocol-27-agent-execution-obligation.mdc', 'Cursor P27 rule');
 
@@ -46,7 +46,7 @@ if (agents) {
   }
 }
 
-const manifest = requireFile('01-docs/04-ops/agent-execution-obligation.md', 'manifest');
+const manifest = requireFile('01-docs/operations/agent-execution-obligation.md', 'manifest');
 if (manifest && !manifest.includes('adoption_status: established')) {
   errors.push('P27 manifest must have adoption_status: established');
 }

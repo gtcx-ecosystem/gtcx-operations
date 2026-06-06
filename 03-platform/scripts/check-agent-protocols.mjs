@@ -6,7 +6,7 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '../..');
 
 const CHECKS = [
   { id: 'P19', script: 'check-agent-credentials.mjs' },
@@ -17,7 +17,7 @@ const CHECKS = [
 
 let failed = 0;
 for (const { id, script } of CHECKS) {
-  const r = spawnSync('node', [join(ROOT, 'scripts', script)], {
+  const r = spawnSync('node', [join(ROOT, '03-platform/scripts', script)], {
     cwd: ROOT,
     encoding: 'utf8',
   });

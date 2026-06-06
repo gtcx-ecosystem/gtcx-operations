@@ -15,7 +15,7 @@ function requireFile(rel, label) {
   return readFileSync(abs, 'utf8');
 }
 
-requireFile('01-docs/04-ops/agent-credential-access.md', 'P19 manifest');
+requireFile('01-docs/operations/agent-credential-access.md', 'P19 manifest');
 const agents = requireFile('AGENTS.md', 'AGENTS.md');
 const gitignore = requireFile('.gitignore', '.gitignore');
 

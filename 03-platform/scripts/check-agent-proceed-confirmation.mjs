@@ -15,8 +15,8 @@ function requireFile(rel, label) {
   return readFileSync(abs, 'utf8');
 }
 
-const manifest = requireFile('01-docs/04-ops/agent-proceed-confirmation.md', 'P26 manifest');
-requireFile('01-docs/04-ops/AGENT-PROTOCOL-26-BRIEF.md', 'P26 brief');
+const manifest = requireFile('01-docs/operations/agent-proceed-confirmation.md', 'P26 manifest');
+requireFile('01-docs/operations/AGENT-PROTOCOL-26-BRIEF.md', 'P26 brief');
 const agents = requireFile('AGENTS.md', 'AGENTS.md');
 
 if (agents) {
