@@ -3,8 +3,14 @@
   "repo": "gtcx-operations",
   "updated": "2026-06-06",
   "syncSource": "pnpm pm:sync",
-  "active": null,
-  "backlogClear": null,
+  "active": {
+    "storyId": "OPS-02",
+    "title": "Fix ClickUp list ID mapping in baseline-os",
+    "status": "in_progress",
+    "owner": null,
+    "tier": "resume-in_progress"
+  },
+  "backlogClear": false,
   "stories": [],
   "crossRepoRefs": [],
   "agileHub": {

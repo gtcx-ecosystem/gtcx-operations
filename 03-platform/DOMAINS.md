@@ -1,3 +1,10 @@
+---
+title: 'Corporate domain map'
+status: current
+date: 2026-06-06
+owner: gtcx-operations
+---
+
 # Corporate domain map — gtcx-operations
 
 Quick lookup: data → schema → validate → CLI.

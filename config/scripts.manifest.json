@@ -1,0 +1,39 @@
+{
+  "schema": "gtcx.scriptsManifest.v1",
+  "repo": "gtcx-operations",
+  "updated": "2026-06-06",
+  "taxonomy": {
+    "agent": {
+      "path": "03-platform/scripts/agent/",
+      "purpose": "Agent protocol checks, bootstrap, P22 next-work"
+    },
+    "domains": {
+      "path": "03-platform/scripts/domains/",
+      "purpose": "Corporate domain validation and integrations"
+    },
+    "ecosystem": {
+      "path": "03-platform/scripts/ecosystem/",
+      "purpose": "Cross-repo health, release, and hygiene tooling"
+    },
+    "layout": {
+      "path": "03-platform/scripts/layout/",
+      "purpose": "Layout v3 path drift detection"
+    },
+    "workspace": {
+      "path": "03-platform/scripts/workspace/",
+      "purpose": "P29 ops domain validation and PM sync"
+    },
+    "ops": {
+      "path": "03-platform/scripts/ops/",
+      "purpose": "Root allowlist / hygiene"
+    },
+    "config": {
+      "path": "03-platform/scripts/config/",
+      "purpose": "Toolchain stub sync"
+    },
+    "agentSync": {
+      "path": "03-platform/scripts/agent-sync/",
+      "purpose": "AGENTS.md partial generation"
+    }
+  }
+}
