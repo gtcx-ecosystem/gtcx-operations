@@ -32,6 +32,7 @@ Hub `gtcx-docs` INF-86 register: update when siblings close steps; link to `mess
 | --- | --- |
 | [from-gtcx-protocols-inf-86-agentic-attestations-2026-06-03.md](./from-gtcx-protocols-inf-86-agentic-attestations-2026-06-03.md) | **INF-86 XR-401 A/B/C** — mirror index + verify commands |
 | [to-sensei-ai-agent-scope-incident-2026-06-06.md](./to-sensei-ai-agent-scope-incident-2026-06-06.md) | **Outbound** — ops agent scope violation witness (sensei-ai recovery owned there) |
+| [agent-feedback-gtcx-operations-pointer.md](./agent-feedback-gtcx-operations-pointer.md) | **Pointer** — layout v3 agent feedback (canonical in gtcx-agentic) |
 | [from-gtcx-protocols-agentic-trust-2026-06-03.md](./from-gtcx-protocols-agentic-trust-2026-06-03.md) | XR-401-A detail + pickup checklist |
 | [Protocol adoption registry](../operations/protocol-adoption-registry.md) | P19, P22, P24, P26, P27, COORD-ATR-001 |
 
