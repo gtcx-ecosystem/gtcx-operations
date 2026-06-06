@@ -7,5 +7,5 @@
     "soc2TypeII": "https://github.com/gtcx-ecosystem/gtcx-protocols/blob/main/01-docs/10-compliance/soc2-type2/evidence-index.md"
   },
   "evidenceIndex": "02-ops/compliance/evidence-index.json",
-  "assuranceProcedure": "workspace/assurance"
+  "assuranceProcedure": "02-ops/assurance"
 }

@@ -27,6 +27,22 @@ review_cycle: 'on-change'
 
 > Canonical structure for `/docs` in `gtcx-operations`. Follows the [GTCX Documentation Standard](https://github.com/gtcx-ecosystem/gtcx-protocols/blob/main/01-docs/reference/docs-standard.md).
 
+## Layout v3 IA map (agent)
+
+| Hub | Path | Purpose |
+| --- | ---- | ------- |
+| `01-docs` | `01-docs/` | Architecture, strategy, operations narratives, agent indexes |
+| `02-ops` | `02-ops/` | PM, coordination, compliance, attestation (P29 JSON manifests) |
+| `03-platform` | `03-platform/` | Corporate domain data, Zod schemas, CLI scripts, tests |
+| `04-deploy` | `04-deploy/` | Deploy artifacts (minimal for this repo) |
+| `05-audit` | `05-audit/` + `01-docs/05-audit/` | Audit entry + lane forensics |
+| `06-workstream` | `06-workstream/` | Sprints, status, coordination handoffs |
+| `config` | `config/` | `ops.manifest.json`, toolchain SoR |
+
+Machine-readable map: [`../config/ops.manifest.json`](../config/ops.manifest.json) · Consolidation: [`04-ops/workspace/repo-consolidation-review.md`](./04-ops/workspace/repo-consolidation-review.md)
+
+**Last updated:** 2026-06-06
+
 This repository uses the standard 6-folder documentation skeleton. Every document belongs in exactly one of these folders based on the question it answers.
 
 ---

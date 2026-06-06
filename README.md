@@ -42,7 +42,7 @@ pnpm clickup:sync
 
 | Doc | Location | Description |
 |-----|----------|-------------|
-| **System Architecture** | [01-docs/architecture/overview.md](01-docs/architecture/overview.md) | Full architecture diagram, data flows, component breakdown |
+| **System Architecture** | [01-docs/architecture/README.md](01-docs/architecture/README.md) | Full architecture diagram, data flows, component breakdown |
 | **API Reference** | [01-docs/api/README.md](01-docs/api/README.md) | Google Workspace clients, WhatsApp client, email provider, schemas, CLI scripts |
 | **ClickUp Sync** | [01-docs/workflows/clickup-sync.md](01-docs/workflows/clickup-sync.md) | Follow-up → ClickUp task sync workflow |
 | **Cross-Channel Orchestration** | [01-docs/workflows/cross-channel-orchestration.md](01-docs/workflows/cross-channel-orchestration.md) | WhatsApp-first rules, audience routing, thread lifecycle |
@@ -222,13 +222,28 @@ pnpm test:integrations
 
 🟢 **Operational** — Core integrations (Google Workspace, WhatsApp, ClickUp) are implemented and tested. Cross-channel orchestration is active. Documentation is comprehensive.
 
+## Operational domains {#operational-domains}
+
+Layout v3 — seven root hubs + nine P29 domains under `02-ops/`:
+
+| Hub / domain | Path | Role |
+| ------------ | ---- | ---- |
+| Docs | `01-docs/` | Architecture, strategy, agent protocols |
+| Ops (P29) | `02-ops/` | PM, GTM, coordination, compliance, attestation, security, assurance |
+| Platform | `03-platform/` | Domain data, schemas, scripts, tests |
+| Deploy | `04-deploy/` | Deploy artifacts |
+| Audit entry | `05-audit/` | Audit workflow start |
+| Workstream | `06-workstream/` | Sprints, status, handoffs |
+
+Check: `pnpm ops:check` · Spec: [ecosystem-repo-layout-v3.md](./01-docs/04-ops/workspace/ecosystem-repo-layout-v3.md)
+
 ## Agent & workspace index
 
 | Resource | Path |
 | -------- | ---- |
 | **Any terminal** | [`agents/README.md`](./agents/README.md) |
 | **Cursor** | [`AGENTS.md`](./AGENTS.md) |
-| **Operational SoR** | [`workspace/`](./workspace/) — `pnpm workspace:check` |
+| **Operational SoR** | [`02-ops/`](./02-ops/) — `pnpm ops:check` |
 | **Docs map** | [`01-docs/README.md`](./01-docs/README.md) |
 
 Protocol [P29 workspace domains](https://github.com/gtcx-ecosystem/gtcx-docs/blob/main/01-docs/governance/protocols/29-agent-workspace-domains/protocol.md).

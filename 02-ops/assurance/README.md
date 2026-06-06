@@ -1,4 +1,4 @@
-# workspace/assurance-programs — gtcx-operations
+# 02-ops/assurance — gtcx-operations
 
 Program index: pen-test, SOC2, pilot, attestation, legal-DPA.
 

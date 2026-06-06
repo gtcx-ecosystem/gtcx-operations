@@ -1,4 +1,4 @@
-# workspace/coordination — gtcx-operations
+# 02-ops/coordination — gtcx-operations
 
 **Protocol 24** cross-repo handoffs. Operational SoR for XR rows, outbound/inbound artifacts.
 

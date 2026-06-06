@@ -1,4 +1,4 @@
-# workspace/gtm — gtcx-operations
+# 02-ops/gtm — gtcx-operations
 
 Go-to-market **scope** (pen-test in/out, SOC controls owned, procurement).
 

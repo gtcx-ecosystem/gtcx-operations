@@ -1,4 +1,4 @@
-# workspace/security — gtcx-operations
+# 02-ops/security — gtcx-operations
 
 Security **posture** — controls, vulnerability tracking, incident hooks. Distinct from GTM buyer packets.
 

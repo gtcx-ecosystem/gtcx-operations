@@ -1,4 +1,4 @@
-# workspace/compliance — gtcx-operations
+# 02-ops/compliance — gtcx-operations
 
 Standards gaps and compliance evidence index.
 

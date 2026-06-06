@@ -5,7 +5,7 @@
   "root": {
     "max_entries": 48,
     "max_files": 16,
-    "required_dirs": ["01-docs"],
+    "required_dirs": ["01-docs", "02-ops", "06-workstream"],
     "case_rules": {
       "uppercase_allowlist": ["README.md", "LICENSE", "Dockerfile", "AGENTS.md"],
       "forbid_uppercase_outside_allowlist": true
@@ -15,8 +15,9 @@
       "01-docs",
       "02-ops",
       "03-platform",
-      "04-ship",
+      "04-deploy",
       "05-audit",
+      "06-workstream",
       "config",
       "node_modules"
     ],

@@ -11,16 +11,16 @@ review_cycle: on-change
 # Migration complete — gtcx-operations
 
 **Date:** 2026-06-06  
-**Score:** 100/100 GREEN (`migrationComplete: true`)  
-**Commit:** `cbe126b` (migration slice: `ccfbcd9` toolchain · `073c812` ops · `f9dff1f` governance · `cbe126b` evidence)
+**Score:** L1 **100/100** GREEN · L2 **100/100** GREEN (`migrationComplete: true`)  
+**L3 agent bootstrap:** N/A — corporate-ops repo (not platform monorepo; no `sor-map.json` required)
 
 ## Ecosystem evidence
 
 | Artifact | Path |
 | -------- | ---- |
 | Scorecard JSON | `gtcx-agentic/05-audit/evidence/migration-health-gtcx-operations-latest.json` |
-| P32 manifest | PASS — 23/23 documents |
-| P33 spine | PASS — AGPL-3.0-or-later |
+| Consolidation review | `01-docs/04-ops/workspace/repo-consolidation-review.md` |
+| P33 spine | PASS — AGPL-3.0 |
 
 ## Dimension rollup
 
@@ -37,36 +37,27 @@ review_cycle: on-change
 
 | Command | Exit |
 | ------- | ---: |
-| `pnpm check:workspace-root-cleanliness:strict` | 0 |
-| `pnpm config:stubs:check` | 0 |
-| `pnpm layout:migrate:v6:check` | 0 |
 | `pnpm ops:check` | 0 |
-| `pnpm pm:sync` | 0 |
-| `pnpm lint` | 0 |
+| `pnpm layout:migrate:v6:check` | 0 |
+| `pnpm layout:strings:check` | 0 |
+| `pnpm check:workspace-root-cleanliness:strict` | 0 |
 | `pnpm typecheck` | 0 |
-| `pnpm build` | 0 |
 | `pnpm test` | 0 |
-| `node 03-platform/scripts/check-agent-protocols.mjs` | 0 |
+| `pnpm validate` | 0 |
+| `pnpm agent:protocols:check` | 0 |
 
-## Fixes applied (this session)
+## Layout v3 completion (2026-06-06 session)
 
-- Added `packages: ['.']` to `pnpm-workspace.yaml` (unblocks all pnpm scripts)
-- Replaced broken monorepo `vitest.workspace.ts` with `config/toolchain/vitest.config.ts`
-- Removed forbidden root `vitest.workspace.ts` stub (Protocol 31)
-- Added `layout-drift-check.mjs`, `ops:check`, `lint`, `layout:migrate:v6:check` scripts
-- Aligned protocol check paths to `01-docs/operations/` (layout v3)
-- Fixed `check-agent-protocols.mjs` repo-root spawn `cwd`
-- Added `LICENSE` (AGPL-3.0), governance spine tier-B docs, `CHANGELOG.md`
-- Copied session pointer to `01-docs/05-audit/auto-dev-state.md`
-- Fixed `ecosystem:validate` output path → `06-workstream/`
+- `config/ops.manifest.json` — `deploy: 04-deploy`, v3 aliases, `workstream/` → `06-workstream/`
+- `02-ops/manifest.json` — layout v3 pointer, `pnpm ops:check`
+- Archived duplicate `01-docs/audit/` → `00-archive/01-docs-audit-legacy-2026-06-06/`
+- Added `03-platform/README.md`, `repo-consolidation-review.md`, IA map in `01-docs/README.md`
+- `migration_tier: stable` on root allowlist; `hygiene.config.json` → `04-deploy` + `06-workstream`
+- README operational domains section + fixed architecture doc link
+- Renamed `02-ops/*/README.md` headers from legacy `workspace/` paths
 
-## Deferred (non-migration)
+## Deferred (non-layout)
 
-- OPS-02 ClickUp list ID mapping (baseline-os handoff)
+- OPS-02 ClickUp list ID mapping
 - OPS-03 Google Workspace credentials placement
-- OPS-05 README broken architecture doc links
-- Engineering audit P0 items from `engineering-audit-2026-06-06.md` — resolved by this migration for toolchain gates
-
-## Sibling repos
-
-Not started in this session (per mission scope).
+- L3 platform bootstrap artifacts (intentionally omitted — not a platform monorepo)

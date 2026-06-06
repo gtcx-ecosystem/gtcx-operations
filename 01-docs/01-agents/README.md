@@ -1,6 +1,6 @@
 # agents/ — gtcx-operations
 
-**Start here** for terminal-specific agent guidance. Universal protocols stay in `gtcx-docs`; repo operations stay in `workspace/` + `01-docs/`.
+**Start here** for terminal-specific agent guidance. Universal protocols stay in `gtcx-docs`; repo operations stay in `02-ops/` + `01-docs/`.
 
 ## Which file for my terminal?
 
@@ -20,7 +20,7 @@
 | ----- | ---- | ---- |
 | **Machine sync** | [`.agent/`](../.agent/) | `pnpm agent:sync` generator SoR — do not hand-edit synced blocks |
 | **Discoverable index** | **`agents/`** (this folder) | Terminal routing + protocol pointers |
-| **Operational** | [`workspace/`](../workspace/) | JSON manifests, gates, backlog |
+| **Operational** | [`02-ops/`](../../02-ops/) | JSON manifests, gates, backlog |
 | **Narrative** | [`01-docs/`](../01-docs/) | Procedures, audit lenses, assurance programs |
 
 ## Session commands

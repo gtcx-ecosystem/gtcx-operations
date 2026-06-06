@@ -1,4 +1,4 @@
-# workspace/product-management — gtcx-operations
+# 02-ops/pm — gtcx-operations
 
 **Protocol 22** + **gtcx-agile** bridge. Machine backlog — not the aggregation hub (unless this repo is gtcx-agile).
 

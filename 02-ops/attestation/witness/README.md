@@ -1,4 +1,4 @@
-# workspace/audit — gtcx-operations
+# 02-ops/attestation/witness — gtcx-operations
 
 Witness lane — smoke JSON, deployment proof, credentialed runs.
 

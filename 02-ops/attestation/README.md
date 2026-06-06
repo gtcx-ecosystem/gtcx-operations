@@ -1,4 +1,4 @@
-# workspace/attestation — gtcx-operations
+# 02-ops/attestation — gtcx-operations
 
 Human gates (Class **S**), custody runners (Class **A**), attestation evidence.
 
