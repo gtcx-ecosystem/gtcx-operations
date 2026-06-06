@@ -36,16 +36,18 @@
   },
   "lanes": {
     "engineeringCompletenessQuality": {
-      "auditQuality1to10": 8.0,
+      "auditQuality1to10": 8.5,
       "readinessOutcome": {
-        "internalSignoff": 4.2,
-        "completionAudit": 5.8,
-        "weightedLaneScore": 5.0
+        "internalSignoff": 7.8,
+        "completionAudit": 6.2,
+        "weightedLaneScore": 6.3
       },
       "index": "01-docs/05-audit/engineering-completeness-quality-2026-06-06.md",
-      "forensic": "01-docs/05-audit/engineering-audit-2026-06-06.md"
+      "forensic": "01-docs/05-audit/engineering-audit-2026-06-06.md",
+      "revision": 2,
+      "commit": "512a4af"
     }
   },
-  "autoDevState": "01-docs/audit/auto-dev-state.md",
+  "autoDevState": "01-docs/05-audit/auto-dev-state.md",
   "updated": "2026-06-06"
 }

@@ -22,17 +22,17 @@ review_cycle: quarterly
 
 ## Audit quality (1–10)
 
-**Lane 1 audit program quality:** **8.0/10** — first baseline forensic; all applicable gates run with exit codes; toolchain path bugs documented with file citations.
+**Lane 1 audit program quality:** **8.5/10** — revision 2 delta reverify; all applicable gates run with exit codes; resolved P0 items documented.
 
 ## Readiness outcomes
 
 | Metric                          |       Value | Source |
 | ------------------------------- | ----------: | ------ |
-| Gate signoff (deterministic CI)  | **4.2/10**  | [engineering-audit-2026-06-06.md](./engineering-audit-2026-06-06.md) — pnpm/vitest/protocol checks red |
-| Completion depth (packages)     | **5.8/10**  | Schemas, clients, 32 tests; workspace/tooling gaps |
-| **Weighted lane score**         | **5.0/10**  | Weighted dimension rollup in forensic |
+| Gate signoff (deterministic CI)  | **7.8/10**  | [engineering-audit-2026-06-06.md](./engineering-audit-2026-06-06.md) rev 2 — pnpm + agent gates green |
+| Completion depth (packages)     | **6.2/10**  | Schemas, clients, 32 tests; no coverage/fuzz/domain forensics |
+| **Weighted lane score**         | **6.3/10**  | Weighted dimension rollup in forensic |
 
-> **2026-06-06 baseline:** Repo is operational for direct `tsx`/`tsc` workflows but **CI and agent protocol gates are not green** until P0 toolchain fixes land.
+> **2026-06-06 revision 2 @ `512a4af`:** P0 toolchain blockers from revision 1 are **resolved**. CI path is green. Remaining work is P2 doc hygiene and optional prompt gates.
 
 ---
 
@@ -40,29 +40,27 @@ review_cycle: quarterly
 
 | Audit | Purpose |
 | ----- | ------- |
-| [engineering-audit-2026-06-06.md](./engineering-audit-2026-06-06.md) | **Current** lane-1 forensic @ `6d054b5` |
+| [engineering-audit-2026-06-06.md](./engineering-audit-2026-06-06.md) | **Current** lane-1 forensic @ `512a4af` (revision 2) |
 
 ---
 
 ## Verification (lane 1)
 
 ```bash
-# Expected after P0 fixes:
 pnpm typecheck && pnpm test && pnpm validate && pnpm build
-pnpm agent:protocols:check
-
-# Current workaround (direct binaries):
-./node_modules/.bin/tsc --noEmit
-./node_modules/.bin/tsx 03-platform/scripts/validate.ts
+pnpm agent:protocols:check && pnpm ops:check
 ```
+
+All exit **0** as of revision 2 (2026-06-06).
 
 ---
 
-## Top remediation (from forensic P0)
+## Top remediation (from forensic P2)
 
-1. Add `packages: ['.']` (or remove workspace file) in `pnpm-workspace.yaml`
-2. Add root `vitest.config.ts` targeting `03-platform/tests/**/*.test.ts` or fix workspace globs
-3. Align protocol manifest paths (`01-docs/04-ops/` ↔ `01-docs/operations/`) and fix `check-agent-protocols.mjs` repo-root `cwd`
+1. Fix README architecture link → `01-docs/architecture/README.md`
+2. Remove stale `01-docs/audit/auto-dev-state.md` duplicate
+3. Add `format:check` and/or `architecture:check` scripts if repo adopts those gates
+4. Clean compiled `.js` artifacts from `03-platform/src/`
 
 ---
 

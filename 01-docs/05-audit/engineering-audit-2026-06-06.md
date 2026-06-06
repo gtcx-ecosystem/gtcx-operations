@@ -6,22 +6,24 @@ owner: gtcx-operations
 audit_lane: engineering-completeness-quality
 audit_command: engineering-audit
 alias_commands: ['full-audit', 'forensic-audit']
-audit_quality_1to10: 8.0
-readiness_signoff: 4.2
-readiness_completion: 5.8
-readiness_lane_score: 5.0
+audit_quality_1to10: 8.5
+readiness_signoff: 7.8
+readiness_completion: 6.2
+readiness_lane_score: 6.3
 tags: ['audit', 'engineering', 'lane-1']
 review_cycle: quarterly
-commit: 6d054b5b215458b265ab75fde9d52b4a4aa7cc56
-reverified_at: '2026-06-06T17:20:00Z'
-revision: 1
+commit: 512a4af
+reverified_at: '2026-06-06T21:06:00Z'
+revision: 2
+prior_revision: 1
+prior_commit: 6d054b5
 ---
 
 # gtcx-operations — Engineering Completeness & Quality (Lane 1)
 
 **Repo:** `gtcx-ecosystem/gtcx-operations`  
-**HEAD:** `6d054b5`  
-**Prior:** none — **baseline** lane-1 forensic for this repo  
+**HEAD:** `512a4af`  
+**Prior:** [revision 1 @ `6d054b5`](./engineering-audit-2026-06-06.md) — **delta reverify** same day  
 **Domain forensics cited:** none &lt;30 days (no `api-audit` or `deployment-audit` in-repo)
 
 ---
@@ -30,40 +32,38 @@ revision: 1
 
 | Metric            |      Value | Notes                                                                 |
 | ----------------- | ---------: | --------------------------------------------------------------------- |
-| Gate signoff      | **4.2/10** | Core TS/validate green via direct binaries; **`pnpm *` exit 1**; CI path red |
-| Completion depth  | **5.8/10** | Zod schemas, Google/WhatsApp clients, 32 unit tests; toolchain miswired |
-| **Lane headline** | **5.0/10** | Weighted dimension score (below)                                      |
+| Gate signoff      | **7.8/10** | Core pnpm path **green**; `format:check` / `architecture:check` absent |
+| Completion depth  | **6.2/10** | Zod schemas, Google/WhatsApp clients, 32 unit tests; no coverage/fuzz |
+| **Lane headline** | **6.3/10** | Weighted dimension score (below)                                      |
 
-**Verdict:** Functional corporate-ops automation layer with validated domain data and passing schema tests, but **not engineering-ready for CI/agent gates** until workspace (`pnpm-workspace.yaml`), Vitest workspace, and protocol manifest path drift are fixed. Class R domain work (validate, scripts) is unblocked via `tsx`/`tsc` direct invocation.
+**Verdict:** **Substantially improved** since revision 1 — P0 toolchain blockers (pnpm workspace, Vitest config, protocol manifest drift, ecosystem validate path) are **resolved**. CI and agent protocol gates are now green at HEAD. Remaining gaps are **P2 doc hygiene** (stale README link, duplicate session pointer), **compiled `.js` artifacts in `src/`**, and missing prompt-standard gates (`format:check`, `architecture:check`).
+
+**Delta from revision 1:** Lane score **5.0 → 6.3** (+1.3); gate signoff **4.2 → 7.8** (+3.6).
 
 ---
 
 ## Gate results (Protocol 27)
 
-Audited **2026-06-06** on `6d054b5`. Commands run in-session from repo root unless noted.
+Audited **2026-06-06** (revision 2) on `512a4af`. Commands run in-session from repo root unless noted.
 
 | Gate                         | Command                                              | Exit | Notes                                                                 |
 | ---------------------------- | ---------------------------------------------------- | ---: | --------------------------------------------------------------------- |
-| Format                       | `pnpm format:check`                                  | **1** | Script **not defined** in `package.json`                              |
-| Lint                         | `pnpm lint`                                          | **1** | Script **not defined**                                                |
-| Typecheck                    | `pnpm typecheck`                                     | **1** | `pnpm-workspace.yaml` missing `packages` field                        |
-| Typecheck (direct)           | `./node_modules/.bin/tsc --noEmit`                   | **0** | Strict TS passes                                                      |
-| Test                         | `pnpm test`                                          | **1** | Same pnpm workspace error                                             |
-| Test (workaround)            | `vitest run --config /tmp/vitest-ops.config.ts`      | **0** | **32/32** tests pass (6 files)                                        |
-| Test (default)               | `./node_modules/.bin/vitest run`                     | **1** | `vitest.workspace.ts` refs missing `03-platform/tools/vitest.config.ts` |
-| Build                        | `pnpm build`                                         | **1** | pnpm workspace error                                                  |
-| Build (direct)               | `./node_modules/.bin/tsc`                            | **0** | Compiles `03-platform/src` → `dist/`                                  |
-| Validate                     | `pnpm validate`                                      | **1** | pnpm workspace error                                                  |
-| Validate (direct)            | `tsx 03-platform/scripts/validate.ts`                | **0** | **14/14** domain files pass                                           |
-| Policy lint                  | `tsx 03-platform/scripts/lint-policies.ts`           | **0** | 2 missing recommended fields (warnings)                               |
-| Agent protocols              | `pnpm agent:protocols:check`                         | **1** | pnpm workspace error                                                  |
-| Agent protocols (direct)     | `node 03-platform/scripts/check-agent-protocols.mjs` | **1** | Wrong spawn `cwd` + path drift (see P0/P1)                            |
-| Agent work selection         | `node 03-platform/scripts/check-agent-work-selection.mjs` | **1** | Manifest paths expect `01-docs/04-ops/`; files at `01-docs/operations/` |
-| Ecosystem validate           | `tsx 03-platform/scripts/validate-ecosystem-consistency.ts` | **1** | ENOENT writing `workstream/ecosystem-consistency.md` (layout v3 drift) |
-| Config stubs                 | `node 03-platform/scripts/config/sync-root-stubs.mjs --check` | **0** | Root stubs match SoR                                              |
-| Workspace domains (P29)      | `node 03-platform/scripts/workspace/check.mjs`     | **0** | All workspace checks pass                                           |
-| Architecture                 | `pnpm architecture:check`                            | **—**  | **Not defined** in `package.json`                                     |
-| Root hygiene (strict signal) | `python3 03-platform/scripts/ops/check-workspace-root-cleanliness.py` | **0** | Reports **BLOCKED**: forbidden root `vitest.workspace.ts` |
+| Format                       | `pnpm format:check`                                  | **254** | Script **not defined** in `package.json`                              |
+| Lint                         | `pnpm lint`                                          | **0** | Delegates to `lint:policies`; 2 warnings on incident runbook        |
+| Typecheck                    | `pnpm typecheck`                                     | **0** | Strict TS passes                                                      |
+| Test                         | `pnpm test`                                          | **0** | **32/32** tests pass (6 files) via `config/toolchain/vitest.config.ts` |
+| Build                        | `pnpm build`                                         | **0** | Compiles `03-platform/src` → `dist/`                                  |
+| Validate                     | `pnpm validate`                                      | **0** | **14/14** domain files pass                                           |
+| Architecture                 | `pnpm architecture:check`                            | **254** | Script **not defined** in `package.json`                              |
+| Agent protocols              | `pnpm agent:protocols:check`                         | **0** | P19, P22, P24, P26, P27 all pass                                      |
+| Agent work selection         | `pnpm agent:work-selection:check`                    | **0** | Manifest paths resolve                                              |
+| Agent execution obligation   | `pnpm agent:execution-obligation:check`              | **0** | P27 wiring OK                                                         |
+| Agent proceed confirmation   | `pnpm agent:proceed-confirmation:check`              | **0** | P26 wiring OK                                                         |
+| Agent credentials            | `pnpm agent:credentials:check`                       | **0** | P19 wiring OK                                                         |
+| Ecosystem validate           | `pnpm ecosystem:validate`                            | **0** | Report → `06-workstream/ecosystem-consistency.md` (132/176, 75%)    |
+| Config stubs                 | `pnpm config:stubs:check`                            | **0** | Root stubs match SoR                                                  |
+| Workspace domains (P29)      | `pnpm ops:check`                                     | **0** | All workspace checks pass                                             |
+| Root hygiene (strict)        | `pnpm check:workspace-root-cleanliness:strict`       | **0** | **PASS** — root allowlist clean (was BLOCKED in rev 1)              |
 
 ---
 
@@ -71,59 +71,64 @@ Audited **2026-06-06** on `6d054b5`. Commands run in-session from repo root unle
 
 | #   | Dimension             | Weight | Score | Conf | Evidence                                                                                  |
 | --- | --------------------- | -----: | ----: | :--: | ----------------------------------------------------------------------------------------- |
-| 1   | CI / quality gates    |    25% |   4.0 |  A   | Direct tsc/validate **0**; pnpm/CI path **1**; vitest workspace **1**; protocol checks **1** |
-| 2   | Package completeness  |    20% |   6.0 |  A   | 70+ scripts; Zod schemas + clients; broken `pnpm-workspace.yaml`; compiled `.js` in `src/` |
-| 3   | Test depth            |    20% |   5.5 |  A   | 32 schema unit tests; no integration/property tests; default vitest entry broken          |
+| 1   | CI / quality gates    |    25% |   8.0 |  A   | pnpm typecheck/test/build/validate **0**; agent protocols **0**; 2 prompt gates missing   |
+| 2   | Package completeness  |    20% |   7.0 |  A   | 70+ scripts; Zod + clients; `pnpm-workspace.yaml` fixed; 19 compiled `.js` in `src/`    |
+| 3   | Test depth            |    20% |   6.0 |  A   | 32 schema unit tests; Vitest entry fixed; no integration/coverage/property tests        |
 | 4   | Crypto / safety hooks |    15% |   4.5 |  B   | No FIPS/fuzz campaign; external Google/Twilio APIs; `.secrets/` gitignored pattern OK     |
-| 5   | Operational signals   |    10% |   5.5 |  B   | Cross-channel orchestration rules; sent/ audit logs; no OTel/metrics hooks in code          |
-| 6   | Doc–code fidelity     |    10% |   4.0 |  A   | README stale architecture link; AGENTS paths vs `01-docs/operations/`; arch docs placeholders |
+| 5   | Operational signals   |    10% |   5.5 |  B   | Cross-channel orchestration rules; sent/ audit logs; no OTel/metrics hooks in code        |
+| 6   | Doc–code fidelity     |    10% |   4.5 |  A   | README stale architecture link; duplicate `auto-dev-state.md`; arch docs placeholders     |
 
-**Weighted lane score:** `(4.0×25 + 6.0×20 + 5.5×20 + 4.5×15 + 5.5×10 + 4.0×10) ÷ 100` = **4.93** → rounded **5.0** headline
+**Weighted lane score:** `(8.0×25 + 7.0×20 + 6.0×20 + 4.5×15 + 5.5×10 + 4.5×10) ÷ 100` = **6.28** → rounded **6.3** headline
+
+**Gate signoff formula:** 6 of 8 prompt-standard gates pass (2 undefined) + all agent/ecosystem gates pass → **7.8/10**
+
+**Completion depth formula:** Strong schema/client layer; missing coverage, fuzz, domain forensics → **6.2/10**
 
 ---
 
 ## Findings
 
-### P0 — Critical
+### Resolved since revision 1 (2026-06-06)
 
-| ID   | Finding | Owner | Evidence |
-| ---- | ------- | ----- | -------- |
-| E-P0-1 | **`pnpm-workspace.yaml` missing `packages` field** — all `pnpm run` / `pnpm test` fail | gtcx-operations | `pnpm-workspace.yaml:1-5`; `pnpm typecheck` exit **1** |
-| E-P0-2 | **`vitest.workspace.ts` references non-existent configs** — default test runner cannot start | gtcx-operations | `vitest.workspace.ts:8-13`; `vitest run` exit **1** |
-| E-P0-3 | **CI workflows invoke broken pnpm path** — `.github/workflows/ci.yml` and `validate.yml` will fail at install/run | gtcx-operations | `.github/workflows/ci.yml:21-37`; `.github/workflows/validate.yml:30-39` |
+| ID (rev 1) | Finding | Status |
+| ---------- | ------- | ------ |
+| E-P0-1 | `pnpm-workspace.yaml` missing `packages` field | **Fixed** — `packages: ['.']` present |
+| E-P0-2 | `vitest.workspace.ts` references missing configs | **Fixed** — removed; SoR at `config/toolchain/vitest.config.ts` |
+| E-P0-3 | CI workflows invoke broken pnpm path | **Fixed** — `pnpm typecheck` / `test` / `validate` exit **0** |
+| E-P1-1 | Protocol manifest path drift | **Fixed** — `agent:work-selection:check` exit **0** |
+| E-P1-2 | `check-agent-protocols.mjs` wrong `cwd` | **Fixed** — `agent:protocols:check` exit **0** |
+| E-P1-3 | Session pointer path mismatch | **Fixed** — check reads `01-docs/05-audit/auto-dev-state.md` |
+| E-P1-4 | `ecosystem:validate` writes to missing `workstream/` | **Fixed** — writes `06-workstream/ecosystem-consistency.md` |
+| E-P2-5 | Root `vitest.workspace.ts` hygiene violation | **Fixed** — file removed; strict hygiene **PASS** |
 
 ### P1 — High
 
 | ID   | Finding | Owner | Evidence |
 | ---- | ------- | ----- | -------- |
-| E-P1-1 | Protocol manifest **path drift**: checks require `01-docs/04-ops/*`; established manifests live under `01-docs/operations/` | gtcx-operations | `check-agent-work-selection.mjs:20`; manifest at `01-docs/operations/agent-work-selection.md:1` |
-| E-P1-2 | `check-agent-protocols.mjs` spawns checks with **`cwd: 03-platform/`** (not repo root) | gtcx-operations | `check-agent-protocols.mjs:9,21` |
-| E-P1-3 | Session pointer at **`01-docs/audit/auto-dev-state.md`**; checks expect **`01-docs/05-audit/auto-dev-state.md`** | gtcx-operations | `check-agent-work-selection.mjs:23`; file at `01-docs/audit/auto-dev-state.md:15` |
-| E-P1-4 | `ecosystem:validate` writes to **`workstream/`** (missing); layout v3 uses **`06-workstream/`** | gtcx-operations | `validate-ecosystem-consistency.ts:161` |
+| E-P1-5 | **Duplicate session pointer** — `01-docs/audit/auto-dev-state.md` stale copy alongside canonical `01-docs/05-audit/auto-dev-state.md` | gtcx-operations | Both files exist; check uses `05-audit/` only |
 
 ### P2 — Medium
 
 | ID   | Finding | Owner | Evidence |
 | ---- | ------- | ----- | -------- |
-| E-P2-1 | README links **`01-docs/architecture/overview.md`** (missing) | gtcx-operations | `README.md:45` |
+| E-P2-1 | README links **`01-docs/architecture/overview.md`** (missing) | gtcx-operations | `README.md:45` — use `01-docs/architecture/README.md` |
 | E-P2-2 | **19 compiled `.js` artifacts** co-located in `03-platform/src/` alongside `.ts` sources | gtcx-operations | `find 03-platform/src -name '*.js'` → 19 |
-| E-P2-3 | Prompt-standard gates **`format:check`**, **`lint`**, **`architecture:check`** not wired in `package.json` | gtcx-operations | `package.json` scripts block |
+| E-P2-3 | Prompt-standard gates **`format:check`**, **`architecture:check`** not wired in `package.json` | gtcx-operations | `pnpm format:check` / `architecture:check` exit **254** |
 | E-P2-4 | Policy lint warnings — missing `review_date`, `status` on incident runbook | gtcx-operations | `03-platform/ops/runbooks/incident-response.md` |
-| E-P2-5 | Root **`vitest.workspace.ts`** flagged by workspace hygiene allowlist | gtcx-operations | `check-workspace-root-cleanliness.py` → BLOCKED |
 
 ### P3 — Low
 
 | ID   | Finding | Notes |
 | ---- | ------- | ----- |
 | E-P3-1 | Architecture docs (`system-overview.md`, `ecosystem-integration.md`) are placeholders | OPS-05 backlog |
-| E-P3-2 | `01-docs/05-audit/` skeleton READMEs only — no prior lane forensics until this pass | Expected for first audit |
+| E-P3-2 | No coverage gate or report configured | Add Vitest coverage threshold when integration tests land |
 
 ---
 
 ## Evidence gaps
 
 - **API domain** — no `api-audit` forensic; Google/WhatsApp clients exist but no OpenAPI surface
-- **Deployment domain** — no `deployment-audit`; `04-deploy/docker/` present but no staging witness in-repo
+- **Deployment domain** — no `deployment-audit`; `04-deploy/` present but no staging witness in-repo
 - **Integration E2E** — `pnpm test:integrations` not re-run (requires credentials); OPS-07 pending
 - **Coverage signal** — no coverage gate or report configured
 
@@ -131,8 +136,8 @@ Audited **2026-06-06** on `6d054b5`. Commands run in-session from repo root unle
 
 ## Post-audit checklist
 
-- [x] `01-docs/05-audit/engineering-audit-2026-06-06.md` (this file)
-- [x] `01-docs/05-audit/engineering-completeness-quality-2026-06-06.md` index
+- [x] `01-docs/05-audit/engineering-audit-2026-06-06.md` (revision 2)
+- [x] `01-docs/05-audit/engineering-completeness-quality-2026-06-06.md` index updated
 - [x] `01-docs/05-audit/latest.json` → `lanes.engineeringCompletenessQuality`
 
 ---
@@ -142,3 +147,4 @@ Audited **2026-06-06** on `6d054b5`. Commands run in-session from repo root unle
 - [x] AGENTS.md + engineering-scoring read
 - [x] P27 gates run in-session (exit codes above)
 - [x] Lane 1 only — no bank-grade composite or GCR claims
+- [x] Delta documented vs revision 1 @ `6d054b5`
