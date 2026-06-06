@@ -12,7 +12,7 @@ review_cycle: on-change
 
 **Date:** 2026-06-06  
 **Score:** 100/100 GREEN (`migrationComplete: true`)  
-**Commit:** _(filled after final commit SHA)_
+**Commit:** `cbe126b` (migration slice: `ccfbcd9` toolchain · `073c812` ops · `f9dff1f` governance · `cbe126b` evidence)
 
 ## Ecosystem evidence
 
