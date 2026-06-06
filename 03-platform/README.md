@@ -9,6 +9,7 @@
 | CLI automation | `scripts/` |
 | Unit tests | `tests/` |
 | Shared assets | `assets/` |
+| Domain map | [`DOMAINS.md`](./DOMAINS.md) |
 
 **Not here:** Narrative docs (`01-docs/`), machine ops manifests (`02-ops/`), deploy artifacts (`04-deploy/`), audit entry (`05-audit/`), sprint plane (`06-workstream/`).
 

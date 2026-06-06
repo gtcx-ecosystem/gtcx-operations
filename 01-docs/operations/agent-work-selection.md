@@ -23,7 +23,7 @@ reference_implementation: exploration-os
 | --- | --- |
 | Execution roadmap (story register) | [`01-docs/strategy/execution-roadmap.md`](../strategy/execution-roadmap.md) |
 | Epic roadmap (human) | [`01-docs/specs/_project/planning/roadmap.md`](../specs/_project/planning/roadmap.md) |
-| Session pointer | [`01-docs/05-audit/auto-dev-state.md`](../audit/auto-dev-state.md) |
+| Session pointer | [`01-docs/05-audit/auto-dev-state.md`](../05-audit/auto-dev-state.md) |
 | Baseline session memory | [`.baseline/memory/session.md`](../../.baseline/memory/session.md) |
 | Cross-repo blockers | [`.baseline/memory/dependencies.md`](../../.baseline/memory/dependencies.md) |
 | Selection script | [`03-platform/scripts/agent-next-work.mjs`](../../03-platform/scripts/agent-next-work.mjs) |

@@ -12,11 +12,14 @@
     "auditMachineState": "01-docs/05-audit/latest.json",
     "agentSessionState": "01-docs/05-audit/auto-dev-state.md",
     "agentWorkSelection": "01-docs/operations/agent-work-selection.md",
+    "agentOpsCanonical": "01-docs/operations/",
+    "agentOpsPointers": "01-docs/04-ops/",
     "inRepoStoryRegister": "01-docs/strategy/execution-roadmap.md",
     "p22NextWork": "03-platform/scripts/agent-next-work.mjs",
     "platformScripts": "03-platform/scripts/",
     "platformSrc": "03-platform/src/",
     "platformDomainRoot": "03-platform/legal/",
+    "platformDomainMap": "03-platform/DOMAINS.md",
     "deploy": "04-deploy/",
     "toolchainSoR": "config/toolchain/",
     "sorMap": "config/sor-map.json",
@@ -28,7 +31,8 @@
     "workstream": "06-workstream/",
     "archive": "00-archive/",
     "consolidationReview": "01-docs/04-ops/workspace/repo-consolidation-review.md",
-    "layoutPointer": "01-docs/04-ops/workspace/ecosystem-repo-layout-v3.md"
+    "layoutPointer": "01-docs/04-ops/workspace/ecosystem-repo-layout-v3.md",
+    "docsIndex": "01-docs/INDEX.md"
   },
   "deprecated": {
     "01-docs/audit/": "archived 2026-06-06 — use 01-docs/05-audit/",

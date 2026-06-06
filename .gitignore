@@ -6,6 +6,11 @@ node_modules/
 .secrets/
 dist/
 
+# TypeScript build artifacts must not live beside sources
+03-platform/src/**/*.js
+03-platform/src/**/*.d.ts
+03-platform/src/**/*.map
+
 # Auto-added by ecosystem-self-heal
 Thumbs.db
 logs/

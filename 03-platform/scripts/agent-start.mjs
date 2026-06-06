@@ -16,7 +16,7 @@ if (!baselineRoot) {
   console.error(
     'ERROR: baseline-os not found (side-by-side checkout or set GTCX_ECOSYSTEM_ROOT).',
   );
-  console.error('Fallback: run `pnpm agent:next-work` and read 01-docs/04-ops/agent-universal-instructions.md');
+  console.error('Fallback: run `pnpm agent:next-work` and read 01-docs/operations/agent-universal-instructions.md');
   process.exit(1);
 }
 

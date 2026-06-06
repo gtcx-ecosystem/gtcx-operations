@@ -45,7 +45,7 @@ What was combined, nested, or relocated for **layout v3** (seven hubs + P29 nine
 | ---- | -------------- |
 | `02-ops/attestation/evidence-index.json` + `witness/evidence-index.json` | Different artifact classes |
 | `01-docs/05-audit/` (forensics) vs `05-audit/` (entry) | Narrative vs workflow entry hub |
-| `01-docs/operations/` vs `01-docs/04-ops/` | Tier-B repo policy vs P29 ops domain docs |
+| `01-docs/operations/` vs `01-docs/04-ops/` | **Resolved 2026-06-06:** `operations/` = agent protocol SoR; `04-ops/` = layout stubs + redirect pointers |
 
 ## Verification
 
@@ -54,4 +54,16 @@ pnpm ops:check
 pnpm layout:migrate:v6:check
 pnpm check:workspace-root-cleanliness:strict
 pnpm layout:strings:check
+pnpm agent:bootstrap:check
 ```
+
+## Path consolidation (2026-06-06)
+
+| Role | Canonical path |
+| ---- | -------------- |
+| Agent protocols (P19–P27) | `01-docs/operations/` |
+| Layout v3 pointers | `01-docs/04-ops/workspace/` |
+| Legacy `04-ops/agent-*.md` links | Redirect stubs → `operations/` |
+| Domain map | `03-platform/DOMAINS.md` |
+| Agent path lookup | `config/sor-map.json` |
+| Build output | `dist/` only (not `03-platform/src/`) |
