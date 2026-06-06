@@ -62,6 +62,73 @@ gtcx-agentic owner should **not** revert ops-valid rows; only sensei-ai-specific
 
 **sensei-ai owner agent** — use `git reflog`, stashes, and remote branches to recover any lost work. Ops agent provides this witness only.
 
+---
+
+## Recovery playbook (sensei-ai owner agent — run in `sensei-ai` root)
+
+**Ops agent must not run these.** Copy this section to the sensei-ai session or read this ticket from the sibling checkout.
+
+### 1. Assess (read-only first)
+
+```bash
+cd /path/to/sensei-ai
+git status -sb
+git log --oneline -5 HEAD
+git log --oneline -5 origin/main
+git reflog -20
+git stash list
+```
+
+**Expected baseline if reset landed:** `HEAD` = `a55b8716` (`refactor(layout): apply ecosystem repo layout v3.`).
+
+**Session-witness local commits that may have been dropped** (check `reflog` for these SHAs — do not assume all existed on every machine):
+
+| SHA (witness) | Subject (approx.) |
+| ------------- | ----------------- |
+| `1cbb9b16` | `chore(infra): add layout v3 gates and governance spine wiring` |
+| `0cb485e2` | `refactor(infra): relocate non-TS assets to layout v3 hubs` |
+| `8741d532` | engineering audit / lane-1 forensic (earlier session) |
+
+Untracked and staged WIP under `03-platform/` (apps, packages, services, tests, tools) may have been removed by partial `git clean -fdx` — **not recoverable via git** unless backed up elsewhere.
+
+### 2. Restore dropped commits (if in reflog)
+
+If reflog shows commits before the reset entry (`reset: moving to origin/main`):
+
+```bash
+# Example — replace SHA with best commit from YOUR reflog, not blindly these witness SHAs
+git cherry-pick <sha>   # one commit at a time
+# or
+git reset --hard <sha>  # only if that SHA is YOUR intended branch tip
+```
+
+Prefer **cherry-pick** over another hard reset unless you have verified the target SHA is correct.
+
+### 3. Recover uncommitted work
+
+- `git stash list` — apply any stashes not created by the ops agent.
+- Cursor/local history, Time Machine, or another clone — only source for clean-removed untracked files.
+- **Do not** run `git clean -fdx` until worktree is understood.
+
+### 4. gtcx-agentic (optional — only if sensei artifacts matter)
+
+In **gtcx-agentic** (not sensei-ai), ops agent already removed out-of-scope `gtcx-agent/agent-feedback-sensei-ai.md` (commit `d880302`). No action required unless you want to regenerate sensei feedback later from sensei-ai.
+
+### 5. Resume normal work
+
+After recovery:
+
+```bash
+git status -sb   # must reflect YOUR intended state
+# continue layout v3 / migration / audit work as sensei-ai owner
+```
+
+### 6. Close this ticket
+
+When sensei-ai is stable, sensei-ai owner updates this ticket status or files `from-sensei-ai-recovery-complete-YYYY-MM-DD.md` back to gtcx-operations coordination (optional).
+
+---
+
 ## Ops agent commitment
 
 1. **This repo only** unless human expands scope by repo name.
