@@ -1,0 +1,51 @@
+{
+  "repo": "gtcx-operations",
+  "auditDate": "2026-06-06",
+  "laneAuditsRegistry": "gtcx-docs/03-platform/tools/audit/lane-audits/README.md",
+  "domainAuditsRegistry": "gtcx-docs/03-platform/tools/audit/domain-audits/README.md",
+  "laneAudits": {
+    "engineering": {
+      "command": "engineering-audit",
+      "forensicGlob": "01-docs/05-audit/engineering-audit-*.md"
+    },
+    "internalCompliance": {
+      "command": "compliance-audit",
+      "forensicGlob": "01-docs/05-audit/compliance-audit-*.md"
+    },
+    "industryCompliance": {
+      "command": "external-audit",
+      "forensicGlob": "01-docs/05-audit/external-audit-*.md"
+    },
+    "bankGrade": {
+      "command": "bank-grade-audit",
+      "forensicGlob": "01-docs/05-audit/bank-grade-audit-*.md"
+    },
+    "gtmReadiness": {
+      "command": "gtm-audit",
+      "forensicGlob": "01-docs/05-audit/gtm-audit-*.md"
+    },
+    "globalComplianceRating": {
+      "command": "global-compliance-audit",
+      "forensicGlob": "01-docs/05-audit/global-compliance-audit-*.md",
+      "requires": ["compliance-audit", "external-audit"]
+    }
+  },
+  "ratingScales": {
+    "auditQuality": "1-10 — quality of audit artifacts only",
+    "readinessOutcome": "per forensic audit (scores or tiers)"
+  },
+  "lanes": {
+    "engineeringCompletenessQuality": {
+      "auditQuality1to10": 8.0,
+      "readinessOutcome": {
+        "internalSignoff": 4.2,
+        "completionAudit": 5.8,
+        "weightedLaneScore": 5.0
+      },
+      "index": "01-docs/05-audit/engineering-completeness-quality-2026-06-06.md",
+      "forensic": "01-docs/05-audit/engineering-audit-2026-06-06.md"
+    }
+  },
+  "autoDevState": "01-docs/audit/auto-dev-state.md",
+  "updated": "2026-06-06"
+}
