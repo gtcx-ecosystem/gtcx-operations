@@ -56,7 +56,8 @@
     "track:docs": "tsx 03-platform/scripts/documentation-freshness-tracker.ts",
     "check-credentials": "tsx 03-platform/scripts/check-credentials.ts",
     "test:integrations": "tsx 03-platform/scripts/test-integrations.ts",
-    "test": "vitest run",
+    "lint": "pnpm run lint:policies",
+    "test": "vitest run --config config/toolchain/vitest.config.ts",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "agent:sync": "node 03-platform/scripts/agent-sync/sync.mjs",
@@ -73,7 +74,9 @@
     "config:stubs:sync": "node 03-platform/scripts/config/sync-root-stubs.mjs",
     "config:stubs:check": "node 03-platform/scripts/config/sync-root-stubs.mjs --check",
     "check:workspace-root-cleanliness": "python3 03-platform/scripts/ops/check-workspace-root-cleanliness.py",
-    "check:workspace-root-cleanliness:strict": "python3 03-platform/scripts/ops/check-workspace-root-cleanliness.py --strict"
+    "check:workspace-root-cleanliness:strict": "python3 03-platform/scripts/ops/check-workspace-root-cleanliness.py --strict",
+    "layout:migrate:v6:check": "node 03-platform/scripts/layout-drift-check.mjs",
+    "ops:check": "node 03-platform/scripts/workspace/check.mjs"
   },
   "devDependencies": {
     "typescript": "^5.4.0",
