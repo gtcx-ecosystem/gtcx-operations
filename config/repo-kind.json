@@ -1,0 +1,20 @@
+{
+  "schema": "gtcx.repoKind.v1",
+  "repo": "gtcx-operations",
+  "kind": "corporate-ops",
+  "toolchainProfile": "single-package",
+  "emphasis": [
+    "03-platform/legal",
+    "03-platform/finance",
+    "03-platform/crm",
+    "03-platform/scripts",
+    "02-ops"
+  ],
+  "deemphasis": ["04-deploy"],
+  "migrationTier": "stable",
+  "vitest": {
+    "configSoR": "config/toolchain/vitest.config.ts",
+    "workspaceSyncToRoot": false
+  },
+  "notes": "Corporate operations — domain YAML/JSON + TypeScript CLI automation (single package)."
+}

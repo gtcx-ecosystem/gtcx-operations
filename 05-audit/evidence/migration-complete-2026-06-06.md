@@ -11,8 +11,7 @@ review_cycle: on-change
 # Migration complete — gtcx-operations
 
 **Date:** 2026-06-06  
-**Score:** L1 **100/100** GREEN · L2 **100/100** GREEN (`migrationComplete: true`)  
-**L3 agent bootstrap:** N/A — corporate-ops repo (not platform monorepo; no `sor-map.json` required)
+**Score:** L1 **100/100** · L2 **100/100** · L3 **100/100** GREEN (`migrationComplete: true`, `worldClass: true`)
 
 ## Ecosystem evidence
 
@@ -45,6 +44,13 @@ review_cycle: on-change
 | `pnpm test` | 0 |
 | `pnpm validate` | 0 |
 | `pnpm agent:protocols:check` | 0 |
+| `pnpm agent:bootstrap:check` | 0 |
+
+## L3 bootstrap (2026-06-06)
+
+- `config/sor-map.json`, `config/paths.mjs`, `config/repo-kind.json`, `config/governance-spine.json`
+- `03-platform/scripts/agent-bootstrap-check.mjs` + `pnpm agent:bootstrap:check`
+- `repoKind: corporate-ops` (single-package profile)
 
 ## Layout v3 completion (2026-06-06 session)
 
@@ -55,9 +61,3 @@ review_cycle: on-change
 - `migration_tier: stable` on root allowlist; `hygiene.config.json` → `04-deploy` + `06-workstream`
 - README operational domains section + fixed architecture doc link
 - Renamed `02-ops/*/README.md` headers from legacy `workspace/` paths
-
-## Deferred (non-layout)
-
-- OPS-02 ClickUp list ID mapping
-- OPS-03 Google Workspace credentials placement
-- L3 platform bootstrap artifacts (intentionally omitted — not a platform monorepo)

@@ -1,0 +1,39 @@
+{
+  "schema": "gtcx.sorMap.v1",
+  "repo": "gtcx-operations",
+  "repoKind": "corporate-ops",
+  "repoTier": 2,
+  "migrationTier": "stable",
+  "updated": "2026-06-06",
+  "paths": {
+    "auditEntry": "05-audit/AGENT-START.md",
+    "auditEvidenceOps": "05-audit/evidence/",
+    "auditForensics": "01-docs/05-audit/",
+    "auditMachineState": "01-docs/05-audit/latest.json",
+    "agentSessionState": "01-docs/05-audit/auto-dev-state.md",
+    "agentWorkSelection": "01-docs/operations/agent-work-selection.md",
+    "inRepoStoryRegister": "01-docs/strategy/execution-roadmap.md",
+    "p22NextWork": "03-platform/scripts/agent-next-work.mjs",
+    "platformScripts": "03-platform/scripts/",
+    "platformSrc": "03-platform/src/",
+    "platformDomainRoot": "03-platform/legal/",
+    "deploy": "04-deploy/",
+    "toolchainSoR": "config/toolchain/",
+    "sorMap": "config/sor-map.json",
+    "pathsModule": "config/paths.mjs",
+    "repoKind": "config/repo-kind.json",
+    "governanceSpine": "config/governance-spine.json",
+    "opsManifest": "config/ops.manifest.json",
+    "opsDomains": "02-ops/",
+    "workstream": "06-workstream/",
+    "archive": "00-archive/",
+    "consolidationReview": "01-docs/04-ops/workspace/repo-consolidation-review.md",
+    "layoutPointer": "01-docs/04-ops/workspace/ecosystem-repo-layout-v3.md"
+  },
+  "deprecated": {
+    "01-docs/audit/": "archived 2026-06-06 — use 01-docs/05-audit/",
+    "workspace/": "use 02-ops/",
+    "04-ship/": "use 04-deploy/",
+    "vitest.workspace.ts": "use config/toolchain/vitest.config.ts"
+  }
+}
