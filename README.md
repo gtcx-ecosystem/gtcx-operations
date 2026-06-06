@@ -234,3 +234,22 @@ pnpm test:integrations
 Protocol [P29 workspace domains](https://github.com/gtcx-ecosystem/gtcx-docs/blob/main/01-docs/governance/protocols/29-agent-workspace-domains/protocol.md).
 
 <!-- gtcx-agents-index -->
+
+## Governance
+
+| Document        | Path                                                                           |
+| --------------- | ------------------------------------------------------------------------------ |
+| Contributing    | [CONTRIBUTING.md](./01-docs/operations/repo/CONTRIBUTING.md)                   |
+| Code of conduct | [CODE_OF_CONDUCT.md](./01-docs/operations/repo/CODE_OF_CONDUCT.md)             |
+| Security        | [SECURITY.md](./01-docs/operations/repo/SECURITY.md)                           |
+| Repo hygiene    | [repo-hygiene-protocol.md](./01-docs/operations/repo/repo-hygiene-protocol.md) |
+| Changelog       | [CHANGELOG.md](./CHANGELOG.md)                                                 |
+| License         | [LICENSE](./LICENSE)                                                           |
+
+## Agents
+
+| Resource    | Path                                                                                  |
+| ----------- | ------------------------------------------------------------------------------------- |
+| Agent entry | [AGENTS.md](./AGENTS.md)                                                              |
+| Audit start | [05-audit/AGENT-START.md](./05-audit/AGENT-START.md)                                  |
+| Layout v3   | [ecosystem-repo-layout-v3.md](./01-docs/04-ops/workspace/ecosystem-repo-layout-v3.md) |

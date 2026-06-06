@@ -545,3 +545,17 @@ Template: `01-docs/04-ops/agent-status-update-template.md` · Spec: P26 §3b (gt
 - **Class R** (tests, manifests, capture scripts) → run in-session; never list under Approval needed.
 - **Never** execute H-03 countersign or XR-518 `--confirm` unless owner repo + Class A artifact says so.
 <!-- AGENT-SYNC:END -->
+
+<!-- gtcx-governance-spine -->
+
+## Governance spine (Protocol 33)
+
+| Gate             | Command                                        |
+| ---------------- | ---------------------------------------------- |
+| Root cleanliness | `pnpm check:workspace-root-cleanliness:strict` |
+| Ops domains      | `pnpm ops:check`                               |
+| Work selection   | `pnpm agent:next-work` (Protocol 22)           |
+
+Tier B docs: [`01-docs/operations/repo/`](./01-docs/operations/repo/) · Audit entry: [`05-audit/AGENT-START.md`](./05-audit/AGENT-START.md)
+
+Spec: [Protocol 33](https://github.com/gtcx-ecosystem/gtcx-docs/blob/main/01-docs/governance/protocols/33-ecosystem-repo-governance-spine/protocol.md)
