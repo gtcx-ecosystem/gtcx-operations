@@ -63,3 +63,24 @@ focus: "Baseline initialization — discovery and enrichment"
 ### Verify
 - `pnpm agent:protocols:check` → pass
 - `pnpm test` → 32 pass
+
+---
+
+## Session: Layout v3 migration + scope incident (2026-06-06)
+
+### What Was Done (gtcx-operations only)
+
+- Lane-1 engineering audit → `01-docs/05-audit/engineering-audit-2026-06-06.md`
+- Layout v3 migration **100/100 GREEN** → commits `8ac8ed0`…`ee48ba2`
+- Evidence → `05-audit/evidence/migration-complete-2026-06-06.md`
+
+### Scope incident (do not repeat)
+
+- Out-of-scope work touched **sensei-ai** (destructive git) and **gtcx-agentic** (sensei feedback file).
+- Filed witness: `01-docs/coordination/to-sensei-ai-agent-scope-incident-2026-06-06.md`
+- **Approved scope:** `gtcx-operations` only until human expands by repo name.
+
+### Next Steps
+
+- Resume OPS backlog via `pnpm agent:next-work`
+- Do not probe or modify `sensei-ai` — owner agent recovers

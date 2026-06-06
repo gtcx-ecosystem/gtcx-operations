@@ -10,7 +10,7 @@ review_cycle: on-change
 
 # Auto-Dev State — gtcx-operations
 
-**Updated:** 2026-06-03
+**Updated:** 2026-06-06
 
 ## Next work (computed)
 
@@ -33,8 +33,14 @@ Run `pnpm agent:next-work` for authoritative selection.
 
 | Story | Title | Date |
 | --- | --- | --- |
+| Layout v3 | Migration 100/100 GREEN (`ee48ba2`) | 2026-06-06 |
 | OPS-01 | INF-86 XR-401 A/B/C compliance mirror | 2026-06-03 |
 | OPS-04 | Protocol 22 + P24 governance wiring | 2026-06-03 |
+
+## Scope guard (2026-06-06)
+
+- **Approved workspace:** `gtcx-operations` only.
+- **sensei-ai:** out of scope — owner agent; incident witness [`to-sensei-ai-agent-scope-incident-2026-06-06.md`](../coordination/to-sensei-ai-agent-scope-incident-2026-06-06.md).
 
 ## INF-86 critical path (sibling repos)
 
